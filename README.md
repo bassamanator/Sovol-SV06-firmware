@@ -65,4 +65,5 @@ sudo service klipper start
 ## Sources
 
 - https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
+- https://www.klipper3d.org/Installation.html#building-and-flashing-the-micro-controller
 - https://www.klipper3d.org/RPi_microcontroller.html#rpi-microcontroller
