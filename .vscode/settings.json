@@ -1,5 +1,6 @@
 {
 	"editor.tabSize": 4,
 	"editor.insertSpaces": true,
-	"editor.detectIndentation": false
+	"editor.detectIndentation": false,
+	"git.mergeEditor": false
 }
