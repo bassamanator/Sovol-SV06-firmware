@@ -4,6 +4,8 @@ This repository contains firmware for the SV06 3D printer from Sovol. You should
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
 
+⚠️ The instructions found on this page apply only to the `master` branch.
+
 ⚠️⚡☢️ USE AT YOUR OWN RISK! YOU HAVE BEEN WARNED! ☢️⚡⚠️
 
 # Highlights
@@ -18,6 +20,8 @@ I am creating these files for my personal use and cannot be held responsible for
   - Load/unload filament macros.
   - Purge line macro.
 
+To do:
+- Get the Ellis `TEST_SPEED.cfg` working.
 # Installation Steps
 
 💡 **Requirement**: klipper must be installed on the host Raspberry Pi for everything to work after the flash. Easiest is to use a Fluiddpi or MailsailOS image.
