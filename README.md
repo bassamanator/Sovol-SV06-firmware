@@ -34,7 +34,15 @@ You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
 ⚠️ **Caveat**: flashing will only work if current firmware filename (`anyNewFilename.bin` in this example) is different from previous flashing procedure. The `.bin` is also important.
 
-# Post Installation Steps
+## Clone the Repository
+
+There are many ways to get started, the simplest being to clone this repo to the appropriate folder.
+
+1. `cd ~/printer_data/config`
+2. Empty entire `~/printer_data/config` folder. Unfortunately, for safety reasons I will not post this command here. However, in linux, you can delete files via `rm filename`.
+3. `git clone -b master --single-branch git@github.com:bassamanator/Sovol-SV06-firmware.git .`
+
+## Initial Steps
 
 ⚠️⚡☢️ **Your finger should be on the power switch for most of these steps** ☢️⚡⚠️
 
