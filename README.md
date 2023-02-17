@@ -1,4 +1,4 @@
-# Sovol-SV06-firmware
+# Sovol SV06 Klipper Firmware
 
 This repository contains firmware for the SV06 3D printer from Sovol. You should not use this firmware on any other printer.
 
@@ -11,17 +11,20 @@ I am creating these files for my personal use and cannot be held responsible for
 # Highlights
 
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
-- Mechanical gantry calibration/`G34` macro.
-- SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for an FDM printer. Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer).
+- SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer. Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
 - Macros
+  - Mechanical gantry calibration/`G34` macro.
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
   - Purge line macro.
 
 To do:
+
 - Get the Ellis `TEST_SPEED.cfg` working.
+- Replace M109/M190 with TEMPERATURE_WAIT
+
 # Installation Steps
 
 💡 **Requirement**: klipper must be installed on the host Raspberry Pi for everything to work after the flash. Easiest is to use a Fluiddpi or MailsailOS image.
