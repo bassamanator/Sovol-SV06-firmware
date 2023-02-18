@@ -25,6 +25,12 @@ To do:
 - Get the Ellis `TEST_SPEED.cfg` working.
 - Replace M109/M190 with TEMPERATURE_WAIT
 
+## Stay Up-to-Date
+
+I work on this repository all the time and a lot of new features are coming. Watch releases of this repository to be notified for future updates:
+
+<img src="./images/githubstar.gif" width="500" alt='Raspberry Pi'/>
+
 # Installation Steps
 
 💡 **Requirement**: klipper must be installed on the host Raspberry Pi for everything to work after the flash. Easiest is to use a Fluiddpi or MailsailOS image.
