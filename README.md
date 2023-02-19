@@ -34,8 +34,11 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 ## Before You Begin
 
-- *Read these docs fully!* Your question has probably been answered already. If it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
+- Know what you're getting into by reading this documentation *fully!*
+- Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - If you see any errors, or encounter any issues, please create an [Issue](https://github.com/bassamanator/Sovol-SV06-firmware/issues/new), or create a [Pull request](https://github.com/bassamanator/Sovol-SV06-firmware/pulls).
+- I would recommend searching for the word `NOTE` in this repository. There are about 6 short points amongst the various files that you should be aware of if you're using this configuration.
+
 ## Flash Firmware
 
 💡 *If you have already flashed klipper onto your motherboard in the past, you can skip this step*
@@ -66,9 +69,7 @@ There are many ways to get started, the simplest being to clone this repo to the
 
 ⚠️⚡☢️ **Power off if there is a collision/problem** ☢️⚡⚠️
 
-💡 I would recommend searching for the word `NOTE` in this repository. There are about 6 short points amongst the various files that you should be aware of if you're using this configuration.
-
-I recommend no filament be loaded for any of these steps.
+💡 I recommend no filament be loaded for any of these steps.
 
 1. Do a `G28`; home all.
    1. Check to see if `X` and `Y` max positions (`G1 X223 F3000`, `G1 Y223 F3000`) can be reached, and adjust `position_max`, if necessary. You can probably go all the way up to `225` for `X` and `Y` both, however, I would not recommend it.
