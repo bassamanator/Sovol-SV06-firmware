@@ -1,4 +1,4 @@
-# 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration 🏎️
+# 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
 
 This repository contains firmware for the SV06 3D printer from Sovol. You should not use this firmware on any other printer.
 
