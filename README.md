@@ -1,20 +1,19 @@
-# Sovol SV06 Klipper Firmware
+# 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration 🏎️
 
 This repository contains firmware for the SV06 3D printer from Sovol. You should not use this firmware on any other printer.
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
 
-⚠️ The instructions found on this page apply only to the `master` branch.
-
 ⚠️⚡☢️ USE AT YOUR OWN RISK! YOU HAVE BEEN WARNED! ☢️⚡⚠️
 
 # Highlights
 
+- 💥 This Klipper configuration is an endpoint, meaning that it contains everything that you could possibly need in order to have an excellent Klipper experience! 💥
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
-- SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer. Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
+- SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
 - Macros
-  - Mechanical gantry calibration/`G34` macro.
+  - Improved mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to verify the calibration.
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
@@ -33,9 +32,13 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 # Installation Steps
 
-💡 **Requirement**: klipper must be installed on the host Raspberry Pi for everything to work after the flash. Easiest is to use a Fluiddpi or MailsailOS image.
+## Before You Begin
 
+- *Read these docs fully!* Your question has probably been answered already. If it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
+- If you see any errors, or encounter any issues, please create an [Issue](https://github.com/bassamanator/Sovol-SV06-firmware/issues/new), or create a [Pull request](https://github.com/bassamanator/Sovol-SV06-firmware/pulls).
 ## Flash Firmware
+
+💡 *If you have already flashed klipper onto your motherboard in the past, you can skip this step*
 
 1. Copy `klipper.bin` to a MicroSD card and rename to `anyNewFilename.bin`.
 2. Make sure the printer is off.
@@ -49,6 +52,8 @@ You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
 ## Clone the Repository
 
+💡 **Requirement**: Klipper must be installed on the host Raspberry Pi for everything to work. Easiest is to use a [FluiddPi](https://docs.fluidd.xyz/installation/fluiddpi#download) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image.
+
 There are many ways to get started, the simplest being to clone this repo to the appropriate folder.
 
 1. `cd ~/printer_data/config`
@@ -61,7 +66,7 @@ There are many ways to get started, the simplest being to clone this repo to the
 
 ⚠️⚡☢️ **Power off if there is a collision/problem** ☢️⚡⚠️
 
-💡 I would recommend searching for the word `NOTE` in this repository. There are about 6 short points amongst the various files that you should be aware of if you're using this `printer.cfg`.
+💡 I would recommend searching for the word `NOTE` in this repository. There are about 6 short points amongst the various files that you should be aware of if you're using this configuration.
 
 I recommend no filament be loaded for any of these steps.
 
@@ -95,13 +100,19 @@ I recommend no filament be loaded for any of these steps.
    5. `BED_MESH_CALIBRATE`
    6. `SAVE_CONFIG` (once completed)
 
+## Useful Resources
+
+- [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
+- [RP2040-Zero ADXL345 Connection Klipper](https://github.com/bassamanator/rp2040-zero-adxl345-klipper)
+- [🧨 Ellis' Print Tuning Guide 🧨](https://ellis3dp.com/Print-Tuning-Guide)
+
 ## Sources
 
 - https://www.klipper3d.org
 - https://ellis3dp.com/Print-Tuning-Guide
 - https://github.com/strayr/strayr-k-macros
 - https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
-- https://github.com/spinixguy/Sovol-SV06-firmware
+- ⭐ https://github.com/spinixguy/Sovol-SV06-firmware
 - https://github.com/Pr20100/SOVOL-SV06-Klipper-profile
 - https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
