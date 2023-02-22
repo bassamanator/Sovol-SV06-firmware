@@ -101,6 +101,10 @@ There are many ways to get started, the simplest being to clone this repo to the
    5. `BED_MESH_CALIBRATE`
    6. `SAVE_CONFIG` (once completed)
 
+## <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/>
+
+If you found my work useful, please consider buying me a [<img src="./misc/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+
 ## Useful Resources
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
@@ -117,3 +121,5 @@ There are many ways to get started, the simplest being to clone this repo to the
 - https://github.com/Pr20100/SOVOL-SV06-Klipper-profile
 - https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)
