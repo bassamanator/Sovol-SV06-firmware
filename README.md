@@ -24,6 +24,8 @@ To do:
 - [ ] Replace M109/M190 with `TEMPERATURE_WAIT`.
 - [ ] Get the Ellis `TEST_SPEED` macro working.
 - [ ] Add information about directory structure.
+- [ ] Create FAQ section.
+- [ ] Finalize filament sensor config and merge into `master`.
 
 ## Stay Up-to-Date
 
