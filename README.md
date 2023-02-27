@@ -23,6 +23,7 @@ To do:
 
 - [ ] Replace M109/M190 with `TEMPERATURE_WAIT`.
 - [ ] Get the Ellis `TEST_SPEED` macro working.
+- [ ] Add information about directory structure.
 
 ## Stay Up-to-Date
 
