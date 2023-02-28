@@ -37,10 +37,11 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 ## Before You Begin
 
-- Klipper *must* be installed on the host Raspberry Pi for everything to work. Easiest is to use a [FluiddPi](https://docs.fluidd.xyz/installation/fluiddpi#download) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image.
 - Know what you're getting into by reading this documentation *fully!*
+- There is an assumption that you are connected to your host Raspberry Pi via SSH, and that your printer motherboard is connected to the host via USB.
+- Klipper *must* be installed on the host Raspberry Pi for everything to work. Easiest is to use a [FluiddPi](https://docs.fluidd.xyz/installation/fluiddpi#download) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
-- If you see any errors, or encounter any issues, please create an [Issue](https://github.com/bassamanator/Sovol-SV06-firmware/issues/new), or create a [Pull request](https://github.com/bassamanator/Sovol-SV06-firmware/pulls).
+- If you see any errors, or encounter any issues, please create an [Issue](https://github.com/bassamanator/Sovol-SV06-firmware/issues/new), or a [Pull request](https://github.com/bassamanator/Sovol-SV06-firmware/pulls).
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
 ## Flash Firmware
