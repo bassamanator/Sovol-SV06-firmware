@@ -23,7 +23,7 @@ To do:
 
 - [ ] Replace M109/M190 with `TEMPERATURE_WAIT`.
 - [ ] Get the Ellis `TEST_SPEED` macro working.
-- [ ] Add information about directory structure.
+- [x] Add information about directory structure.
 - [ ] Create FAQ section.
 - [ ] Finalize filament sensor config and merge into `master`.
 
@@ -117,6 +117,37 @@ You can choose *either* of the 2 following methods.
    4. `G28`
    5. `BED_MESH_CALIBRATE`
    6. `SAVE_CONFIG` (once completed)
+
+## Directory Structure
+
+This repository contains many files and folders. Some are *necessary* for this Klipper configuration to work, others are not.
+- **Necessary** items are marked with a ✅.
+- Items that can *optionally* be deleted are marked with a ❌.
+
+```
+├── cfgs ✅
+│   ├── adxl-direct.cfg
+│   ├── adxl-rp2040.cfg
+│   ├── beeper.cfg
+│   ├── macros.cfg
+│   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
+│   ├── PARKING.cfg
+│   └── TEST_SPEED.cfg [☠️Not ready for use☠️]
+├── images ❌
+│   └── githubstar.gif
+├── misc ❌
+│   ├── cup-border.png
+│   ├── klipper.bin
+│   ├── logo_white_stroke.png
+│   ├── M503-output.yml
+│   ├── SuperSlicer_config_bundle.ini
+│   ├── sv06-buildPlate.png
+│   ├── SV06-buildPlate.stl
+│   └── SV06-texture.svg
+├── moonraker.conf ✅
+├── printer.cfg ✅
+└── README.md ❌
+```
 
 ## <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/>
 
