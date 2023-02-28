@@ -1,14 +1,14 @@
 # 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
 
-This repository contains firmware for the SV06 3D printer from Sovol. You should not use this firmware on any other printer.
+This repository contains the Klipper configuration and firmware for the Sovol SV06 3D printer.
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
 
-⚠️⚡☢️ USE AT YOUR OWN RISK! YOU HAVE BEEN WARNED! ☢️⚡⚠️
+❗☠️ **USE AT YOUR OWN RISK. YOU HAVE BEEN WARNED.** ☠️❗
 
 # Highlights
 
-- 💥 This Klipper configuration is an endpoint, meaning that it contains everything that you could possibly need in order to have an excellent Klipper experience! 💥
+- 💥 This Klipper configuration is an *endpoint*, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
@@ -37,10 +37,11 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 ## Before You Begin
 
+- Klipper *must* be installed on the host Raspberry Pi for everything to work. Easiest is to use a [FluiddPi](https://docs.fluidd.xyz/installation/fluiddpi#download) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image.
 - Know what you're getting into by reading this documentation *fully!*
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - If you see any errors, or encounter any issues, please create an [Issue](https://github.com/bassamanator/Sovol-SV06-firmware/issues/new), or create a [Pull request](https://github.com/bassamanator/Sovol-SV06-firmware/pulls).
-- I would recommend searching for the word `NOTE` in this repository. There are about 6 short points amongst the various files that you should be aware of if you're using this configuration.
+- I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
 ## Flash Firmware
 
@@ -54,23 +55,36 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
-⚠️ **Caveat**: flashing will only work if current firmware filename (`anyNewFilename.bin` in this example) is different from previous flashing procedure. The `.bin` is also important.
+⚠️ **Caveat**: Flashing will only work if current firmware filename (`anyNewFilename.bin` in this example) is different from previous flashing procedure. The `.bin` is also important.
 
-## Clone the Repository
+## Download Klipper Configuration
 
-💡 **Requirement**: Klipper must be installed on the host Raspberry Pi for everything to work. Easiest is to use a [FluiddPi](https://docs.fluidd.xyz/installation/fluiddpi#download) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image.
+You can choose *either* of the 2 following methods.
 
-There are many ways to get started, the simplest being to clone this repo to the appropriate folder.
+### Clone the Repository
 
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder. Unfortunately, for safety reasons I will not post this command here. However, in linux, you can delete files via `rm filename`.
 3. `git clone -b master --single-branch git@github.com:bassamanator/Sovol-SV06-firmware.git .`
 
+### Download the ZIP
+
+1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/master.zip) the `ZIP` file containing the Klipper configuration.
+2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-master`. This is relevant in the next step.
+3. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
+
 ## Initial Steps
 
-⚠️⚡☢️ **Your finger should be on the power switch for most of these steps** ☢️⚡⚠️
+### Step 1
 
-⚠️⚡☢️ **Power off if there is a collision/problem** ☢️⚡⚠️
+1. Find what port the `mcu` (SV06 motherboard) is connected to via `ls -l /dev/serial/by-id/`.
+2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
+
+### Step 2
+
+❗☠️ **Your finger should be on the power switch for most of these steps** ☠️❗
+
+❗☠️ **Power off if there is a collision/problem** ☠️❗
 
 💡 I recommend no filament be loaded for any of these steps.
 
@@ -112,7 +126,7 @@ If you found my work useful, please consider buying me a [<img src="./misc/logo_
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
 - [RP2040-Zero ADXL345 Connection Klipper](https://github.com/bassamanator/rp2040-zero-adxl345-klipper)
-- [🧨 Ellis' Print Tuning Guide 🧨](https://ellis3dp.com/Print-Tuning-Guide)
+- ⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
 
 ## Sources
 
