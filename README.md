@@ -26,6 +26,7 @@ To do:
 - [x] Add information about directory structure.
 - [ ] Create FAQ section.
 - [ ] Finalize filament sensor config and merge into `master`.
+- [ ] Create topic in Discussion section detailing how users should keep track of their own Klipper config using `git`.
 
 ## Stay Up-to-Date
 
