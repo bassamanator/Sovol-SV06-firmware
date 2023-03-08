@@ -1,6 +1,6 @@
 # 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
 
-This repository contains the Klipper configuration and firmware for the Sovol SV06 3D printer.
+This repository contains the Klipper configuration and firmware for the Sovol SV06 3D printer with completely *stock hardware*.
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
 
@@ -19,14 +19,15 @@ I am creating these files for my personal use and cannot be held responsible for
   - Load/unload filament macros.
   - Purge line macro.
 
-To do:
+## To do:
 
-- [ ] Replace M109/M190 with `TEMPERATURE_WAIT`.
+- [x] Replace M109/M190 with `TEMPERATURE_WAIT`.
 - [ ] Get the Ellis `TEST_SPEED` macro working.
 - [x] Add information about directory structure.
 - [ ] Create FAQ section.
+- [x] Get filament sensor working with hotend PCB.
 - [ ] Finalize filament sensor config and merge into `master`.
-- [ ] Create topic in Discussion section detailing how users should keep track of their own Klipper config using `git`.
+- [ ] Create topic in Discussion section detailing how users should keep this repository in sync with their own Klipper config using `git`.
 
 ## Stay Up-to-Date
 
