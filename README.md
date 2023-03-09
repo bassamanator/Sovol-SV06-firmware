@@ -68,7 +68,7 @@ You can choose *either* of the 2 following methods.
 
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder. Unfortunately, for safety reasons I will not post this command here. However, in linux, you can delete files via `rm filename`.
-3. `git clone -b master --single-branch git@github.com:bassamanator/Sovol-SV06-firmware.git .`
+3. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .`
 
 ### Download the ZIP
 
