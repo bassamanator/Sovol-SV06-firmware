@@ -132,7 +132,7 @@ This repository contains many files and folders. Some are *necessary* for this K
 │   ├── adxl-direct.cfg
 │   ├── adxl-rp2040.cfg
 │   ├── beeper.cfg
-│   ├── macros.cfg
+│   ├── misc-macros.cfg
 │   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
 │   ├── PARKING.cfg
 │   └── TEST_SPEED.cfg [☠️Not ready for use☠️]
