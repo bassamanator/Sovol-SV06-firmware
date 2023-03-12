@@ -1,0 +1,1 @@
+<img src="skr-mini-e3-v3.0-v1678580296384.png" alt='skr-mini-e3-v3.0 installation instructions'/>
