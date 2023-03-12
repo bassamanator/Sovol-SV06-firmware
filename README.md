@@ -4,7 +4,7 @@
 
 ## If you were looking for my OSS Klipper Configuration for the Sovol SV06 with *completely stock hardware*, please refer to the [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master) branch.
 
-I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
+## I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
 
 ## ❗☠️ I do not own this board so everything found on this branch is COMPLETELY UNTESTED ☠️❗
 ## ❗☠️ USE AT YOUR OWN RISK. YOU HAVE BEEN WARNED. ☠️❗
@@ -39,7 +39,8 @@ Important: If the file is not renamed, the bootloader will not be updated proper
 
 ### Download Klipper Configuration
 
-Follow the instructions found in the [Download Klipper Configuration](https://github.com/bassamanator/Sovol-SV06-firmware#download-klipper-configuration) section and onwards.
+1. Download [printer-skr-mini-e3-v3.cfg](./printer-skr-mini-e3-v3.cfg) and rename it to `printer.cfg`. This is the *only* `printer.cfg` that you will be using. Anytime there is a reference to `printer.cfg`, you will use this `printer.cfg` that you just saved/renamed.
+2. Follow the instructions found in the [Download Klipper Configuration](https://github.com/bassamanator/Sovol-SV06-firmware#download-klipper-configuration) section and onwards. 💡 *Remember to use the `printer.cfg` that you saved in step 1*.
 
 # Sources
 
