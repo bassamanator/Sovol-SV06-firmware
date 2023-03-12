@@ -25,3 +25,4 @@ Important: If the file is not renamed, the bootloader will not be updated proper
 # Sources
 
 - https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#how-to-use-klipper-on-skr-mini-e3-v30
+- https://forum.sovol3d.com/t/sv06-mit-skr-e3-mini-v3/1189/24
