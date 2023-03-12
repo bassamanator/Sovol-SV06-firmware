@@ -1,4 +1,4 @@
-# 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration 🏎️
+# 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
 
 ## This branch contains the Klipper configuration and firmware for the Sovol SV06 3D printer with the `BTT SKR-Mini-E3-V3.0` motherboard.
 
