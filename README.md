@@ -1,8 +1,10 @@
 # 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
 
-This repository contains the Klipper configuration and firmware for the Sovol SV06 3D printer with completely *stock hardware*.
+This repository contains the Klipper configuration and firmware for the Sovol SV06 `PLUS` 3D printer with completely *stock hardware*.
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
+
+❗☠️ **This branch is COMPLETELY UNTESTED.** ☠️❗
 
 ❗☠️ **USE AT YOUR OWN RISK. YOU HAVE BEEN WARNED.** ☠️❗
 
