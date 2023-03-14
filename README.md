@@ -162,6 +162,11 @@ If you found my work useful, please consider buying me a [<img src="./misc/logo_
 - [RP2040-Zero ADXL345 Connection Klipper](https://github.com/bassamanator/rp2040-zero-adxl345-klipper)
 - ⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
 
+## Links
+
+- [SV06 Official Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
+- [SV06 Official Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
+
 ## Sources
 
 - https://www.klipper3d.org
