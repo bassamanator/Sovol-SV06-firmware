@@ -156,6 +156,12 @@ This repository contains many files and folders. Some are *necessary* for this K
 
 If you found my work useful, please consider buying me a [<img src="./misc/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
+## FAQ
+
+##### How do I disable the beeping at the end of a print?
+
+Edit the file `cfgs/misc-macros.cfg`: change the line that reads `variable_beeping_enabled: 1` to `variable_beeping_enabled: 0`. All beeping will be disabled except during gantry calibration.
+
 ## Useful Resources
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
