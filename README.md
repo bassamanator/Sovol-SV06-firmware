@@ -207,7 +207,6 @@ A simple runout sensor can only detect a change in state. So, if you start a pri
 - https://github.com/strayr/strayr-k-macros
 - https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
 - ⭐ https://github.com/spinixguy/Sovol-SV06-firmware
-- https://github.com/Pr20100/SOVOL-SV06-Klipper-profile
 - https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
 
