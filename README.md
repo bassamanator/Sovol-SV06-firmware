@@ -185,6 +185,10 @@ Make the following changes according to your needs.
 | Disable sensor | `0` |
 | Enable sensor | `1` |
 
+##### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
+
+A simple runout sensor can only detect a change in state. So, if you start a print without filament loaded, the printer will not know that there is no filament loaded. You should test your sensor by having filament loaded, starting a print, then cutting the filament. The expected behaviour is that the print will pause, and as long as you have beeping enabled, you will hear 3 annoying beeps.
+
 ## Useful Resources
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
