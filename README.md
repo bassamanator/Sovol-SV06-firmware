@@ -9,6 +9,7 @@ I am creating these files for my personal use and cannot be held responsible for
 # Highlights
 
 - 💥 This Klipper configuration is an *endpoint*, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
+- `NEW` Filament runout sensor usage implemented.
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
@@ -24,10 +25,11 @@ I am creating these files for my personal use and cannot be held responsible for
 - [x] Replace M109/M190 with `TEMPERATURE_WAIT`.
 - [ ] Get the Ellis `TEST_SPEED` macro working.
 - [x] Add information about directory structure.
-- [ ] Create FAQ section.
+- [x] Create FAQ section.
 - [x] Get filament sensor working with hotend PCB.
-- [ ] Finalize filament sensor config and merge into `master`.
+- [x] Finalize filament sensor config and merge into `master`.
 - [ ] Create topic in Discussion section detailing how users should keep this repository in sync with their own Klipper config using `git`.
+- [ ] Explain `PAUSE`/`RESUME` extruder behaviour.
 
 ## Stay Up-to-Date
 
@@ -160,7 +162,28 @@ If you found my work useful, please consider buying me a [<img src="./misc/logo_
 
 ##### How do I disable the beeping at the end of a print?
 
-Edit the file `cfgs/misc-macros.cfg`: change the line that reads `variable_beeping_enabled: 1` to `variable_beeping_enabled: 0`. All beeping will be disabled except during gantry calibration.
+Make the following changes according to your needs. All beeping will be disabled except during gantry calibration.
+
+| File | `cfgs/misc-macros.cfg` |
+| - | - |
+| Section | `[gcode_macro _globals]` |
+| Variable | `variable_beeping_enabled` |
+| Disable beeping | `0` |
+| Enable beeping | `1` |
+
+##### I want to use a filament sensor. How do I set it up?
+
+ You can find information about the physical setup [here](https://github.com/bassamanator/everything-sovol-sv06#filament-sensor).
+##### I have a simple filament sensor connected. How do I enable/disable it?
+
+Make the following changes according to your needs.
+
+| File | `cfgs/misc-macros.cfg` |
+| - | - |
+| Section | `[gcode_macro _globals]` |
+| Variable | `variable_filament_sensor_enabled` |
+| Disable sensor | `0` |
+| Enable sensor | `1` |
 
 ## Useful Resources
 
