@@ -2,9 +2,7 @@
 
 This repository contains the Klipper configuration and firmware for the Sovol SV06 3D printer with completely *stock hardware*.
 
-I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
-
-❗☠️ **USE AT YOUR OWN RISK. YOU HAVE BEEN WARNED.** ☠️❗
+I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
 # Highlights
 
@@ -156,7 +154,7 @@ This repository contains many files and folders. Some are *necessary* for this K
 
 ## <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/>
 
-<img src="./images/heart.gif" width="25" alt=''/> If you found my work useful, please consider buying me a [<img src="./misc/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+<img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./misc/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
