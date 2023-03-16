@@ -28,6 +28,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - [x] Finalize filament sensor config and merge into `master`.
 - [ ] Create topic in Discussion section detailing how users should keep this repository in sync with their own Klipper config using `git`.
 - [ ] Explain `PAUSE`/`RESUME` extruder behaviour.
+- [ ] Integrate KAMP (Klipper Adaptive Meshing and Purging).
 
 ## Stay Up-to-Date
 
