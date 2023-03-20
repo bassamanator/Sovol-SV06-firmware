@@ -29,6 +29,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - [ ] Create topic in Discussion section detailing how users should keep this repository in sync with their own Klipper config using `git`.
 - [ ] Explain `PAUSE`/`RESUME` extruder behaviour.
 - [ ] Integrate KAMP (Klipper Adaptive Meshing and Purging).
+- [x] Add `BEEP` when filament needs changing/`M600`.
 
 ## Stay Up-to-Date
 
@@ -158,6 +159,14 @@ This repository contains many files and folders. Some are *necessary* for this K
 <img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./misc/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
+
+##### When does beeping occur?
+
+The printer will beep upon:
+- Filament runout.
+- Filament change/`M600`.
+- Upon `PRINT_END`.
+- `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
 
 ##### How do I disable the beeping at the end of a print?
 
