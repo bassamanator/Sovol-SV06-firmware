@@ -160,6 +160,14 @@ This repository contains many files and folders. Some are *necessary* for this K
 
 ## FAQ
 
+##### How do I import a SuperSlicer configuration bundle (`SuperSlicer_config_bundle.ini`) into SuperSlicer?
+
+Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
+
+##### How do I print using SuperSlicer?
+
+Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
+
 ##### When does beeping occur?
 
 The printer will beep upon:
@@ -168,9 +176,9 @@ The printer will beep upon:
 - Upon `PRINT_END`.
 - `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
 
-##### How do I disable the beeping at the end of a print?
+##### How do I disable beeping?
 
-Make the following changes according to your needs. All beeping will be disabled except during gantry calibration.
+Make the following changes according to your needs. All beeping will be disabled *except* during gantry calibration.
 
 | File | `cfgs/misc-macros.cfg` |
 | - | - |
