@@ -50,17 +50,28 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 ## Flash Firmware
 
-💡 *If you have already flashed klipper onto your motherboard in the past, you can skip this step*
+💡 *If you have already flashed klipper onto your motherboard in the past, you can skip this step.*
 
-1. Copy `klipper.bin` to a MicroSD card and rename to `anyNewFilename.bin`.
-2. Make sure the printer is off.
-3. Insert MicroSD into printer.
+💡 For the sake of simplicity, I will refer to the klipper firmware file as `klipper.bin` even though the actual filename is something along the lines of `klipper-v0.11.0-148-g52f4e20c.bin`.
+
+### Prepare the microSD Card for Flashing
+
+- Size: `8GB`. Accordinig to Sovol, the largest size that you can use is `16GB`.
+- File system: `FAT32`.
+- Must not contain any files *except* the firmware file.
+
+### Flashing Procedure
+
+1. Disconnect any USB cables that might be connected to the motherboard.
+2. Copy `klipper.bin` to the microSD card.
+3. Make sure the printer is off.
+4. Insert the microSD card into printer.
 4. Turn on the printer and wait a minute (usually takes 10 seconds).
-5. Turn off printer and remove MicroSD.
+5. Turn off the printer and remove the microSD.
 
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
-⚠️ **Caveat**: Flashing will only work if current firmware filename (`anyNewFilename.bin` in this example) is different from previous flashing procedure. The `.bin` is also important.
+⚠️ **Caveat**: Flashing will only work if current firmware filename is *different from previous flashing procedure*. The `.bin` is also important.
 
 ## Download Klipper Configuration
 
