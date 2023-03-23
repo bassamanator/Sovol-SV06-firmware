@@ -42,7 +42,8 @@ I work on this repository all the time and a lot of new features are coming. Wat
 ## Before You Begin
 
 - Know what you're getting into by reading this documentation *fully!*
-- There is an assumption that you are connected to your host Raspberry Pi via SSH, and that your printer motherboard is connected to the host via USB.
+- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via USB.
+- It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
 - Klipper *must* be installed on the host Raspberry Pi for everything to work. Easiest is to use a [FluiddPi](https://docs.fluidd.xyz/installation/fluiddpi#download) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - If you see any errors, or encounter any issues, please create an [Issue](https://github.com/bassamanator/Sovol-SV06-firmware/issues/new), or a [Pull request](https://github.com/bassamanator/Sovol-SV06-firmware/pulls).
@@ -56,7 +57,7 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 ### Prepare the microSD Card for Flashing
 
-- Size: `8GB`. Accordinig to Sovol, the largest size that you can use is `16GB`.
+- Size: `8GB`. According to Sovol, the largest size that you can use is `16GB`.
 - File system: `FAT32`.
 - Must not contain any files *except* the firmware file.
 
