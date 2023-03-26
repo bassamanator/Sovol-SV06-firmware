@@ -1,63 +1,48 @@
-Recv: echo:; Linear Units:
-Recv: echo:  G21 ; (mm)
-Recv: echo:; Temperature Units:
-Recv: echo:  M149 C ; Units in Celsius
-Recv: echo:; Filament settings (Disabled):
-Recv: echo:  M200 S0 D1.75
-Recv: echo:; Steps per unit:
-Recv: echo:  M92 X80.00 Y80.00 Z800.00 E691.50
-Recv: echo:; Max feedrates (units/s):
-Recv: echo:  M203 X200.00 Y200.00 Z12.00 E120.00
-Recv: echo:; Max Acceleration (units/s2):
-Recv: echo:  M201 X1000.00 Y1000.00 Z200.00 E5000.00
-Recv: echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
-Recv: echo:  M204 P1000.00 R1250.00 T1500.00
-Recv: echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> J<junc_dev>):
-Recv: echo:  M205 B20000.00 S0.00 T0.00 J0.01
-Recv: echo:; Home offset:
-Recv: echo:  M206 X0.00 Y0.00 Z0.00
-Recv: echo:; Unified Bed Leveling:
-Recv: echo:  M420 S1 Z10.00 ; Leveling ON
-Recv: Unified Bed Leveling System v1.01 active
-Recv: echo:Active Mesh Slot 0
-Recv: echo:EEPROM can hold 2 meshes.
-Recv: echo:; X-Twist Correction:
-Recv:   M423 A0.00 I110.00
-Recv:   M423 X0 Z0.00
-Recv:   M423 X1 Z0.00
-Recv:   M423 X2 Z0.00
-Recv: echo:; Material heatup parameters:
-Recv: echo:  M145 S0 H200.00 B60.00 F0
-Recv: echo:  M145 S1 H240.00 B70.00 F0
-Recv: echo:  M145 S2 H205.00 B45.00 F0
-Recv: echo:  M145 S3 H260.00 B70.00 F0
-Recv: echo:; Hotend PID:
-Recv: echo:  M301 P23.48 I2.99 D46.09
-Recv: echo:; Bed PID:
-Recv: echo:  M304 P163.96 I28.03 D639.32
-Recv: echo:; User thermistors:
-Recv: echo:  M305 P0 R4700.0 T94162.0 B4160.0 C0.000000000 ; HOTEND 0
-Recv: echo:; Power-loss recovery:
-Recv: echo:  M413 S0 ; OFF
-Recv: echo:; Z-Probe Offset:
-Recv: echo:  M851 X28.00 Y-20.00 Z-2.02 ; (mm)
-Recv: echo:; Stepper driver current:
-Recv: echo:  M906 X860 Y900 Z1000
-Recv: echo:  M906 T0 E550
-Recv: echo:; Hybrid Threshold:
-Recv: echo:  M913 X183 Y183 Z41
-Recv: echo:  M913 T0 E60
-Recv: echo:; StallGuard threshold:
-Recv: echo:  M914 X65 Y68
-Recv: echo:; Driver stepping mode:
-Recv: echo:  M569 S1 X Y Z
-Recv: echo:  M569 S1 T0 E
-Recv: echo:; Input Shaping:
-Recv: echo:  M593 X F40.00 D0.15
-Recv: echo:  M593 Y F40.00 D0.15
-Recv: echo:; Linear Advance:
-Recv: echo:  M900 K0.05
-Recv: echo:; Filament load/unload:
-Recv: echo:  M603 L0.00 U50.00 ; (mm)
-Recv: echo:; Filament runout sensor:
-Recv: echo:  M412 S0 ; Sensor OFF
+echo:; Linear Units:
+echo:  G21 ; (mm)
+echo:; Temperature Units:
+echo:  M149 C ; Units in Celsius
+echo:; Filament settings (Disabled):
+echo:  M200 S0 D1.75
+echo:; Steps per unit:
+echo:  M92 X80.00 Y80.00 Z800.00 E691.50
+echo:; Max feedrates (units/s):
+echo:  M203 X500.00 Y500.00 Z10.00 E30.00
+echo:; Max Acceleration (units/s2):
+echo:  M201 X500.00 Y500.00 Z100.00 E5000.00
+echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+echo:  M204 P500.00 R500.00 T1000.00
+echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_x_jerk> Y<max_y_jerk> Z<max_z_jerk> E<max_e_jerk>):
+echo:  M205 B20000.00 S0.00 T0.00 X8.00 Y8.00 Z0.40 E5.00
+echo:; Home offset:
+echo:  M206 X0.00 Y0.00 Z0.00
+echo:; Auto Bed Leveling:
+echo:  M420 S0 Z10.00 ; Leveling OFF
+echo:; Material heatup parameters:
+echo:  M145 S0 H185.00 B60.00 F255
+echo:  M145 S1 H240.00 B80.00 F255
+echo:; Hotend PID:
+echo:  M301 P15.95 I1.30 D48.96
+echo:; Bed PID:
+echo:echo:  M304 P110.38 I6.12 D497.30
+echo:; User thermistors:
+echo:  M305 P0 R4700.0 T94162.0 B4160.0 C0.000000000 ; HOTEND 0
+echo:; Power-loss recovery:
+echo:  M413 S1 ; ON
+echo:; Z-Probe Offset:
+echo:  M851 X25.00 Y-25.00 Z0.00 ; (mm)
+echo:; Stepper driver current:
+echo:  M906 X860 Y900 Z800
+echo:  M906 T0 E550
+echo:; Hybrid Threshold:
+echo:  M913 X183 Y183 Z41
+echo:  M913 T0 E60
+echo:; StallGuard threshold:
+echo:  M914 X68 Y70
+echo:; Driver stepping mode:
+echo:  M569 S1 X Y Z
+echo:  M569 S1 T0 E
+echo:; Linear Advance:
+echo:  M900 K0.04
+echo:; Filament load/unload:
+echo:  M603 L0.00 U50.00 ; (mm)
