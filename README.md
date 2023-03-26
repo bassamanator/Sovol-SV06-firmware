@@ -30,6 +30,8 @@ I am creating these files for my personal use and cannot be held responsible for
 - [x] Finalize filament sensor config and merge into `master`.
 - [ ] Create topic in Discussion section detailing how users should keep this repository in sync with their own Klipper config using `git`.
 - [ ] Explain `PAUSE`/`RESUME` extruder behaviour.
+- [ ] Integrate KAMP (Klipper Adaptive Meshing and Purging).
+- [x] Add `BEEP` when filament needs changing/`M600`.
 
 ## Stay Up-to-Date
 
@@ -42,25 +44,38 @@ I work on this repository all the time and a lot of new features are coming. Wat
 ## Before You Begin
 
 - Know what you're getting into by reading this documentation *fully!*
-- There is an assumption that you are connected to your host Raspberry Pi via SSH, and that your printer motherboard is connected to the host via USB.
+- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via USB.
+- It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
 - Klipper *must* be installed on the host Raspberry Pi for everything to work. Easiest is to use a [FluiddPi](https://docs.fluidd.xyz/installation/fluiddpi#download) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image.
+- It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - If you see any errors, or encounter any issues, please create an [Issue](https://github.com/bassamanator/Sovol-SV06-firmware/issues/new), or a [Pull request](https://github.com/bassamanator/Sovol-SV06-firmware/pulls).
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
 ## Flash Firmware
 
-💡 *If you have already flashed klipper onto your motherboard in the past, you can skip this step*
+💡 *If you have already flashed klipper onto your motherboard in the past, you can skip this step.*
 
-1. Copy `klipper.bin` to a MicroSD card and rename to `anyNewFilename.bin`.
-2. Make sure the printer is off.
-3. Insert MicroSD into printer.
+💡 For the sake of simplicity, I will refer to the klipper firmware file as `klipper.bin` even though the actual filename is something along the lines of `klipper-v0.11.0-148-g52f4e20c.bin`.
+
+### Prepare the microSD Card for Flashing
+
+- Size: `8GB`. According to Sovol, the largest size that you can use is `16GB`.
+- File system: `FAT32`.
+- Must not contain any files *except* the firmware file.
+
+### Flashing Procedure
+
+1. Disconnect any USB cables that might be connected to the motherboard.
+2. Copy `klipper.bin` to the microSD card.
+3. Make sure the printer is off.
+4. Insert the microSD card into printer.
 4. Turn on the printer and wait a minute (usually takes 10 seconds).
-5. Turn off printer and remove MicroSD.
+5. Turn off the printer and remove the microSD.
 
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
-⚠️ **Caveat**: Flashing will only work if current firmware filename (`anyNewFilename.bin` in this example) is different from previous flashing procedure. The `.bin` is also important.
+⚠️ **Caveat**: Flashing will only work if current firmware filename is *different from previous flashing procedure*. The `.bin` is also important.
 
 ## Download Klipper Configuration
 
@@ -160,9 +175,27 @@ This repository contains many files and folders. Some are *necessary* for this K
 
 ## FAQ
 
-##### ~~How do I disable the beeping at the end of a print?~~ Since the LCD doesn't work, likely the beeping will not work. I recommend not turning beeping on at this point.
+##### How do I import a SuperSlicer configuration bundle (`SuperSlicer_config_bundle.ini`) into SuperSlicer?
 
-Make the following changes according to your needs. All beeping will be disabled except during gantry calibration.
+Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
+
+##### How do I print using SuperSlicer?
+
+Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
+
+##### When does beeping occur?
+
+💡 Beeping will likely not work on the SV06 Plus. I recommend not turning it on.
+
+The printer will beep upon:
+- Filament runout.
+- Filament change/`M600`.
+- Upon `PRINT_END`.
+- `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
+
+##### How do I disable beeping?
+
+Make the following changes according to your needs. All beeping will be disabled *except* during gantry calibration.
 
 | File | `cfgs/misc-macros.cfg` |
 | - | - |
