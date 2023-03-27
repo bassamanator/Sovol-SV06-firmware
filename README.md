@@ -77,6 +77,8 @@ This repository contains many files and folders. Some are *necessary* for this K
 │   ├── misc-macros.cfg
 │   ├── PARKING.cfg
 │   └── TEST_SPEED.cfg
+├── .vscode❌
+├── .gitignore❌
 ├── images ❌
 │   ├── githubstar.gif
 │   ├── heart.gif
@@ -85,7 +87,7 @@ This repository contains many files and folders. Some are *necessary* for this K
 │   ├── cup-border.png
 │   ├── logo_white_stroke.png
 │   └── SuperSlicer_config_bundle.ini
-├── moonraker.conf ✅ ❌ (depends if you already have this file or not)
+├── moonraker.conf ✅ ❌ ¿? (depends if you already have this file or not)
 ├── osskc.cfg ✅
 └── README.md ❌
 ```
