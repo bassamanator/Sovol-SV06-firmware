@@ -23,8 +23,7 @@ If you were looking for the OSS Klipper configuration for the SV06, please switc
 - [x] Get the Ellis `TEST_SPEED` macro working. ⚠️This works on Vorons only!.
 - [x] Add information about directory structure.
 - [x] Create FAQ section.
-- [x] Get filament sensor working with hotend PCB.
-- [x] Finalize filament sensor config and merge into `master`.
+- [x] Get filament sensor working.
 - [ ] Create topic in Discussion section detailing how users should keep this repository in sync with their own Klipper config using `git`.
 - [ ] Explain `PAUSE`/`RESUME` extruder behaviour.
 - [ ] Integrate KAMP (Klipper Adaptive Meshing and Purging).
@@ -109,15 +108,15 @@ Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware
 
 ##### When does beeping occur?
 
-The printer will beep upon:
+If you have a beeper pin set in your `printer.cfg`, the printer will beep upon:
 - Filament runout.
 - Filament change/`M600`.
 - Upon `PRINT_END`.
 - `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
 
-##### How do I disable beeping?
+##### How do I disable/enable beeping?
 
-Make the following changes according to your needs. All beeping will be disabled *except* during gantry calibration.
+Make the following changes according to your needs.
 
 | File | `cfgs/misc-macros.cfg` |
 | - | - |
@@ -126,9 +125,6 @@ Make the following changes according to your needs. All beeping will be disabled
 | Disable beeping | `0` |
 | Enable beeping | `1` |
 
-##### I want to use a filament sensor. How do I set it up?
-
- You can find information about the physical setup [here](https://github.com/bassamanator/everything-sovol-sv06#filament-sensor).
 ##### I have a simple filament sensor connected. How do I enable/disable it?
 
 Make the following changes according to your needs.
