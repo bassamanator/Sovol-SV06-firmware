@@ -2,13 +2,14 @@
 
 This repository contains the OSS Klipper configuration that can be used with any printer running klipper.
 
+If you were looking for the OSS Klipper configuration for the SV06, please switch to the [master](https://github.com/bassamanator/Sovol-SV06-firmware) branch.
+
 # Highlights
 
 - 💥 This Klipper configuration is an *endpoint*, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/> 
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
-- Bed model and texture to use in SuperSlicer/PrusaSlicer.
 - Macros
   - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration. ⚠️ This is for i3 style printers only, see example video [here](https://youtu.be/aVdIeIIpUAk).
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
