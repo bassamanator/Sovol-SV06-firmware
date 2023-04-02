@@ -1,0 +1,77 @@
+echo:; Linear Units:
+echo:  G21 ; (mm)
+echo:; Temperature Units:
+echo:  M149 C ; Units in Celsius
+echo:; Filament settings (Disabled):
+echo:  M200 S0 D1.75
+echo:; Steps per unit:
+echo:  M92 X80.00 Y80.00 Z800.00 E691.50
+echo:; Max feedrates (units/s):
+echo:  M203 X500.00 Y500.00 Z10.00 E50.00
+echo:; Max Acceleration (units/s2):
+echo:  M201 X2000.00 Y2000.00 Z100.00 E5000.00
+echo:; Acceleration (units/s2) (P<print-accel> R<retract-accel> T<travel-accel>):
+echo:  M204 P1000.00 R3000.00 T1000.00
+echo:; Advanced (B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_x_jerk> Y<max_y_jerk> Z<max_z_jerk> E<max_e_jerk>):
+echo:  M205 B20000.00 S0.00 T0.00 X5.00 Y5.00 Z0.40 E10.00
+echo:; Home offset:
+echo:  M206 X0.00 Y0.00 Z0.00
+echo:; Auto Bed Leveling:
+echo:  M420 S1 Z20.00 ; Leveling ON
+echo:  G29 W I0 J0 Z-0.01490
+echo:  G29 W I1 J0 Z-0.06615
+echo:  G29 W I2 J0 Z-0.14615
+echo:  G29 W I3 J0 Z-0.44865
+echo:  G29 W I4 J0 Z-0.91865
+echo:  G29 W I0 J1 Z0.21010
+echo:  G29 W I1 J1 Z0.12885
+echo:  G29 W I2 J1 Z0.06260
+echo:  G29 W I3 J1 Z-0.20240
+echo:  G29 W I4 J1 Z-0.60365
+echo:  G29 W I0 J2 Z0.26885
+echo:  G29 W I1 J2 Z0.19760
+echo:  G29 W I2 J2 Z0.15135
+echo:  G29 W I3 J2 Z-0.07990
+echo:  G29 W I4 J2 Z-0.42490
+echo:  G29 W I0 J3 Z0.17760
+echo:  G29 W I1 J3 Z0.09260
+echo:  G29 W I2 J3 Z0.05760
+echo:  G29 W I3 J3 Z-0.10740
+echo:  G29 W I4 J3 Z-0.41740
+echo:  G29 W I0 J4 Z-0.02865
+echo:  G29 W I1 J4 Z-0.08740
+echo:  G29 W I2 J4 Z-0.09615
+echo:  G29 W I3 J4 Z-0.24615
+echo:  G29 W I4 J4 Z-0.53740
+echo:; Material heatup parameters:
+echo:  M145 S0 H195.00 B60.00 F0
+echo:  M145 S1 H240.00 B80.00 F0
+echo:; Hotend PID:
+echo:  M301 P15.66 I1.49 D41.96
+echo:; Bed PID:
+echo:echo:  M304 P186.38 I36.12 D637.30
+echo:; User thermistors:
+echo:  M305 P0 R4700.0 T94162.0 B4160.0 C0.000000000 ; HOTEND 0
+echo:; LCD Brightness:
+echo:  M256 B250
+echo:; Power-loss recovery:
+echo:  M413 S1 ; ON
+echo:; Z-Probe Offset:
+echo:  M851 X25.00 Y-25.00 Z-1.81 ; (mm)
+echo:; Stepper driver current:
+echo:  M906 X820 Y880 Z800
+echo:  M906 T0 E550
+echo:; Hybrid Threshold:
+echo:  M913 X253 Y253 Z61
+echo:  M913 T0 E81
+echo:; StallGuard threshold:
+echo:  M914 X86 Y110
+echo:; Driver stepping mode:
+echo:  M569 S1 X Y Z
+echo:  M569 S1 T0 E
+echo:; Linear Advance:
+echo:  M900 K0.03
+echo:; Filament load/unload:
+echo:  M603 L0.00 U50.00 ; (mm)
+echo:; Filament runout sensor:
+echo:  M412 S1 ; Sensor ON
