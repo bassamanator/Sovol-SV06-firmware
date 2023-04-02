@@ -1,12 +1,12 @@
 # 🚨 *One-Stop-Shop* Klipper Configuration
 
-This repository contains the OSS Klipper configuration that can be used with any printer running klipper.
+This branch contains the OSS Klipper configuration that can be used with **any printer** running Klipper.
 
-If you were looking for the OSS Klipper configuration for the SV06, please switch to the [master](https://github.com/bassamanator/Sovol-SV06-firmware) branch.
+If you were looking for the OSS Klipper configuration for the **Sovol SV06**, please switch to the [master](https://github.com/bassamanator/Sovol-SV06-firmware) branch.
 
 # Highlights
 
-- 💥 This Klipper configuration is an *endpoint*, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
+- 💥 This Klipper configuration is an *endpoint*, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 Voron users can rightly disagree and say that it lacks the quad gantry leveling macros. Please create a pull request if you can help in this regard!
 - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/> 
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
@@ -53,7 +53,7 @@ I work on this repository all the time and a lot of new features are coming. Wat
 2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-any-printer`. This is relevant in the next step.
 3. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
 
-💡 If you already have a `moonraker.conf` (which you probably do since you're already up and running Klipper), and *you're not using a low powered device such as the RPi Zero*, you need to simply paste the following into your `moonraker.conf`:
+💡 If you get a warning that you already have a `moonraker.conf` (which you probably do since you're already up and running Klipper), and *you're not using a low powered device such as the RPi Zero*, you need to simply paste the following into your *existing* `moonraker.conf`:
 ```
 [file_manager]
 enable_object_processing: True
@@ -127,7 +127,7 @@ Make the following changes according to your needs.
 
 ##### I have a simple filament sensor connected. How do I enable/disable it?
 
-Make the following changes according to your needs.
+Make the following changes according to your needs. Also, search for the word `NOTE` in this repository to find other places where such a sensor might come into play.
 
 | File | `cfgs/misc-macros.cfg` |
 | - | - |
