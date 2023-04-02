@@ -58,6 +58,8 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 💡 For the sake of simplicity, I will refer to the klipper firmware file as `klipper.bin` even though the actual filename is something along the lines of `klipper-v0.11.0-148-g52f4e20c.bin`.
 
+💡 The firmware file is located in the `misc` folder.
+
 ### Prepare the microSD Card for Flashing
 
 - Size: `8GB`. According to Sovol, the largest size that you can use is `16GB`.
