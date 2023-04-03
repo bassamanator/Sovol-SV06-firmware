@@ -140,6 +140,10 @@ You can choose *either* of the 2 following methods.
    5. `BED_MESH_CALIBRATE`
    6. `SAVE_CONFIG` (once completed)
 
+## Adjust Your Slicer
+
+You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
+
 ## Directory Structure
 
 This repository contains many files and folders. Some are *necessary* for this Klipper configuration to work, others are not.
