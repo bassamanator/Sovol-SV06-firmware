@@ -21,10 +21,19 @@ This branch is **mostly untested**. Having said that, I'm confident that an adva
 Wire cables according to the following diagram:
 <img src="./misc/skr-mini/skr-mini-e3-v3.0-v1678580296384.png" alt='skr-mini-e3-v3.0 installation instructions'/>
 ### Download Firmware Precompiled by BIGTREETECH
-- [firmware-USB.bin](./misc/skr-mini/firmware-USB.bin). Connect the SKR-Mini to the Raspberry Pi via USB connection.
-- [firmware-USART2.bin](./misc/skr-mini/firmware-USART2.bin). Use TFT port USART2 to communicate with raspberry pi. Connect the UART-TX of raspberry pi with the USART-RX2 of motherboard and connect the UART-RX of raspberry pi with the USART-TX2 of motherboard directly to communicate normally.
 
-Alternatively, find instructions on how to build the firmware yourself [here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#build-firmware-image).
+💡 The firmware files are located in `misc/skr-mini`.
+💡 Be sure to download the `raw` files. Find out more about this [here](https://stackoverflow.com/questions/4604663/download-single-files-from-github).
+
+Depending on how you will set things up, download *one* of the following firmware files:
+
+1. Download [firmware-USB.bin](./misc/skr-mini/firmware-USB.bin). Connect the SKR-Mini to the Raspberry Pi via USB connection. 💡 This is the option that most users will want.
+2. Download [firmware-USART2.bin](./misc/skr-mini/firmware-USART2.bin). Use TFT port USART2 to communicate with raspberry pi. Connect the UART-TX of raspberry pi with the USART-RX2 of motherboard and connect the UART-RX of raspberry pi with the USART-TX2 of motherboard directly to communicate normally.
+
+#### Alternatively, find instructions on how to build the firmware yourself [here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#build-firmware-image)
+
+<img src="./misc/skr-mini/menuconfig.png" width="500" alt='ls output'/>
+
 
 ### Flash Firmware
 
@@ -36,13 +45,25 @@ Important: If the file is not renamed, the bootloader will not be updated proper
 5. Power on the SKR-mini-E3-V3.0.
 6. After a few seconds, the SKR-mini-E3-V3.0 should be flashed.
 7. You can confirm that the flash was successful, by running ls /dev/serial/by-id. If the flash was successful, you'll see something like the following:
-<img src="./misc/skr-mini/ls-output.png" alt='ls output'/>
+<img src="./misc/skr-mini/ls-output.png" width="400" alt='ls output'/>
 
 ### Download Klipper Configuration
 
-1. Download [printer-skr-mini-e3-v3.cfg](./printer-skr-mini-e3-v3.cfg) and rename it to `printer.cfg`. This is the *only* `printer.cfg` that you will be using. Anytime there is a reference to `printer.cfg`, you will use this `printer.cfg` that you just saved/renamed.
-2. Follow the instructions found in the [Download Klipper Configuration](https://github.com/bassamanator/Sovol-SV06-firmware#download-klipper-configuration) section and onwards. 💡 *Remember to use the `printer.cfg` that you saved in step 1*.
+You can choose *either* of the 2 following methods.
 
+### Clone the Repository
+
+1. `cd ~/printer_data/config`
+2. Empty entire `~/printer_data/config` folder. Unfortunately, for safety reasons I will not post this command here. However, in linux, you can delete files via `rm filename`.
+3. `git clone -b skr-mini-e3-v3 --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .`
+
+### Download the ZIP
+
+1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/skr-mini-e3-v3.zip) the `ZIP` file containing the Klipper configuration.
+2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-master`. This is relevant in the next step.
+3. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
+
+#### Once you've cloned or downloaded the configuration, please follow instructions found in [Initial Steps](https://github.com/bassamanator/Sovol-SV06-firmware#initial-steps).
 # Sources
 
 - https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#how-to-use-klipper-on-skr-mini-e3-v30
