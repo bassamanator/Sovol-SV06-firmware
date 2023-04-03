@@ -1,13 +1,14 @@
 # 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
 
-## This branch contains the Klipper configuration and firmware for the Sovol SV06 3D printer with the `BTT SKR-Mini-E3-V3.0` motherboard.
+This branch contains the Klipper configuration and firmware for the **Sovol SV06** 3D printer with the **BTT SKR-Mini-E3-V3.0** motherboard.
 
-## If you were looking for my OSS Klipper Configuration for the Sovol SV06 with *completely stock hardware*, please refer to the [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master) branch.
+If you were looking for my OSS Klipper Configuration for the **Sovol SV06** with *completely stock hardware*, please refer to the [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master) branch.
 
-## I am creating these files for my personal use and cannot be held responsible for what it might do to your printer.
+If you wanted to use the One-Stop-Shop Klipper Configuration for a different printer, please switch to the [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) branch.
 
-## ❗☠️ I do not own this board so everything found on this branch is COMPLETELY UNTESTED ☠️❗
-## ❗☠️ USE AT YOUR OWN RISK. YOU HAVE BEEN WARNED. ☠️❗
+I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
+
+This branch is **mostly untested**. Having said that, I'm confident that an advanced user will get this configuration up and running in under 3 minutes.
 
 ## An Important Note
 
