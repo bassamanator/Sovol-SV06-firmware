@@ -1,10 +1,14 @@
 # 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
 
-This repository contains the Klipper configuration and firmware for the Sovol SV06 `PLUS` 3D printer with completely *stock hardware*.
+This repository contains the Klipper configuration and firmware for the **Sovol SV06 PLUS** 3D printer with completely *stock hardware*.
+
+For the **Sovol SV06**, please refer to the [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master).
+
+If you wanted to use the One-Stop-Shop Klipper Configuration for a *different printer*, please switch to the [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) branch.
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
-❗☠️ THIS BRANCH IS COMPLETELY UNTESTED ☠️❗
+❗☠️ THIS BRANCH IS MOSTLY UNTESTED ☠️❗
 
 # Highlights
 
@@ -19,19 +23,6 @@ I am creating these files for my personal use and cannot be held responsible for
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
   - Purge line macro.
-
-## To do:
-
-- [x] Replace M109/M190 with `TEMPERATURE_WAIT`.
-- [ ] Get the Ellis `TEST_SPEED` macro working.
-- [x] Add information about directory structure.
-- [x] Create FAQ section.
-- [x] Get filament sensor working with hotend PCB.
-- [x] Finalize filament sensor config and merge into `master`.
-- [ ] Create topic in Discussion section detailing how users should keep this repository in sync with their own Klipper config using `git`.
-- [ ] Explain `PAUSE`/`RESUME` extruder behaviour.
-- [ ] Integrate KAMP (Klipper Adaptive Meshing and Purging).
-- [x] Add `BEEP` when filament needs changing/`M600`.
 
 ## Stay Up-to-Date
 
@@ -85,12 +76,12 @@ You can choose *either* of the 2 following methods.
 
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder. Unfortunately, for safety reasons I will not post this command here. However, in linux, you can delete files via `rm filename`.
-3. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .`
+3. `git clone -b sv06-plus --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .`
 
 ### Download the ZIP
 
-1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/master.zip) the `ZIP` file containing the Klipper configuration.
-2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-master`. This is relevant in the next step.
+1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/sv06-plus.zip) the `ZIP` file containing the Klipper configuration.
+2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-sv06-plus`. This is relevant in the next step.
 3. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
 
 ## Initial Steps
