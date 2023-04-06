@@ -8,7 +8,7 @@ If you wanted to use the One-Stop-Shop Klipper Configuration for a *different pr
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
-❗☠️ THIS BRANCH IS MOSTLY UNTESTED ☠️❗
+🙏🏻 🙌🏻 Big thanks to [blanchas3d](https://github.com/blanchas3d) in testing out this branch and reporting issues.
 
 # Highlights
 
@@ -38,6 +38,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 ## Before You Begin
 
+- On the SV06 Plus, your screen will not work if you install Klipper.
 - Read this documentation *fully!*
 - Follow the steps in order.
 - If an error was reported at a step, do no proceed to the next step.
