@@ -17,18 +17,6 @@ If you were looking for the OSS Klipper configuration for the **Sovol SV06**, pl
   - Load/unload filament macros.
   - Purge line macro.
 
-## To do:
-
-- [x] Replace M109/M190 with `TEMPERATURE_WAIT`.
-- [x] Get the Ellis `TEST_SPEED` macro working. ⚠️This works on Vorons only!.
-- [x] Add information about directory structure.
-- [x] Create FAQ section.
-- [x] Get filament sensor working.
-- [ ] Create topic in Discussion section detailing how users should keep this repository in sync with their own Klipper config using `git`.
-- [ ] Explain `PAUSE`/`RESUME` extruder behaviour.
-- [ ] Integrate KAMP (Klipper Adaptive Meshing and Purging).
-- [x] Add `BEEP` when filament needs changing/`M600`.
-
 ## Stay Up-to-Date
 
 I work on this repository all the time and a lot of new features are coming. Watch releases of this repository to be notified for future updates:
@@ -40,11 +28,9 @@ I work on this repository all the time and a lot of new features are coming. Wat
 ## Before You Begin
 
 - Know what you're getting into by reading this documentation *fully!*
-- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via USB.
+- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable.
 - It is assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
 - It is assumed that you already have a working `printer.cfg` and you already have your printer up and running Klipper.
-- Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
-- If you see any errors, or encounter any issues, please create an [Issue](https://github.com/bassamanator/Sovol-SV06-firmware/issues/new), or a [Pull request](https://github.com/bassamanator/Sovol-SV06-firmware/pulls).
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
 ## Download the Configuration
@@ -151,8 +137,6 @@ A simple runout sensor can only detect a change in state. So, if you start a pri
 - https://ellis3dp.com/Print-Tuning-Guide
 - https://github.com/strayr/strayr-k-macros
 - https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
-- ⭐ https://github.com/spinixguy/Sovol-SV06-firmware
-- https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)
