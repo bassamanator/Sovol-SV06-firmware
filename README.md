@@ -10,9 +10,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 This branch is **mostly untested**. Having said that, I'm confident that an advanced user will get this configuration up and running in under 3 minutes.
 
-## An Important Note
-
-⭐ A big thank you to Github user `transistor1`. This branch would not have been possible without his help. Please checkout his profile [here](https://github.com/transistor1). ⭐
+🙏🏻🙌🏻 A big thanks to [transistor1](https://github.com/transistor1) for getting this `printer.cfg` up an running to begin with.
 
 ## Installation Instructions
 
@@ -33,7 +31,6 @@ Depending on how you will set things up, download *one* of the following firmwar
 #### Alternatively, find instructions on how to build the firmware yourself [here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#build-firmware-image)
 
 <img src="./misc/skr-mini/menuconfig.png" width="500" alt='ls output'/>
-
 
 ### Flash Firmware
 
