@@ -107,7 +107,7 @@ You can choose *either* of the 2 following methods.
 
 💡 I recommend no filament be loaded for any of these steps.
 
-💡 Find explainations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [klipper.org](https://www.klipper3d.org/G-Codes.html).
+💡 Find explanations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [klipper.org](https://www.klipper3d.org/G-Codes.html).
 
 1. `G28`
    1. Check to see if `X` and `Y` max positions (`G90`, `G1 X300 F3000`, `G1 Y300 F3000`) can be reached, and adjust `position_max`, if necessary. Note, you might be able to go even further.
