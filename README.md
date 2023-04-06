@@ -107,21 +107,25 @@ You can choose *either* of the 2 following methods.
 
 💡 I recommend no filament be loaded for any of these steps.
 
-1. Do a `G28`; home all.
-   1. Check to see if `X` and `Y` max positions (`G1 X223 F3000`, `G1 Y223 F3000`) can be reached, and adjust `position_max`, if necessary. You can probably go all the way up to `225` for `X` and `Y` both, however, I would not recommend it.
-2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up agaisnt the `stoppers` at the top. You will hear a succession of beeps.
-   1. Figure out your `Z` `position_max` by baby stepping your way up to the beam. The range is 250 to 261 from what I've seen, could be even higher for you. Adjust `position_max`, if necessary. I can go all the way to 258 over and over again, however, I would not print anything higher than 255 probably.
+💡 Find explainations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [klipper.org](https://www.klipper3d.org/G-Codes.html).
+
+1. `G28`
+   1. Check to see if `X` and `Y` max positions (`G90`, `G1 X300 F3000`, `G1 Y300 F3000`) can be reached, and adjust `position_max`, if necessary. Note, you might be able to go even further.
+2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up agaisnt the `stoppers` at the top. ~~You will hear a succession of beeps.~~
+   1. Figure out your `Z` `position_max` by baby stepping your way up to the beam (`G90`, `G1 Z330 F900`, then move up mm by mm). Adjust `position_max`, if necessary.
 3. Pid tune the bed, but first move the printhead to the center. Ideally, all Pid tuning should occur at the temperatures that you print most at.
    1. `G28`
-   2. `G1 X111 Y111 Z40 F6000`
-   3. `PID_CALIBRATE HEATER=heater_bed TARGET=70`
-   4. `SAVE_CONFIG` (once completed)
+   2. `G90`
+   3. `G1 X150 Y150 Z40 F6000`
+   4. `PID_CALIBRATE HEATER=heater_bed TARGET=70`
+   5. `SAVE_CONFIG` (once completed)
 4. Pid tune the extruder while part cooling fan runs at 25%.
    1. `G28`
-   2. `G1 X111 Y111 Z10 F6000`
-   3. `M106 S64`
-   4. `PID_CALIBRATE HEATER=extruder TARGET=245`
-   5. `SAVE_CONFIG` (once completed)
+   2. `G90`
+   3. `G1 X150 Y150 Z10 F6000`
+   4. `M106 S64`
+   5. `PID_CALIBRATE HEATER=extruder TARGET=245`
+   6. `SAVE_CONFIG` (once completed)
 5. Adjust `z_offset`. Make sure your nozzle if very clean. Do the [Paper test](https://www.klipper3d.org/Bed_Level.html?h=probe_calibrate#the-paper-test).
    1. `SET_HEATER_TEMPERATURE HEATER=heater_bed TARGET=60`
    2. `SET_HEATER_TEMPERATURE HEATER=extruder TARGET=180`
