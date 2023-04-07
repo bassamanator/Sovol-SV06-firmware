@@ -231,7 +231,8 @@ A simple runout sensor can only detect a change in state. So, if you start a pri
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
 - [RP2040-Zero ADXL345 Connection Klipper](https://github.com/bassamanator/rp2040-zero-adxl345-klipper)
-- ⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- ⭐⭐⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- [Simplify3D Print Quality Troubleshooting Guide](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
 
 ## Links
 
