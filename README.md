@@ -8,7 +8,7 @@ If you wanted to use the One-Stop-Shop Klipper Configuration for a different pri
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
-This branch is **mostly untested**. Having said that, I'm confident that an advanced user will get this configuration up and running in under 3 minutes.
+⚠️ I am only 99% confident that this branch is production ready. Proceed with caution.
 
 🙏🏻🙌🏻 A big thanks to [transistor1](https://github.com/transistor1) for getting this `printer.cfg` up an running to begin with.
 
