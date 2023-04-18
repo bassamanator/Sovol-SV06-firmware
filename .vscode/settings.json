@@ -4,5 +4,16 @@
 	"editor.detectIndentation": false,
 	"git.mergeEditor": false,
 	"spellright.language": ["en-GB-10-1."],
-	"spellright.documentTypes": ["markdown", "plaintext"]
+	"spellright.documentTypes": ["markdown", "plaintext"],
+	"cSpell.words": [
+		"ADXL",
+		"gcode",
+		"hotend",
+		"Klipper",
+		"Klipperized",
+		"octahedroflake",
+		"PARKBED",
+		"runout",
+		"Sovol"
+	]
 }

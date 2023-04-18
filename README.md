@@ -48,13 +48,13 @@ Important: If the file is not renamed, the bootloader will not be updated proper
 
 You can choose *either* of the 2 following methods.
 
-### Clone the Repository
+### Method 1: Clone the Repository
 
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder. Unfortunately, for safety reasons I will not post this command here. However, in linux, you can delete files via `rm filename`.
 3. `git clone -b skr-mini-e3-v3 --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .`
 
-### Download the ZIP
+### Method 2: Download the ZIP
 
 1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/skr-mini-e3-v3.zip) the `ZIP` file containing the Klipper configuration.
 2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-master`. This is relevant in the next step.
