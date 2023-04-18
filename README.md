@@ -28,7 +28,7 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 # Preface
 
-Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the fustration, and fully read all documentation found on this page. Also note that Klipper is not a *must*, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
+Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a *must*, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
 # Installation Steps
 
@@ -108,7 +108,7 @@ You can choose *either* of the 2 following methods.
 
 1. `G28`
    1. Check to see if `X` and `Y` max positions (`G90`, `G1 X223 F3000`, `G1 Y223 F3000`) can be reached, and adjust `position_max`, if necessary. You can probably go all the way up to `225` for `X` and `Y` both, however, I would not recommend it.
-2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up agaisnt the `stoppers` at the top. You will hear a succession of beeps.
+2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up against the `stoppers` at the top. You will hear a succession of beeps.
    1. Figure out your `Z` `position_max` by baby stepping your way up to the beam. The range is 250 to 261 from what I've seen, could be even higher for you. Adjust `position_max`, if necessary. I can go all the way to 258, however, I would not print anything higher than 257.
 3. Pid tune the bed, but first move the printhead to the center. Ideally, all Pid tuning should occur at the temperatures that you print most at.
    1. `G28`
@@ -239,7 +239,7 @@ A simple runout sensor can only detect a change in state. So, if you start a pri
 
 Same behaviour as `M600`/colour change *except* there won't be any beeping.
 
-##### What happens when filament runouts out?
+##### What happens when filament runs out?
 
 *If* you have a working filament sensor, the same behaviour as `M600`/colour change will occur*except* the beeps will be fairly annoying.
 
