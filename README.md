@@ -100,9 +100,9 @@ If you have a beeper pin set in your `printer.cfg`, the printer will beep upon:
 - Upon `PRINT_END`.
 - `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
 
-##### How do I disable/enable beeping?
+##### How do I disable beeping?
 
-Make the following changes according to your needs.
+Make the following changes according to your needs. All beeping will be disabled *except* during gantry calibration.
 
 | File | `cfgs/misc-macros.cfg` |
 | - | - |
@@ -125,6 +125,34 @@ Make the following changes according to your needs. Also, search for the word `N
 ##### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
 
 A simple runout sensor can only detect a change in state. So, if you start a print without filament loaded, the printer will not know that there is no filament loaded. You should test your sensor by having filament loaded, starting a print, then cutting the filament. The expected behaviour is that the print will pause, and as long as you have beeping enabled, you will hear 3 annoying beeps.
+
+##### What happens when I put in `M600`/colour change at a certain layer?
+
+1. The printer will beep 3 times (not annoyingly).
+2. Printing will stop.
+3. The printhead will park itself front center.
+4. The hotend will turn off, but the bed will remain hot.
+
+##### What happens when I pause a print?
+
+Same behaviour as `M600`/colour change *except* there won't be any beeping.
+
+##### What happens when filament runs out?
+
+*If* you have a working filament sensor, the same behaviour as `M600`/colour change will occur*except* the beeps will be fairly annoying.
+
+##### How do I resume a print after a colour change or filament runout?
+
+*Do no disable the stepper motors during this process!*
+
+The printhead is now parked front center waiting for you to insert filament. You will:
+
+1. Heat up the hotend to the desired temperature.
+    - Use your Klipper dashboard.
+2. Purge (push) some filament through the nozzle.
+    - Use your Klipper dashboard, and extrude maybe 50mm (for a colour change you probably want to extrude more).
+    - OR, you can push some filament by hand *making sure to first disengage the extruder's spring loaded arm*.
+3. Hit resume in your Klipper dashboard.
 
 ## Useful Resources
 
