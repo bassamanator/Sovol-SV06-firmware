@@ -113,7 +113,7 @@ You can choose *either* of the 2 following methods.
 
 1. `G28`
    1. Check to see if `X` and `Y` max positions (`G90`, `G1 X300 F3000`, `G1 Y300 F3000`) can be reached, and adjust `position_max`, if necessary. Note, you might be able to go even further.
-2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up agaisnt the `stoppers` at the top. ~~You will hear a succession of beeps.~~
+2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up against the `stoppers` at the top. ~~You will hear a succession of beeps.~~
    1. Figure out your `Z` `position_max` by baby stepping your way up to the beam (`G90`, `G1 Z330 F900`, then move up mm by mm). Adjust `position_max`, if necessary.
 3. Pid tune the bed, but first move the printhead to the center. Ideally, all Pid tuning should occur at the temperatures that you print most at.
    1. `G28`
