@@ -32,7 +32,7 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 # Preface
 
-Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the fustration, and fully read all documentation found on this page. Also note that Klipper is not a *must*, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
+Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a *must*, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
 # Installation Steps
 
@@ -40,6 +40,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 - On the SV06 Plus, your screen will not work if you install Klipper.
 - Read this documentation *fully!*
+- Make sure your printer is in good physical condition, because print and travel speeds will be *a lot faster* than they were before. Consider yourself warned.
 - Follow the steps in order.
 - If an error was reported at a step, do no proceed to the next step.
 - It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. Note that most of the micro USB cables that you find at home are *unlikely* to be data cables, and it's not possible to tell just by looking.
@@ -234,11 +235,40 @@ Make the following changes according to your needs.
 
 A simple runout sensor can only detect a change in state. So, if you start a print without filament loaded, the printer will not know that there is no filament loaded. You should test your sensor by having filament loaded, starting a print, then cutting the filament. The expected behaviour is that the print will pause, and as long as you have beeping enabled, you will hear 3 annoying beeps.
 
+##### What happens when I put in `M600`/colour change at a certain layer?
+
+1. The printer will beep 3 times (not annoyingly).
+2. Printing will stop.
+3. The printhead will park itself front center.
+4. The hotend will turn off, but the bed will remain hot.
+
+##### What happens when I pause a print?
+
+Same behaviour as `M600`/colour change *except* there won't be any beeping.
+
+##### What happens when filament runs out?
+
+*If* you have a working filament sensor, the same behaviour as `M600`/colour change will occur*except* the beeps will be fairly annoying.
+
+##### How do I resume a print after a colour change or filament runout?
+
+*Do no disable the stepper motors during this process!*
+
+The printhead is now parked front center waiting for you to insert filament. You will:
+
+1. Heat up the hotend to the desired temperature.
+    - Use your Klipper dashboard.
+2. Purge (push) some filament through the nozzle.
+    - Use your Klipper dashboard, and extrude maybe 50mm (for a colour change you probably want to extrude more).
+    - OR, you can push some filament by hand *making sure to first disengage the extruder's spring loaded arm*.
+3. Hit resume in your Klipper dashboard.
+
 ## Useful Resources
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
 - [RP2040-Zero ADXL345 Connection Klipper](https://github.com/bassamanator/rp2040-zero-adxl345-klipper)
-- ⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- ⭐⭐⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- [Simplify3D Print Quality Troubleshooting Guide](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
 
 ## Links
 
