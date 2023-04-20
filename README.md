@@ -275,7 +275,7 @@ The printhead is now parked front center waiting for you to insert filament. You
 - https://ellis3dp.com/Print-Tuning-Guide
 - https://github.com/strayr/strayr-k-macros
 - https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
-- ⭐ https://github.com/spinixguy/Sovol-SV06-firmware
+- https://github.com/spinixguy/Sovol-SV06-firmware
 - https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
 
