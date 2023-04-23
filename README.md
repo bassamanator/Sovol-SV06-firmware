@@ -60,6 +60,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 - Size: `8GB`. According to Sovol, the largest size that you can use is `16GB`.
 - File system: `FAT32`.
+- Allocation unit size: `4096 bytes`.
 - Must not contain any files *except* the firmware file.
 
 ### Flashing Procedure
