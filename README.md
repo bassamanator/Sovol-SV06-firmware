@@ -42,7 +42,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - If an error was reported at a step, do no proceed to the next step.
 - It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. Note that most of the micro USB cables that you find at home are *unlikely* to be data cables, and it's not possible to tell just by looking.
 - It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
-- Klipper *must* be installed on the host Raspberry Pi for everything to work. Easiest is to use a [FluiddPi](https://docs.fluidd.xyz/installation/fluiddpi#download) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. [KIAUH](https://github.com/th33xitus/kiauh) is another excellent option, though it's not as simple as flashing MainsailOS on a microSD card, for example.
+- Klipper *must* be installed on the host Raspberry Pi for everything to work. Easiest is to use a [~~FluiddPI~~](https://docs.fluidd.xyz/installation/fluiddpi#download) (⚠️ `FluiddPI` is not under active maintenance) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. Alternatively, you can install `Fluidd` or `Mainsail` via [KIAUH](https://github.com/th33xitus/kiauh).
 - Robert Redford's performance in *Spy Game (2001)* was superb!
 - It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
@@ -98,7 +98,17 @@ You can choose *either* of the 2 following methods.
 ### Step 1
 
 1. Find what port the `mcu` (SV06 motherboard) is connected to via `ls -l /dev/serial/by-id/`.
+    1. The output will be something along the lines of 
+`lrwxrwxrwx    13 root root  22 Apr 11:10  usb-1a86_USB2.0-Serial-if00-port0 -> ../../ttyUSB0`.
+    2. `usb-1a86_USB2.0-Serial-if00-port0` is the relevant part.
+    3. Therefore, the full path to your `mcu` is `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0`.
 2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
+    Based on this *example*, your `mcu` section will be:
+    ```
+    [mcu]
+    serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
+    restart_method: command
+    ```
 
 ### Step 2
 
