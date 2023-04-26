@@ -59,8 +59,9 @@ You can choose *either* of the 2 following methods.
 ### Method 2: Download the ZIP
 
 1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/skr-mini-e3-v3.zip) the `ZIP` file containing the Klipper configuration.
-2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-skr-mini-e3-v3`. This is relevant in the next step.
-3. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
+2. See Step 2 in Method 1.
+3. The parent folder in the `ZIP` is `Sovol-SV06-firmware-skr-mini-e3-v3`. This is relevant in the next step.
+4. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
 
 #### Once you've cloned or downloaded the configuration, please follow instructions found in [Initial Steps](https://github.com/bassamanator/Sovol-SV06-firmware#initial-steps).
 # Sources
