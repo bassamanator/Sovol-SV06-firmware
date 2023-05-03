@@ -97,13 +97,13 @@ You can choose *either* of the 2 following methods.
 
 ### Step 1
 
-1. Find what port the `mcu` (SV06 motherboard) is connected to via `ls -l /dev/serial/by-id/`.
+1. Find what port the `mcu` (printer motherboard) is connected to via `ls -l /dev/serial/by-id/` or `ls -l /dev/serial/by-path/`.
     1. The output will be something along the lines of 
 `lrwxrwxrwx    13 root root  22 Apr 11:10  usb-1a86_USB2.0-Serial-if00-port0 -> ../../ttyUSB0`.
     2. `usb-1a86_USB2.0-Serial-if00-port0` is the relevant part.
-    3. Therefore, the full path to your `mcu` is `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0`.
+    3. Therefore, the full path to your `mcu` is either `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0` or `/dev/serial/by-path/usb-1a86_USB2.0-Serial-if00-port0`, depending on the command you used to find the `mcu`.
 2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
-    Based on this *example*, your `mcu` section will be:
+    This is just an *example* `mcu` section:
     ```
     [mcu]
     serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
