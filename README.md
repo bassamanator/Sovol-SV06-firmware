@@ -20,15 +20,12 @@ I am creating these files for my personal use and cannot be held responsible for
 
 Wire cables according to the following diagram:
 <img src="./misc/skr-mini/skr-mini-e3-v3.0-v1678580296384.png" alt='skr-mini-e3-v3.0 installation instructions'/>
-### Download Firmware Precompiled by BIGTREETECH
+### Download Firmware
 
 💡 The firmware files are located in `misc/skr-mini`.
 💡 Be sure to download the `raw` files. Find out more about this [here](https://stackoverflow.com/questions/4604663/download-single-files-from-github).
 
-Depending on how you will set things up, download *one* of the following firmware files:
-
-1. Download [firmware-USB.bin](./misc/skr-mini/firmware-USB.bin). Connect the SKR-Mini to the Raspberry Pi via USB connection. 💡 This is the option that most users will want.
-2. Download [firmware-USART2.bin](./misc/skr-mini/firmware-USART2.bin). Use TFT port USART2 to communicate with raspberry pi. Connect the UART-TX of raspberry pi with the USART-RX2 of motherboard and connect the UART-RX of raspberry pi with the USART-TX2 of motherboard directly to communicate normally.
+Download [klipper-USB.bin](./misc/skr-mini/klipper-USB.bin) compiled by BTT. I also compiled a `klipper.bin` using the latest version of Klipper, however, it is untested; [klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin](./misc/skr-mini/klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin).
 
 #### Alternatively, find instructions on how to build the firmware yourself [here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#build-firmware-image)
 
@@ -36,14 +33,15 @@ Depending on how you will set things up, download *one* of the following firmwar
 
 ### Flash Firmware
 
-1. Rename `firmware-USB.bin` or `firmware-USART2.bin` to `firmware.bin`.
-Important: If the file is not renamed, the bootloader will not be updated properly.
-2. Copy `firmware.bin` to the root directory of the microSD card (make sure the card is in FAT32 format).
-3. Power off the SKR-mini-E3-V3.0.
+⚠️ Make sure the microSD card has been prepared using the instructions found [here](https://github.com/bassamanator/Sovol-SV06-firmware#prepare-the-microsd-card-for-flashing).
+
+1. Rename whatever firmware file you're using to `firmware.bin`. ⚠️ If the file is not renamed, the bootloader will not be updated properly.
+2. Copy `firmware.bin` to the root directory of the microSD card. 
+3. Power off the skr-mini-E3-V3.0.
 4. Insert the microSD card.
-5. Power on the SKR-mini-E3-V3.0.
-6. After a few seconds, the SKR-mini-E3-V3.0 should be flashed.
-7. You can confirm that the flash was successful, by running ls /dev/serial/by-id. If the flash was successful, you'll see something like the following:
+5. Power on the skr-mini-E3-V3.0.
+6. After a few seconds, the skr-mini-E3-V3.0 should be flashed, but wait a full minute just to be sure.
+7. You can confirm that the flash was successful, by running `ls -l /dev/serial/by-id/` or `ls -l /dev/serial/by-path/`. If the flash was successful, you'll see something like the following:
 <img src="./misc/skr-mini/ls-output.png" width="400" alt='ls output'/>
 
 ### Download Klipper Configuration
