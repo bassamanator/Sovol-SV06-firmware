@@ -25,7 +25,9 @@ Wire cables according to the following diagram:
 💡 The firmware files are located in `misc/skr-mini`.
 💡 Be sure to download the `raw` files. Find out more about this [here](https://stackoverflow.com/questions/4604663/download-single-files-from-github).
 
-Download [klipper-USB.bin](./misc/skr-mini/klipper-USB.bin) compiled by BTT. I also compiled a `klipper.bin` using the latest version of Klipper, however, it is untested; [klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin](./misc/skr-mini/klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin).
+Download [klipper-USB.bin](./misc/skr-mini/klipper-USB.bin) compiled by BTT. 
+
+Or you can download [klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin](./misc/skr-mini/klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin) that I compiled, however, it is **untested**.
 
 #### Alternatively, find instructions on how to build the firmware yourself [here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#build-firmware-image)
 
