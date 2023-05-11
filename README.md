@@ -10,8 +10,6 @@ For all other 3D printers, please switch to the [any-printer](https://github.com
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
-⚠️ I am only 99% confident that this branch is production ready. Proceed with caution.
-
 🙏🏻🙌🏻 A big thanks to [transistor1](https://github.com/transistor1) for getting this `printer.cfg` up an running to begin with.
 
 ## Installation Instructions
@@ -62,6 +60,12 @@ You can choose *either* of the 2 following methods.
 2. See Step 2 in Method 1.
 3. The parent folder in the `ZIP` is `Sovol-SV06-firmware-skr-mini-e3-v3`. This is relevant in the next step.
 4. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
+
+### ⚠️ Important Note About Stepper Motor Current
+
+ For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been reduced in the `printer.cfg`, because the standard current seems to make the steppers dangerously hot. You may have to increase the current, or if the motors are still too hot, you may have to decrease it.
+ 
+💡 Although stepper motors can withstand upwards of 125C, they should at the most get hot to the touch (~55C), not *very hot*.
 
 #### Once you've cloned or downloaded the configuration, please follow instructions found in [Initial Steps](https://github.com/bassamanator/Sovol-SV06-firmware#initial-steps).
 # Sources
