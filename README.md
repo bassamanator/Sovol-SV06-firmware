@@ -302,5 +302,6 @@ The printhead is now parked front center waiting for you to insert filament. You
 - https://github.com/spinixguy/Sovol-SV06-firmware
 - https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
+- https://www.printables.com/model/447787-sovol-sv06-plus-build-plate
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)
