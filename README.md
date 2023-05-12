@@ -179,30 +179,36 @@ This repository contains many files and folders. Some are *necessary* for this K
 ├── cfgs ✅
 │   ├── adxl-direct.cfg
 │   ├── adxl-rp2040.cfg
-│   ├── beeper.cfg
-│   ├── misc-macros.cfg
+│   ├── adxl-rpi-pico-2x.cfg
 │   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
+│   ├── misc-macros.cfg
 │   ├── PARKING.cfg
-│   └── TEST_SPEED.cfg [☠️Not ready for use☠️]
+│   └── TEST_SPEED.cfg
+├── CODE_OF_CONDUCT.md ❌
+├── CONTRIBUTING.md ❌
 ├── images ❌
-│   └── githubstar.gif
-├── misc ❌
 │   ├── cup-border.png
-│   ├── klipper.bin
+│   ├── githubstar.gif
+│   ├── heart.gif
 │   ├── logo_white_stroke.png
+│   └── party_blob.gif
+├── misc ❌
+│   ├── klipper-v0.11.0-148-g52f4e20c.bin
 │   ├── M503-output.yml
+│   ├── M503-plus-output.yml
 │   ├── SuperSlicer_config_bundle.ini
 │   ├── sv06-buildPlate.png
-│   ├── SV06-buildPlate.stl
+│   ├── SV06Plus-buildPlate.stl
+│   ├── SV06-PLUSfirmware-2.23.rar
 │   └── SV06-texture.svg
 ├── moonraker.conf ✅
 ├── printer.cfg ✅
 └── README.md ❌
 ```
 
-## <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/>
+## <img src="./images/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./images/cup-border.png" width="30" alt='Ko-fi'/>
 
-<img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./misc/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+<img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
