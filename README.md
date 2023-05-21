@@ -61,6 +61,8 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 ### Prepare the microSD Card for Flashing
 
+⚠️ Many users have reported having issues flashing Klipper using the Sovol microSD card.
+
 - Size: `8GB`. According to Sovol, the largest size that you can use is `16GB`.
 - File system: `FAT32`.
 - Allocation unit size: `4096 bytes`.
