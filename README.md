@@ -71,8 +71,8 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 2. Copy `klipper.bin` to the microSD card.
 3. Make sure the printer is off.
 4. Insert the microSD card into printer.
-4. Turn on the printer and wait a minute (usually takes 10 seconds).
-5. Turn off the printer and remove the microSD.
+5. Turn on the printer and wait a minute (usually takes 10 seconds).
+6. Turn off the printer and remove the microSD.
 
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
@@ -268,7 +268,7 @@ Same behaviour as `M600`/colour change *except* there won't be any beeping.
 
 ##### What happens when filament runs out?
 
-*If* you have a working filament sensor, the same behaviour as `M600`/colour change will occur*except* the beeps will be fairly annoying.
+*If* you have a working filament sensor, the same behaviour as `M600`/colour change will occur *except* the beeps will be fairly annoying.
 
 ##### How do I resume a print after a colour change or filament runout?
 
@@ -294,6 +294,7 @@ The printhead is now parked front center waiting for you to insert filament. You
 
 - [SV06 Official Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
 - [SV06 Official Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
+- [SV06 Plus Official Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
 
 ## Sources
 
