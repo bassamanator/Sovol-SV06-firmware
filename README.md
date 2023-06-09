@@ -106,6 +106,7 @@ You can choose *either* of the 2 following methods.
     3. Therefore, the full path to your `mcu` is either `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0` or `/dev/serial/by-path/usb-1a86_USB2.0-Serial-if00-port0`, depending on the command you used to find the `mcu`.
 2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
     This is just an *example* `mcu` section:
+
     ```
     [mcu]
     serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
@@ -163,6 +164,7 @@ But first, adjust your slicer.
 You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
 
 If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`. Here's an example:
+
 ```
 PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} CHAMBER=[chamber_temperature]
 PURGE_LINE
@@ -230,12 +232,12 @@ The printer will beep upon:
 
 Make the following changes according to your needs. All beeping will be disabled *except* during gantry calibration.
 
-| File | `cfgs/misc-macros.cfg` |
-| - | - |
-| Section | `[gcode_macro _globals]` |
-| Variable | `variable_beeping_enabled` |
-| Disable beeping | `0` |
-| Enable beeping | `1` |
+| File            | `cfgs/misc-macros.cfg`     |
+| --------------- | -------------------------- |
+| Section         | `[gcode_macro _globals]`   |
+| Variable        | `variable_beeping_enabled` |
+| Disable beeping | `0`                        |
+| Enable beeping  | `1`                        |
 
 ##### I want to use a filament sensor. How do I set it up?
 
@@ -244,12 +246,12 @@ Make the following changes according to your needs. All beeping will be disabled
 
 Make the following changes according to your needs.
 
-| File | `cfgs/misc-macros.cfg` |
-| - | - |
-| Section | `[gcode_macro _globals]` |
-| Variable | `variable_filament_sensor_enabled` |
-| Disable sensor | `0` |
-| Enable sensor | `1` |
+| File           | `cfgs/misc-macros.cfg`             |
+| -------------- | ---------------------------------- |
+| Section        | `[gcode_macro _globals]`           |
+| Variable       | `variable_filament_sensor_enabled` |
+| Disable sensor | `0`                                |
+| Enable sensor  | `1`                                |
 
 ##### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
 
