@@ -123,6 +123,8 @@ You can choose *either* of the 2 following methods.
 
 💡 Find explanations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [klipper.org](https://www.klipper3d.org/G-Codes.html).
 
+You will be pasting/typing these commands into the Mainsail/Fluidd console.
+
 1. `G28`
    1. Check to see if `X` and `Y` max positions (`G90`, `G1 X223 F3000`, `G1 Y223 F3000`) can be reached, and adjust `position_max`, if necessary. You can probably go all the way up to `225` for `X` and `Y` both, however, I would not recommend it.
 2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up against the `stoppers` at the top. You will hear a succession of beeps.
