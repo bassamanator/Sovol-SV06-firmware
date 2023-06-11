@@ -13,7 +13,7 @@ I am creating these files for my personal use and cannot be held responsible for
 # Highlights
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/> 
+- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
@@ -32,7 +32,7 @@ I work on this repository all the time and a lot of new features are coming. Wat
 
 # Preface
 
-Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a *must*, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
+Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
 # Installation Steps
 
@@ -46,7 +46,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. Note that most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it's not possible to tell just by looking.
 - It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
 - Klipper _must_ be installed on the host Raspberry Pi for everything to work. Easiest is to use a [~~FluiddPI~~](https://docs.fluidd.xyz/installation/fluiddpi#download) (⚠️ `FluiddPI` is not under active maintenance) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. Alternatively, you can install `Fluidd` or `Mainsail` via [KIAUH](https://github.com/th33xitus/kiauh).
-- Robert Redford's performance in *Spy Game (2001)* was superb!
+- Robert Redford's performance in _Spy Game (2001)_ was superb!
 - It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
@@ -66,7 +66,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - Size: `8GB`. According to Sovol, the largest size that you can use is `16GB`.
 - File system: `FAT32`.
 - Allocation unit size: `4096 bytes`.
-- Must not contain any files *except* the firmware file.
+- Must not contain any files _except_ the firmware file.
 
 ### Flashing Procedure
 
@@ -96,25 +96,25 @@ You can choose _either_ of the 2 following methods.
 1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/sv06-plus.zip) the `ZIP` file containing the Klipper configuration.
 2. See `Step 2` in `Method 1`.
 3. The parent folder in the `ZIP` is `Sovol-SV06-firmware-sv06-plus`. This is relevant in the next step.
-4. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
+4. Extract **only** the _contents_ of the parent folder into `~/printer_data/config`.
 
 ## Initial Steps
 
 ### Step 1
 
 1. Find what port the `mcu` (printer motherboard) is connected to via `ls -l /dev/serial/by-id/` or `ls -l /dev/serial/by-path/`.
-    1. The output will be something along the lines of 
-`lrwxrwxrwx    13 root root  22 Apr 11:10  usb-1a86_USB2.0-Serial-if00-port0 -> ../../ttyUSB0`.
-    2. `usb-1a86_USB2.0-Serial-if00-port0` is the relevant part.
-    3. Therefore, the full path to your `mcu` is either `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0` or `/dev/serial/by-path/usb-1a86_USB2.0-Serial-if00-port0`, depending on the command you used to find the `mcu`.
+   1. The output will be something along the lines of
+      `lrwxrwxrwx 13 root root  22 Apr 11:10  usb-1a86_USB2.0-Serial-if00-port0 -> ../../ttyUSB0`.
+   2. `usb-1a86_USB2.0-Serial-if00-port0` is the relevant part.
+   3. Therefore, the full path to your `mcu` is either `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0` or `/dev/serial/by-path/usb-1a86_USB2.0-Serial-if00-port0`, depending on the command you used to find the `mcu`.
 2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
-    This is just an *example* `mcu` section:
+   This is just an _example_ `mcu` section:
 
-    ```
-    [mcu]
-    serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
-    restart_method: command
-    ```
+   ```
+   [mcu]
+   serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
+   restart_method: command
+   ```
 
 ### Step 2
 
@@ -178,6 +178,7 @@ PURGE_LINE
 ## Directory Structure
 
 This repository contains many files and folders. Some are _necessary_ for this Klipper configuration to work, others are not.
+
 - **Necessary** items are marked with a ✅.
 - Items that can _optionally_ be deleted are marked with a ❌.
 
@@ -231,6 +232,7 @@ Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware
 💡 Beeping will likely not work on the SV06 Plus. I recommend not turning it on.
 
 The printer will beep upon:
+
 - Filament runout.
 - Filament change/`M600`.
 - Upon `PRINT_END`.
@@ -238,7 +240,7 @@ The printer will beep upon:
 
 ##### How do I disable beeping?
 
-Make the following changes according to your needs. All beeping will be disabled *except* during gantry calibration.
+Make the following changes according to your needs. All beeping will be disabled _except_ during gantry calibration.
 
 | File            | `cfgs/misc-macros.cfg`     |
 | --------------- | -------------------------- |
@@ -249,7 +251,8 @@ Make the following changes according to your needs. All beeping will be disabled
 
 ##### I want to use a filament sensor. How do I set it up?
 
- You can find information about the physical setup [here](https://github.com/bassamanator/everything-sovol-sv06#filament-sensor).
+You can find information about the physical setup [here](https://github.com/bassamanator/everything-sovol-sv06#filament-sensor).
+
 ##### I have a simple filament sensor connected. How do I enable/disable it?
 
 Make the following changes according to your needs.
@@ -274,7 +277,7 @@ A simple runout sensor can only detect a change in state. So, if you start a pri
 
 ##### What happens when I pause a print?
 
-Same behaviour as `M600`/colour change *except* there won't be any beeping.
+Same behaviour as `M600`/colour change _except_ there won't be any beeping.
 
 ##### What happens when filament runs out?
 
@@ -287,10 +290,10 @@ _If_ you have a working filament sensor, the same behaviour as `M600`/colour cha
 The printhead is now parked front center waiting for you to insert filament. You will:
 
 1. Heat up the hotend to the desired temperature.
-    - Use your Klipper dashboard.
+   - Use your Klipper dashboard.
 2. Purge (push) some filament through the nozzle.
-    - Use your Klipper dashboard, and extrude maybe 50mm (for a colour change you probably want to extrude more).
-    - OR, you can push some filament by hand _making sure to first disengage the extruder's spring loaded arm_.
+   - Use your Klipper dashboard, and extrude maybe 50mm (for a colour change you probably want to extrude more).
+   - OR, you can push some filament by hand _making sure to first disengage the extruder's spring loaded arm_.
 3. Hit resume in your Klipper dashboard.
 
 ## Useful Resources
