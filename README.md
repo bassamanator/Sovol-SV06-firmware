@@ -1,10 +1,10 @@
-# 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
+# 🚨 _One-Stop-Shop_ Sovol SV06 Klipper Configuration
 
 This repository contains the Klipper configuration and firmware for the **Sovol SV06 Plus** 3D printer.
 
 For the **Sovol SV06**, please refer to the [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master) branch.
 
-If you wanted to use the One-Stop-Shop Klipper Configuration for a *different printer*, please switch to the [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) branch.
+If you wanted to use the One-Stop-Shop Klipper Configuration for a _different printer_, please switch to the [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) branch.
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
@@ -12,7 +12,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 # Highlights
 
-- 💥 This Klipper configuration is an *endpoint*, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
+- 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/> 
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
@@ -38,14 +38,14 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 ## Before You Begin
 
-- On the SV06 Plus, your screen will not work if you install Klipper.
-- Read this documentation *fully!*
-- Make sure your printer is in good physical condition, because print and travel speeds will be *a lot faster* than they were before. Consider yourself warned.
+- On the SV06 Plus, your screen will not work if you install Klipper. You can get it working again via the instructions found [here](https://github.com/fryc88/klipper-sv06plus-screen).
+- Read this documentation _fully!_
+- Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Consider yourself warned.
 - Follow the steps in order.
 - If an error was reported at a step, do no proceed to the next step.
-- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. Note that most of the micro USB cables that you find at home are *unlikely* to be data cables, and it's not possible to tell just by looking.
+- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. Note that most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it's not possible to tell just by looking.
 - It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
-- Klipper *must* be installed on the host Raspberry Pi for everything to work. Easiest is to use a [~~FluiddPI~~](https://docs.fluidd.xyz/installation/fluiddpi#download) (⚠️ `FluiddPI` is not under active maintenance) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. Alternatively, you can install `Fluidd` or `Mainsail` via [KIAUH](https://github.com/th33xitus/kiauh).
+- Klipper _must_ be installed on the host Raspberry Pi for everything to work. Easiest is to use a [~~FluiddPI~~](https://docs.fluidd.xyz/installation/fluiddpi#download) (⚠️ `FluiddPI` is not under active maintenance) or [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. Alternatively, you can install `Fluidd` or `Mainsail` via [KIAUH](https://github.com/th33xitus/kiauh).
 - Robert Redford's performance in *Spy Game (2001)* was superb!
 - It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
@@ -53,7 +53,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 ## Flash Firmware
 
-💡 *If you have already flashed klipper onto your motherboard in the past, you can skip this step.*
+💡 _If you have already flashed klipper onto your motherboard in the past, you can skip this step._
 
 💡 For the sake of simplicity, I will refer to the klipper firmware file as `klipper.bin` even though the actual filename is something along the lines of `klipper-v0.11.0-148-g52f4e20c.bin`.
 
@@ -74,22 +74,22 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 2. Copy `klipper.bin` to the microSD card.
 3. Make sure the printer is off.
 4. Insert the microSD card into printer.
-4. Turn on the printer and wait a minute (usually takes 10 seconds).
-5. Turn off the printer and remove the microSD.
+5. Turn on the printer and wait a minute (usually takes 10 seconds).
+6. Turn off the printer and remove the microSD.
 
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
-⚠️ **Caveat**: Flashing will only work if current firmware filename is *different from previous flashing procedure*. The `.bin` is also important.
+⚠️ **Caveat**: Flashing will only work if current firmware filename is _different from previous flashing procedure_. The `.bin` is also important.
 
 ## Download Klipper Configuration
 
-You can choose *either* of the 2 following methods.
+You can choose _either_ of the 2 following methods.
 
 ### Method 1: Clone the Repository
 
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder. Unfortunately, for safety reasons I will not post this command here. However, in linux, you can delete files via `rm filename`.
-3. `git clone -b sv06-plus --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .`
+3. `git clone -b sv06-plus --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` 💡 Don't miss the period!
 
 ### Method 2: Download the ZIP
 
@@ -109,6 +109,7 @@ You can choose *either* of the 2 following methods.
     3. Therefore, the full path to your `mcu` is either `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0` or `/dev/serial/by-path/usb-1a86_USB2.0-Serial-if00-port0`, depending on the command you used to find the `mcu`.
 2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
     This is just an *example* `mcu` section:
+
     ```
     [mcu]
     serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
@@ -124,6 +125,8 @@ You can choose *either* of the 2 following methods.
 💡 I recommend no filament be loaded for any of these steps.
 
 💡 Find explanations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [klipper.org](https://www.klipper3d.org/G-Codes.html).
+
+You will be pasting/typing these commands into the Mainsail/Fluidd console.
 
 1. `G28`
    1. Check to see if `X` and `Y` max positions (`G90`, `G1 X300 F3000`, `G1 Y300 F3000`) can be reached, and adjust `position_max`, if necessary. Note, you might be able to go even further.
@@ -166,6 +169,7 @@ But first, adjust your slicer.
 You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
 
 If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`. Here's an example:
+
 ```
 PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} CHAMBER=[chamber_temperature]
 PURGE_LINE
@@ -173,9 +177,9 @@ PURGE_LINE
 
 ## Directory Structure
 
-This repository contains many files and folders. Some are *necessary* for this Klipper configuration to work, others are not.
+This repository contains many files and folders. Some are _necessary_ for this Klipper configuration to work, others are not.
 - **Necessary** items are marked with a ✅.
-- Items that can *optionally* be deleted are marked with a ❌.
+- Items that can _optionally_ be deleted are marked with a ❌.
 
 ```
 ├── cfgs ✅
@@ -236,12 +240,12 @@ The printer will beep upon:
 
 Make the following changes according to your needs. All beeping will be disabled *except* during gantry calibration.
 
-| File | `cfgs/misc-macros.cfg` |
-| - | - |
-| Section | `[gcode_macro _globals]` |
-| Variable | `variable_beeping_enabled` |
-| Disable beeping | `0` |
-| Enable beeping | `1` |
+| File            | `cfgs/misc-macros.cfg`     |
+| --------------- | -------------------------- |
+| Section         | `[gcode_macro _globals]`   |
+| Variable        | `variable_beeping_enabled` |
+| Disable beeping | `0`                        |
+| Enable beeping  | `1`                        |
 
 ##### I want to use a filament sensor. How do I set it up?
 
@@ -250,12 +254,12 @@ Make the following changes according to your needs. All beeping will be disabled
 
 Make the following changes according to your needs.
 
-| File | `cfgs/misc-macros.cfg` |
-| - | - |
-| Section | `[gcode_macro _globals]` |
-| Variable | `variable_filament_sensor_enabled` |
-| Disable sensor | `0` |
-| Enable sensor | `1` |
+| File           | `cfgs/misc-macros.cfg`             |
+| -------------- | ---------------------------------- |
+| Section        | `[gcode_macro _globals]`           |
+| Variable       | `variable_filament_sensor_enabled` |
+| Disable sensor | `0`                                |
+| Enable sensor  | `1`                                |
 
 ##### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
 
@@ -274,11 +278,11 @@ Same behaviour as `M600`/colour change *except* there won't be any beeping.
 
 ##### What happens when filament runs out?
 
-*If* you have a working filament sensor, the same behaviour as `M600`/colour change will occur*except* the beeps will be fairly annoying.
+_If_ you have a working filament sensor, the same behaviour as `M600`/colour change will occur _except_ the beeps will be fairly annoying.
 
 ##### How do I resume a print after a colour change or filament runout?
 
-*Do no disable the stepper motors during this process!*
+⚠️ _Do not disable the stepper motors during this process!_
 
 The printhead is now parked front center waiting for you to insert filament. You will:
 
@@ -286,7 +290,7 @@ The printhead is now parked front center waiting for you to insert filament. You
     - Use your Klipper dashboard.
 2. Purge (push) some filament through the nozzle.
     - Use your Klipper dashboard, and extrude maybe 50mm (for a colour change you probably want to extrude more).
-    - OR, you can push some filament by hand *making sure to first disengage the extruder's spring loaded arm*.
+    - OR, you can push some filament by hand _making sure to first disengage the extruder's spring loaded arm_.
 3. Hit resume in your Klipper dashboard.
 
 ## Useful Resources
@@ -300,6 +304,7 @@ The printhead is now parked front center waiting for you to insert filament. You
 
 - [SV06 Official Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
 - [SV06 Official Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
+- [SV06 Plus Official Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
 
 ## Sources
 
