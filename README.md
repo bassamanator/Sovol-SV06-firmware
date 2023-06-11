@@ -1,4 +1,4 @@
-# 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration
+# 🚨 _One-Stop-Shop_ Sovol SV06 Klipper Configuration
 
 This branch contains the Klipper configuration and firmware for the **Sovol SV06** 3D printer with the **BTT SKR-Mini-E3-V3.0** motherboard.
 
@@ -18,12 +18,13 @@ I am creating these files for my personal use and cannot be held responsible for
 
 Wire cables according to the following diagram:
 <img src="./misc/skr-mini/skr-mini-e3-v3.0-v1678580296384.png" alt='skr-mini-e3-v3.0 installation instructions'/>
+
 ### Download Firmware
 
 💡 The firmware files are located in `misc/skr-mini`.
 💡 Be sure to download the `raw` files. Find out more about this [here](https://stackoverflow.com/questions/4604663/download-single-files-from-github).
 
-Download [klipper-USB.bin](./misc/skr-mini/klipper-USB.bin) compiled by BTT. 
+Download [klipper-USB.bin](./misc/skr-mini/klipper-USB.bin) compiled by BTT.
 
 Or you can download [klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin](./misc/skr-mini/klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin) that I compiled, however, it is **untested**.
 
@@ -36,17 +37,17 @@ Or you can download [klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin](./misc/s
 ⚠️ Make sure the microSD card has been prepared using the instructions found [here](https://github.com/bassamanator/Sovol-SV06-firmware#prepare-the-microsd-card-for-flashing).
 
 1. Rename whatever firmware file you're using to `firmware.bin`. ⚠️ If the file is not renamed, the bootloader will not be updated properly.
-2. Copy `firmware.bin` to the root directory of the microSD card. 
+2. Copy `firmware.bin` to the root directory of the microSD card.
 3. Power off the skr-mini-E3-V3.0.
 4. Insert the microSD card.
 5. Power on the skr-mini-E3-V3.0.
 6. After a few seconds, the skr-mini-E3-V3.0 should be flashed, but wait a full minute just to be sure.
 7. You can confirm that the flash was successful, by running `ls -l /dev/serial/by-id/` or `ls -l /dev/serial/by-path/`. If the flash was successful, you'll see something like the following:
-<img src="./misc/skr-mini/ls-output.png" width="400" alt='ls output'/>
+   <img src="./misc/skr-mini/ls-output.png" width="400" alt='ls output'/>
 
 ### Download Klipper Configuration
 
-You can choose *either* of the 2 following methods.
+You can choose _either_ of the 2 following methods.
 
 ### Method 1: Clone the Repository
 
@@ -59,13 +60,13 @@ You can choose *either* of the 2 following methods.
 1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/skr-mini-e3-v3.zip) the `ZIP` file containing the Klipper configuration.
 2. See Step 2 in Method 1.
 3. The parent folder in the `ZIP` is `Sovol-SV06-firmware-skr-mini-e3-v3`. This is relevant in the next step.
-4. Extract **only** the *contents* of the parent folder into `~/printer_data/config`.
+4. Extract **only** the _contents_ of the parent folder into `~/printer_data/config`.
 
 ### ⚠️ Important Note About Stepper Motor Current
 
- For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been reduced in the `printer.cfg`, because the standard current seems to make the steppers dangerously hot. You may have to increase the current, or if the motors are still too hot, you may have to decrease it.
- 
-💡 Although stepper motors can withstand upwards of 125C, they should at the most get hot to the touch (~55C), not *very hot*.
+For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been reduced in the `printer.cfg`, because the standard current seems to make the steppers dangerously hot. You may have to increase the current, or if the motors are still too hot, you may have to decrease it.
+
+💡 Although stepper motors can withstand upwards of 125C, they should at the most get hot to the touch (~55C), not _very hot_.
 
 #### Once you've cloned or downloaded the configuration, please follow instructions found in [Initial Steps](https://github.com/bassamanator/Sovol-SV06-firmware#initial-steps).
 

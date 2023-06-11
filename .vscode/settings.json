@@ -27,5 +27,8 @@
 		"Prusa",
 		"runout",
 		"Sovol"
-	]
+	],
+	"[markdown]": {
+		"editor.formatOnSave": true
+	}
 }
