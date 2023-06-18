@@ -5,7 +5,7 @@ This branch contains the Klipper configuration and firmware for the **Sovol SV06
 | Printer                     | Branch                                                                              |
 | --------------------------- | ----------------------------------------------------------------------------------- |
 | Sovol SV06                  | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)           |
-| Sovol SV06 Skr-Mini-E3-V3.0 | **You are here**                                                                    |
+| Sovol SV06 Skr-Mini-E3-V3.0 | ✨**You are here**✨                                                                |
 | Sovol SV06 Plus             | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)     |
 | All other printers          | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) |
 
@@ -72,6 +72,8 @@ For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been 
 #### Once you've cloned or downloaded the configuration, please follow instructions found in [Initial Steps](https://github.com/bassamanator/Sovol-SV06-firmware#initial-steps).
 
 ## <img src="./images/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./images/cup-border.png" width="30" alt='Ko-fi'/>
+
+Please ⭐star⭐ this repository!
 
 <img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
