@@ -4,15 +4,16 @@ This branch contains the OSS Klipper configuration that can be used with **any p
 
 | Printer                     | Branch                                                                                    |
 | --------------------------- | ----------------------------------------------------------------------------------------- |
-| Sovol SV06                  | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                                                                         |
+| Sovol SV06                  | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
 | Sovol SV06 Skr-Mini-E3-V3.0 | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
 | Sovol SV06 Plus             | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
-| All other printers          | **You are here**       |
+| All other printers          | ✨**You are here**✨                                                                      |
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
-# Highlights
 
-- 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 CoreXY users can rightly disagree and say that it lacks the quad gantry leveling macros. Please create a pull request if you can help in this regard!
+# Features
+
+- 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 CoreXY users can rightly disagree and say that it lacks the quad gantry levelling macros. Please create a pull request if you can help in this regard!
 - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
@@ -23,7 +24,7 @@ I am creating these files for my personal use and cannot be held responsible for
   - Load/unload filament macros.
   - Purge line macro.
 
-## Stay Up-to-Date
+# Stay Up-to-Date
 
 I work on this repository all the time and a lot of new features are coming. Watch releases of this repository to be notified for future updates:
 
@@ -87,6 +88,8 @@ This repository contains many files and folders. Some are _necessary_ for this K
 ```
 
 ## <img src="./images/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./images/cup-border.png" width="30" alt='Ko-fi'/>
+
+Please ⭐star⭐ this repository!
 
 <img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 

@@ -19,6 +19,7 @@
 		"lrwxrwxrwx",
 		"moonraker",
 		"octahedroflake",
+		"osskc",
 		"PARKBED",
 		"PARKCENTER",
 		"PARKFRONT",
@@ -29,6 +30,6 @@
 		"Sovol"
 	],
 	"[markdown]": {
-		"editor.formatOnSave": false
+		"editor.formatOnSave": true
 	}
 }
