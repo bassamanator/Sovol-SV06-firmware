@@ -75,8 +75,27 @@ For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been 
 
 <img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
-# Sources
+## Useful Resources
 
-- https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#how-to-use-klipper-on-skr-mini-e3-v30
-- https://forum.sovol3d.com/t/sv06-mit-skr-e3-mini-v3/1189/24
-- https://github.com/bassamanator/everything-sovol-sv06/discussions/14
+- [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
+- [RP2040-Zero ADXL345 Connection Klipper](https://github.com/bassamanator/rp2040-zero-adxl345-klipper)
+- ⭐⭐⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- [Simplify3D Print Quality Troubleshooting Guide](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
+
+## Sovol Official Links
+
+- [SV06 Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
+- [SV06 Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
+- [SV06 Plus Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
+
+## Sources
+
+- https://www.klipper3d.org
+- https://ellis3dp.com/Print-Tuning-Guide
+- https://github.com/strayr/strayr-k-macros
+- https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
+- https://github.com/spinixguy/Sovol-SV06-firmware
+- https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
+- https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)
