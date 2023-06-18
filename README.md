@@ -8,6 +8,7 @@ For the **Sovol SV06 SKR-Mini-E3-V3**, please refer to the [skr-mini-e3-v3](http
 
 For the **Sovol SV06 Plus**, please refer to the [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus) branch.
 
+I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 # Highlights
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 CoreXY users can rightly disagree and say that it lacks the quad gantry leveling macros. Please create a pull request if you can help in this regard!
