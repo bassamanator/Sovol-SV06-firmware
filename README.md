@@ -2,9 +2,11 @@
 
 This branch contains the Klipper configuration and firmware for the **Sovol SV06** 3D printer.
 
+For the **Sovol SV06 SKR-Mini-E3-V3**, please refer to the [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) branch.
+
 For the **Sovol SV06 Plus**, please refer to the [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus) branch.
 
-To use the One-Stop-Shop Klipper Configuration with a _different printer_, please refer to the [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) branch.
+For all **other printers**, please refer to the [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) branch.
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
