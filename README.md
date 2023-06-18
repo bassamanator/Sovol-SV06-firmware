@@ -300,11 +300,11 @@ The printhead is now parked front center waiting for you to insert filament. You
 - ⭐⭐⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
 - [Simplify3D Print Quality Troubleshooting Guide](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
 
-## Links
+## Sovol Official Links
 
-- [SV06 Official Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
-- [SV06 Official Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
-- [SV06 Plus Official Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
+- [SV06 Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
+- [SV06 Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
+- [SV06 Plus Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
 
 ## Sources
 
