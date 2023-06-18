@@ -2,11 +2,15 @@
 
 This branch contains the OSS Klipper configuration that can be used with **any printer** running Klipper.
 
-If you were looking for the OSS Klipper configuration for the **Sovol SV06**, please switch to the [master](https://github.com/bassamanator/Sovol-SV06-firmware) branch.
+For the **Sovol SV06**, please refer to the [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master) branch.
+
+For the **Sovol SV06 SKR-Mini-E3-V3**, please refer to the [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) branch.
+
+For the **Sovol SV06 Plus**, please refer to the [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus) branch.
 
 # Highlights
 
-- 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 Voron users can rightly disagree and say that it lacks the quad gantry leveling macros. Please create a pull request if you can help in this regard!
+- 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 CoreXY users can rightly disagree and say that it lacks the quad gantry leveling macros. Please create a pull request if you can help in this regard!
 - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
@@ -80,87 +84,26 @@ This repository contains many files and folders. Some are _necessary_ for this K
 └── README.md ❌
 ```
 
-## <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./misc/cup-border.png" width="30" alt='Ko-fi'/>
+## <img src="./images/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./images/cup-border.png" width="30" alt='Ko-fi'/>
 
-<img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./misc/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+<img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
-##### How do I import a SuperSlicer configuration bundle (`SuperSlicer_config_bundle.ini`) into SuperSlicer?
-
-Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
-
-##### How do I print using SuperSlicer?
-
-Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
-
-##### When does beeping occur?
-
-If you have a beeper pin set in your `printer.cfg`, the printer will beep upon:
-
-- Filament runout.
-- Filament change/`M600`.
-- Upon `PRINT_END`.
-- `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
-
-##### How do I disable beeping?
-
-Make the following changes according to your needs. All beeping will be disabled _except_ during gantry calibration.
-
-| File            | `cfgs/misc-macros.cfg`     |
-| --------------- | -------------------------- |
-| Section         | `[gcode_macro _globals]`   |
-| Variable        | `variable_beeping_enabled` |
-| Disable beeping | `0`                        |
-| Enable beeping  | `1`                        |
-
-##### I have a simple filament sensor connected. How do I enable/disable it?
-
-Make the following changes according to your needs. Also, search for the word `NOTE` in this repository to find other places where such a sensor might come into play.
-
-| File           | `cfgs/misc-macros.cfg`             |
-| -------------- | ---------------------------------- |
-| Section        | `[gcode_macro _globals]`           |
-| Variable       | `variable_filament_sensor_enabled` |
-| Disable sensor | `0`                                |
-| Enable sensor  | `1`                                |
-
-##### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
-
-A simple runout sensor can only detect a change in state. So, if you start a print without filament loaded, the printer will not know that there is no filament loaded. You should test your sensor by having filament loaded, starting a print, then cutting the filament. The expected behaviour is that the print will pause, and as long as you have beeping enabled, you will hear 3 annoying beeps.
-
-##### What happens when I put in `M600`/colour change at a certain layer?
-
-1. The printer will beep 3 times (not annoyingly).
-2. Printing will stop.
-3. The printhead will park itself front center.
-4. The hotend will turn off, but the bed will remain hot.
-
-##### What happens when I pause a print?
-
-Same behaviour as `M600`/colour change _except_ there won't be any beeping.
-
-##### What happens when filament runs out?
-
-_If_ you have a working filament sensor, the same behaviour as `M600`/colour change will occur*except* the beeps will be fairly annoying.
-
-##### How do I resume a print after a colour change or filament runout?
-
-_Do no disable the stepper motors during this process!_
-
-The printhead is now parked front center waiting for you to insert filament. You will:
-
-1. Heat up the hotend to the desired temperature.
-   - Use your Klipper dashboard.
-2. Purge (push) some filament through the nozzle.
-   - Use your Klipper dashboard, and extrude maybe 50mm (for a colour change you probably want to extrude more).
-   - OR, you can push some filament by hand _making sure to first disengage the extruder's spring loaded arm_.
-3. Hit resume in your Klipper dashboard.
+Please find answers to common questions [here](https://github.com/bassamanator/Sovol-SV06-firmware/blob/master/README.md#faq).
 
 ## Useful Resources
 
+- [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
 - [RP2040-Zero ADXL345 Connection Klipper](https://github.com/bassamanator/rp2040-zero-adxl345-klipper)
-- ⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- ⭐⭐⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- [Simplify3D Print Quality Troubleshooting Guide](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
+
+## Links
+
+- [SV06 Official Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
+- [SV06 Official Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
+- [SV06 Plus Official Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
 
 ## Sources
 
@@ -168,6 +111,8 @@ The printhead is now parked front center waiting for you to insert filament. You
 - https://ellis3dp.com/Print-Tuning-Guide
 - https://github.com/strayr/strayr-k-macros
 - https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
+- https://github.com/spinixguy/Sovol-SV06-firmware
+- https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)

@@ -7,13 +7,28 @@
 	"spellright.documentTypes": ["markdown", "plaintext"],
 	"cSpell.words": [
 		"ADXL",
+		"cfgs",
+		"Fluidd",
+		"Fluiddpi",
 		"gcode",
+		"githubstar",
 		"hotend",
+		"KIAUH",
 		"Klipper",
 		"Klipperized",
+		"lrwxrwxrwx",
+		"moonraker",
 		"octahedroflake",
 		"PARKBED",
+		"PARKCENTER",
+		"PARKFRONT",
+		"PARKFRONTLOW",
+		"PARKREAR",
+		"Prusa",
 		"runout",
 		"Sovol"
-	]
+	],
+	"[markdown]": {
+		"editor.formatOnSave": false
+	}
 }
