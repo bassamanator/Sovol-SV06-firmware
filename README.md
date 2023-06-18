@@ -6,14 +6,14 @@ This branch contains the Klipper configuration and firmware for the **Sovol SV06
 | --------------------------- | ----------------------------------------------------------------------------------------- |
 | Sovol SV06                  | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
 | Sovol SV06 Skr-Mini-E3-V3.0 | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
-| Sovol SV06 Plus             | **You are here**                                                                          |
+| Sovol SV06 Plus             | ✨**You are here**✨                                                                      |
 | All other printers          | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
 🙏🏻 🙌🏻 Big thanks to [blanchas3d](https://github.com/blanchas3d) in testing out this branch and reporting issues.
 
-# Highlights
+# Features
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
@@ -27,7 +27,7 @@ I am creating these files for my personal use and cannot be held responsible for
   - Load/unload filament macros.
   - Purge line macro.
 
-## Stay Up-to-Date
+# Stay Up-to-Date
 
 I work on this repository all the time and a lot of new features are coming. Watch releases of this repository to be notified for future updates:
 
@@ -217,6 +217,8 @@ This repository contains many files and folders. Some are _necessary_ for this K
 ```
 
 ## <img src="./images/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./images/cup-border.png" width="30" alt='Ko-fi'/>
+
+Please ⭐star⭐ this repository!
 
 <img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
