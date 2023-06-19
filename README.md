@@ -184,32 +184,40 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ```
 ├── cfgs ✅
-│   ├── adxl-direct.cfg
-│   ├── adxl-rp2040.cfg
-│   ├── adxl-rpi-pico-2x.cfg
-│   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
-│   ├── misc-macros.cfg
-│   ├── PARKING.cfg
-│   └── TEST_SPEED.cfg
+│   ├── adxl-direct.cfg
+│   ├── adxl-rp2040.cfg
+│   ├── adxl-rpi-pico-2x.cfg
+│   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
+│   ├── misc-macros.cfg
+│   ├── PARKING.cfg
+│   └── TEST_SPEED.cfg
 ├── CODE_OF_CONDUCT.md ❌
 ├── CONTRIBUTING.md ❌
+├── .github ❌
+│   ├── FUNDING.yml
+│   └── ISSUE_TEMPLATE
+│       ├── bug_report.md
+│       └── feature_request.md
+├── .gitignore ❌
 ├── images ❌
-│   ├── cup-border.png
-│   ├── githubstar.gif
-│   ├── heart.gif
-│   ├── logo_white_stroke.png
-│   └── party_blob.gif
+│   ├── cup-border.png
+│   ├── githubstar.gif
+│   ├── heart.gif
+│   ├── logo_white_stroke.png
+│   └── party_blob.gif
 ├── misc ❌
-│   ├── klipper-v0.11.0-148-g52f4e20c.bin
-│   ├── M503-output.yml
-│   ├── marlin-SV06V2.0.0A_2.24.bin
-│   ├── SuperSlicer_config_bundle.ini
-│   ├── sv06-buildPlate.png
-│   ├── SV06-buildPlate.stl
-│   └── SV06-texture.svg
+│   ├── klipper-v0.11.0-148-g52f4e20c.bin
+│   ├── M503-output.yml
+│   ├── marlin-SV06V2.0.0A_2.24.bin
+│   ├── SuperSlicer_config_bundle.ini
+│   ├── sv06-buildPlate.png
+│   ├── SV06-buildPlate.stl
+│   └── SV06-texture.svg
 ├── moonraker.conf ✅
 ├── printer.cfg ✅
-└── README.md ❌
+├── README.md ❌
+└── .vscode ❌
+    └── settings.json
 ```
 
 ## <img src="./images/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./images/cup-border.png" width="30" alt='Ko-fi'/>
