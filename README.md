@@ -22,6 +22,7 @@ I am creating these files for my personal use and cannot be held responsible for
   - [Flash Firmware](#flash-firmware)
   - [Download Klipper Configuration](#download-klipper-configuration)
 - [Initial Steps](#initial-steps)
+- [Directory Structure](#directory-structure)
 - [Support Me](#support-me)
 - [Useful Resources](#useful-resources)
 - [Sovol Official Links](#sovol-official-links)
@@ -87,6 +88,56 @@ You can choose _either_ of the 2 following methods.
 ## Initial Steps
 
 Once you've cloned or downloaded the configuration, please follow instructions found in [Initial Steps](https://github.com/bassamanator/Sovol-SV06-firmware#initial-steps).
+
+## Directory Structure
+
+This repository contains many files and folders. Some are _necessary_ for this Klipper configuration to work, others are not.
+
+- **Necessary** items are marked with a ✅.
+- Items that can _optionally_ be deleted are marked with a ❌.
+
+```
+├── cfgs ✅
+│   ├── adxl-direct.cfg
+│   ├── adxl-rp2040.cfg
+│   ├── adxl-rpi-pico-2x.cfg
+│   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
+│   ├── misc-macros.cfg
+│   ├── PARKING.cfg
+│   └── TEST_SPEED.cfg
+├── CODE_OF_CONDUCT.md ❌
+├── CONTRIBUTING.md ❌
+├── .github ❌
+│   ├── FUNDING.yml
+│   └── ISSUE_TEMPLATE
+│       ├── bug_report.md
+│       └── feature_request.md
+├── .gitignore ❌
+├── images ❌
+│   ├── cup-border.png
+│   ├── githubstar.gif
+│   ├── heart.gif
+│   ├── logo_white_stroke.png
+│   └── party_blob.gif
+├── misc ❌
+│   ├── M503-output.yml
+│   ├── skr-mini
+│   │   ├── klipper-USART2.bin
+│   │   ├── klipper-USB.bin
+│   │   ├── klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin
+│   │   ├── ls-output.png
+│   │   ├── menuconfig.png
+│   │   ├── README.md
+│   │   └── skr-mini-e3-v3.0-v1678580296384.png
+│   ├── sv06-buildPlate.png
+│   ├── SV06-buildPlate.stl
+│   └── SV06-texture.svg
+├── moonraker.conf ✅
+├── printer.cfg ✅
+├── README.md ❌
+└── .vscode ❌
+    └── settings.json
+```
 
 ## Support Me
 
