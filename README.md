@@ -33,7 +33,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Sovol Official Links](#sovol-official-links)
 - [Sources](#sources)
 
-# Features
+## Features
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
