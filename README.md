@@ -11,10 +11,10 @@ This branch contains the Klipper configuration and firmware for the **Sovol SV06
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
-# Features
+## Features
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
+- <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
@@ -25,19 +25,19 @@ I am creating these files for my personal use and cannot be held responsible for
   - Load/unload filament macros.
   - Purge line macro.
 
-# Stay Up-to-Date
+## Stay Up-to-Date
 
 Watch for releases and updates:
 
 <img src="./images/githubstar.gif" width="500" alt='Raspberry Pi'/>
 
-# Preface
+## Preface
 
 Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
-# Installation Steps
+## Installation Steps
 
-## Before You Begin
+### Before You Begin
 
 - Read this documentation _fully!_
 - Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Consider yourself warned.
@@ -51,24 +51,25 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
-## Flash Firmware
+### Flash Firmware
 
 💡 _If you have already flashed klipper onto your motherboard in the past, you can skip this step._
 
-💡 For the sake of simplicity, I will refer to the klipper firmware file as `klipper.bin` even though the actual filename is something along the lines of `klipper-v0.11.0-148-g52f4e20c.bin`.
+Please note:
 
-💡 The firmware file is located in the `misc` folder.
+- For the sake of simplicity, I will refer to the klipper firmware file as `klipper.bin` even though the actual filename is something along the lines of `klipper-v0.11.0-148-g52f4e20c.bin`.
+- The firmware file is located in the `misc` folder.
+- Flashing will only work if current firmware filename is _different from previous flashing procedure_. The `.bin` is also important.
+- Many users have reported having issues flashing Klipper using the Sovol microSD card.
 
-### Prepare the microSD Card for Flashing
+#### 1. Prepare the microSD Card for Flashing with These Parameters
 
-⚠️ Many users have reported having issues flashing Klipper using the Sovol microSD card.
-
-- Size: `8GB`. According to Sovol, the largest size that you can use is `16GB`.
+- Size: `16GB` maximum.
 - File system: `FAT32`.
 - Allocation unit size: `4096 bytes`.
 - Must not contain any files _except_ the firmware file.
 
-### Flashing Procedure
+#### 2. Flashing Procedure
 
 1. Disconnect any USB cables that might be connected to the motherboard.
 2. Copy `klipper.bin` to the microSD card.
@@ -79,19 +80,18 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
-⚠️ **Caveat**: Flashing will only work if current firmware filename is _different from previous flashing procedure_. The `.bin` is also important.
-
-## Download Klipper Configuration
+### Download Klipper Configuration
 
 You can choose _either_ of the 2 following methods.
 
-### Method 1: Clone the Repository
+#### Method 1: Clone the Repository
 
 1. `cd ~/printer_data/config`
-2. Empty entire `~/printer_data/config` folder. Unfortunately, for safety reasons I will not post this command here. However, in linux, you can delete files via `rm filename`.
-3. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` 💡 Don't miss the period!
+2. Empty entire `~/printer_data/config` folder.
+   - In linux, you can delete files via `rm fileName` and directories via `rmdir directoryName`.
+3. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` ⚠️ <span style="background:orange;border-radius:3px;padding:0px 5px;color:white"> Don't miss the period!</span>
 
-### Method 2: Download the ZIP
+#### Method 2: Download the ZIP
 
 1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/master.zip) the `ZIP` file containing the Klipper configuration.
 2. See `Step 2` in `Method 1`.
@@ -116,6 +116,10 @@ You can choose _either_ of the 2 following methods.
    restart_method: command
    ```
 
+3. Do a `FIRMWARE_RESTART`.
+
+If you've done everything correctly, you should see no errors or warnings in your Mainsail/Fluidd dashboard.
+
 ### Step 2
 
 ❗☠️ **Your finger should be on the power switch for most of these steps** ☠️❗
@@ -124,7 +128,7 @@ You can choose _either_ of the 2 following methods.
 
 💡 I recommend no filament be loaded for any of these steps.
 
-💡 Find explanations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [klipper.org](https://www.klipper3d.org/G-Codes.html).
+💡 Find explanations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [https://www.klipper3d.org/](https://www.klipper3d.org/G-Codes.html).
 
 You will be pasting/typing these commands into the Mainsail/Fluidd console.
 
@@ -132,13 +136,13 @@ You will be pasting/typing these commands into the Mainsail/Fluidd console.
    1. Check to see if `X` and `Y` max positions (`G90`, `G1 X223 F3000`, `G1 Y223 F3000`) can be reached, and adjust `position_max`, if necessary. You can probably go all the way up to `225` for `X` and `Y` both, however, I would not recommend it.
 2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up against the `stoppers` at the top. You will hear a succession of beeps.
    1. Figure out your `Z` `position_max` by baby stepping your way up to the beam. The range is 250 to 261 from what I've seen, could be even higher for you. Adjust `position_max`, if necessary. I can go all the way to 258, however, I would not print anything higher than 257.
-3. Pid tune the bed, but first move the printhead to the center. Ideally, all Pid tuning should occur at the temperatures that you print most at.
+3. PID tune the bed, but first move the printhead to the center. Ideally, all PID tuning should occur at the temperatures that you print most at.
    1. `G28`
    2. `G90`
    3. `G1 X111 Y111 Z40 F6000`
    4. `PID_CALIBRATE HEATER=heater_bed TARGET=70`
    5. `SAVE_CONFIG` (once completed)
-4. Pid tune the extruder while part cooling fan runs at 25%.
+4. PID tune the extruder while part cooling fan runs at 25%.
    1. `G28`
    2. `G90`
    3. `G1 X111 Y111 Z10 F6000`
