@@ -18,6 +18,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Installation Steps](#installation-steps)
   - [Before You Begin](#before-you-begin)
   - [Download the Configuration](#download-the-configuration)
+- [Adjust Your Slicer](#adjust-your-slicer)
 - [Directory Structure](#directory-structure)
 - [Support Me](#support-me)
 - [FAQ](#faq)
@@ -48,10 +49,10 @@ Watch for releases and updates.
 
 ### Before You Begin
 
+- It is assumed that you already have a working `printer.cfg` and you already have your printer up and running Klipper.
 - Know what you're getting into by reading this documentation _fully!_
 - It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable.
 - It is assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
-- It is assumed that you already have a working `printer.cfg` and you already have your printer up and running Klipper.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
 ### Download the Configuration
@@ -70,6 +71,17 @@ enable_object_processing: True
 ### Setup Instructions
 
 Simply add `[include ./osskc.cfg]` somewhere at the top of your `printer.cfg`.
+
+## Adjust Your Slicer
+
+You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
+
+If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`. Here's an example:
+
+```
+PRINT_START BED=[first_layer_bed_temperature] HOTEND={first_layer_temperature[initial_extruder]+extruder_temperature_offset[initial_extruder]} CHAMBER=[chamber_temperature]
+PURGE_LINE
+```
 
 ## Directory Structure
 
