@@ -11,6 +11,26 @@ This branch contains the Klipper configuration and firmware for the **Sovol SV06
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
+## Outline
+
+- [Features](#features)
+- [Stay Up-to-Date](#stay-up-to-date)
+- [Preface](#preface)
+- [Installation Steps](#installation-steps)
+  - [Before You Begin](#before-you-begin)
+  - [Flash Firmware](#flash-firmware)
+  - [Download Klipper Configuration](#download-klipper-configuration)
+- [Initial Steps](#initial-steps)
+  1. [Adjust Configuration with MCU Path](#adjust-configuration-with-mcu-path)
+  2. [Configure Your Printer](#configure-your-printer)
+- [Adjust Your Slicer](#adjust-your-slicer)
+- [Directory Structure](#directory-structure)
+- [Support Me](#support-me)
+- [FAQ](#faq)
+- [Useful Resources](#useful-resources)
+- [Sovol Official Links](#sovol-official-links)
+- [Sources](#sources)
+
 ## Features
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
@@ -89,7 +109,7 @@ You can choose _either_ of the 2 following methods.
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder.
    - In linux, you can delete files via `rm fileName` and directories via `rmdir directoryName`.
-3. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` ⚠️ <span style="background:orange;border-radius:3px;padding:0px 5px;color:white"> Don't miss the period!</span>
+3. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` ⚠️ Don't miss the period!
 
 #### Method 2: Download the ZIP
 
@@ -100,7 +120,7 @@ You can choose _either_ of the 2 following methods.
 
 ## Initial Steps
 
-### Step 1
+### Adjust Configuration with MCU Path
 
 1. Find what port the `mcu` (printer motherboard) is connected to via `ls -l /dev/serial/by-id/` or `ls -l /dev/serial/by-path/`.
    1. The output will be something along the lines of
@@ -120,7 +140,7 @@ You can choose _either_ of the 2 following methods.
 
 If you've done everything correctly, you should see no errors or warnings in your Mainsail/Fluidd dashboard.
 
-### Step 2
+### Configure Your Printer
 
 ❗☠️ **Your finger should be on the power switch for most of these steps** ☠️❗
 
