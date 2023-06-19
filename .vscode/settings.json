@@ -7,6 +7,7 @@
 	"spellright.documentTypes": ["markdown", "plaintext"],
 	"cSpell.words": [
 		"ADXL",
+		"blanchas",
 		"cfgs",
 		"Fluidd",
 		"Fluiddpi",
@@ -29,6 +30,6 @@
 		"Sovol"
 	],
 	"[markdown]": {
-		"editor.formatOnSave": true
+		"editor.formatOnSave": false
 	}
 }
