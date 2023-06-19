@@ -11,10 +11,24 @@ This branch contains the OSS Klipper configuration that can be used with **any p
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
-# Features
+## Outline
+
+- [Features](#features)
+- [Stay Up-to-Date](#stay-up-to-date)
+- [Installation Steps](#installation-steps)
+  - [Before You Begin](#before-you-begin)
+  - [Download the Configuration](#download-the-configuration)
+- [Directory Structure](#directory-structure)
+- [Support Me](#support-me)
+- [FAQ](#faq)
+- [Useful Resources](#useful-resources)
+- [Sovol Official Links](#sovol-official-links)
+- [Sources](#sources)
+
+## Features
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 CoreXY users can rightly disagree and say that it lacks the quad gantry levelling macros. Please create a pull request if you can help in this regard!
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
+- <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Macros
@@ -24,15 +38,15 @@ I am creating these files for my personal use and cannot be held responsible for
   - Load/unload filament macros.
   - Purge line macro.
 
-# Stay Up-to-Date
+## Stay Up-to-Date
 
-I work on this repository all the time and a lot of new features are coming. Watch releases of this repository to be notified for future updates:
+Watch for releases and updates.
 
 <img src="./images/githubstar.gif" width="500" alt='Raspberry Pi'/>
 
-# Installation Steps
+## Installation Steps
 
-## Before You Begin
+### Before You Begin
 
 - Know what you're getting into by reading this documentation _fully!_
 - It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable.
@@ -40,20 +54,20 @@ I work on this repository all the time and a lot of new features are coming. Wat
 - It is assumed that you already have a working `printer.cfg` and you already have your printer up and running Klipper.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
-## Download the Configuration
+### Download the Configuration
 
 1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/any-printer.zip) the `ZIP` file containing the Klipper configuration.
 2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-any-printer`. This is relevant in the next step.
 3. Extract **only** the _contents_ of the parent folder into `~/printer_data/config`.
 
-💡 If you get a warning that you already have a `moonraker.conf` (which you probably do since you're already up and running Klipper), and _you're not using a low powered device such as the RPi Zero_, you need to simply paste the following into your _existing_ `moonraker.conf`:
+💡 **If** you get a warning that you already have a `moonraker.conf` (which you probably do since you're already up and running Klipper), **and** you're not using a low powered device such as a Raspberry Pi Zero, you need to simply paste the following into your <u>_existing_</u> `moonraker.conf`:
 
 ```
 [file_manager]
 enable_object_processing: True
 ```
 
-## Setup Instructions
+### Setup Instructions
 
 Simply add `[include ./osskc.cfg]` somewhere at the top of your `printer.cfg`.
 
@@ -68,30 +82,38 @@ This repository contains many files and folders. Some are _necessary_ for this K
 ├── cfgs ✅
 │   ├── adxl-direct.cfg
 │   ├── adxl-rp2040.cfg
+│   ├── adxl-rpi-pico-2x.cfg
 │   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
 │   ├── misc-macros.cfg
 │   ├── PARKING.cfg
 │   └── TEST_SPEED.cfg
-├── .vscode❌
-├── .gitignore❌
+├── CODE_OF_CONDUCT.md ❌
+├── CONTRIBUTING.md ❌
+├── .github ❌
+│   └── ISSUE_TEMPLATE
+│       ├── bug_report.md
+│       └── feature_request.md
+├── .gitignore ❌
 ├── images ❌
+│   ├── cup-border.png
 │   ├── githubstar.gif
 │   ├── heart.gif
+│   ├── logo_white_stroke.png
 │   └── party_blob.gif
 ├── misc ❌
-│   ├── cup-border.png
-│   ├── logo_white_stroke.png
 │   └── SuperSlicer_config_bundle.ini
 ├── moonraker.conf ✅ ❌ ¿? (depends if you already have this file or not)
 ├── osskc.cfg ✅
-└── README.md ❌
+├── README.md ❌
+└── .vscode ❌
+    └── settings.json
 ```
 
-## <img src="./images/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./images/cup-border.png" width="30" alt='Ko-fi'/>
+## Support Me
 
-Please ⭐star⭐ this repository!
+Please ⭐ star ⭐ this repository!
 
-<img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
@@ -103,12 +125,6 @@ Please find answers to common questions [here](https://github.com/bassamanator/S
 - [RP2040-Zero ADXL345 Connection Klipper](https://github.com/bassamanator/rp2040-zero-adxl345-klipper)
 - ⭐⭐⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
 - [Simplify3D Print Quality Troubleshooting Guide](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
-
-## Sovol Official Links
-
-- [SV06 Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
-- [SV06 Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
-- [SV06 Plus Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
 
 ## Sources
 
