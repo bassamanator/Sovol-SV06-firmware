@@ -47,7 +47,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 ## Stay Up-to-Date
 
-Watch for releases and updates:
+Watch for releases and updates.
 
 <img src="./images/githubstar.gif" width="500" alt='Raspberry Pi'/>
 
@@ -244,11 +244,11 @@ This repository contains many files and folders. Some are _necessary_ for this K
     └── settings.json
 ```
 
-## <img src="./images/cup-border.png" width="30" alt='Ko-fi'/> Support Me <img src="./images/cup-border.png" width="30" alt='Ko-fi'/>
+## Support Me
 
 Please ⭐star⭐ this repository!
 
-<img src="./images/heart.gif" width="17" alt=''/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+<img src="./images/cup-border.png" width="30" alt='Ko-fi'/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
