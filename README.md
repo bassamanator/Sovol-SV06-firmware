@@ -18,7 +18,6 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Installation Instructions](#installation-instructions)
   - [Electronic Wiring](#electronic-wiring)
   - [⚠️ Important Note About Stepper Motor Current](#important-note-about-stepper-motor-current)
-  - [Download Firmware](#download-firmware)
   - [Flash Firmware](#flash-firmware)
   - [Download Klipper Configuration](#download-klipper-configuration)
 - [Initial Steps](#initial-steps)
@@ -41,31 +40,42 @@ For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been 
 
 💡 Although stepper motors can withstand upwards of 125C, they should at the most get hot to the touch (~55C), not _very hot_.
 
-### Download Firmware
+### Flash Firmware
 
-💡 The firmware files are located in `misc/skr-mini`.
-💡 Be sure to download the `raw` files. Find out more about this [here](https://stackoverflow.com/questions/4604663/download-single-files-from-github); check the answer with the highest score.
+💡 _If you have already flashed klipper onto your motherboard in the past, you can skip this step._
 
-Download [klipper-USB.bin](./misc/skr-mini/klipper-USB.bin) compiled by BTT.
+Please note:
 
-Or you can download [klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin](./misc/skr-mini/klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin) that I compiled, however, it is **untested**.
+- The firmware file **must** be named `firmware.bin`.
+- The firmware files are located in `misc/skr-mini`.
+- Many users have reported having issues flashing Klipper using the Sovol microSD card.
 
-#### Alternatively, find instructions on how to build the firmware yourself [here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#build-firmware-image).
+#### Select Your Firmware
+
+- `klipper-USB.bin` compiled by BTT.
+- `klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin` that I compiled, however, it is **untested**.
+
+##### Build Your Own
+
+Find instructions on how to build the firmware yourself [here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#build-firmware-image).
 
 <img src="./misc/skr-mini/menuconfig.png" width="500" alt='ls output'/>
 
-### Flash Firmware
+#### 1. Prepare the microSD Card for Flashing with These Parameters
 
-⚠️ Make sure the microSD card has been prepared using the instructions found [here](https://github.com/bassamanator/Sovol-SV06-firmware#1-prepare-the-microsd-card-for-flashing-with-these-parameters).
+- Size: `16GB` maximum.
+- File system: `FAT32`.
+- Allocation unit size: `4096 bytes`.
+- Must not contain any files _except_ the firmware file.
 
-1. Rename whatever firmware file you're using to `firmware.bin`. ⚠️ If the file is not renamed, the bootloader will not be updated properly.
-2. Copy `firmware.bin` to the root directory of the microSD card.
-3. Power off the printer.
-4. Insert the microSD card.
-5. Power on the printer.
-6. After a few seconds, the skr-mini-E3-V3.0 should be flashed, but wait a full minute just to be sure.
-7. You can confirm that the flash was successful, by running `ls -l /dev/serial/by-id/` or `ls -l /dev/serial/by-path/`. If the flash was successful, you'll see something like the following:
-   <img src="./misc/skr-mini/ls-output.png" width="400" alt='ls output'/>
+#### 2. Flashing Procedure
+
+1. Disconnect any USB cables that might be connected to the motherboard.
+2. Copy `firmware.bin` to the microSD card.
+3. Make sure the printer is off.
+4. Insert the microSD card into printer.
+5. Turn on the printer and wait a minute (usually takes 10 seconds).
+6. Turn off the printer and remove the microSD.
 
 ### Download Klipper Configuration
 
@@ -122,12 +132,10 @@ This repository contains many files and folders. Some are _necessary_ for this K
 ├── misc ❌
 │   ├── M503-output.yml
 │   ├── skr-mini
-│   │   ├── klipper-USART2.bin
 │   │   ├── klipper-USB.bin
 │   │   ├── klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin
 │   │   ├── ls-output.png
 │   │   ├── menuconfig.png
-│   │   ├── README.md
 │   │   └── skr-mini-e3-v3.0-v1678580296384.png
 │   ├── sv06-buildPlate.png
 │   ├── SV06-buildPlate.stl
