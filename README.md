@@ -246,9 +246,9 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ## Support Me
 
-Please ⭐star⭐ this repository!
+Please ⭐ star ⭐ this repository!
 
-<img src="./images/cup-border.png" width="30" alt='Ko-fi'/> If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
