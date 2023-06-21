@@ -1,9 +1,14 @@
-# 🚨 *One-Stop-Shop* Sovol SV06 Klipper Configuration 🏎️
+# 🚨 _One-Stop-Shop_ Klipper Configuration
 
 ## This branch contains my personal settings.
 
-## Please refer to the [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master) branch to download the recommended Klipper configuration for the SV06.
+## Switch to a More Appropriate Branch
 
-## For all other printers running Klipper, please refer to the [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) branch to download the OSS Klipper configuration.
+| Printer                     | Branch                                                                                    |
+| --------------------------- | ----------------------------------------------------------------------------------------- |
+| Sovol SV06                  | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
+| Sovol SV06 Skr-Mini-E3-V3.0 | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
+| Sovol SV06 Plus             | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
+| All other printers          | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
 
 <img src="./images/octahedroflake.jpg" />
