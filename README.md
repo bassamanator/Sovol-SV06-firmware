@@ -16,10 +16,10 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Features](#features)
 - [Stay Up-to-Date](#stay-up-to-date)
 - [Preface](#preface)
-- [Installation Steps](#installation-steps)
-  - [Before You Begin](#before-you-begin)
+- [Before You Begin](#before-you-begin)
+- [Klipper Installation](#klipper-installation)
   - [Flash Firmware](#flash-firmware)
-  - [Download Klipper Configuration](#download-klipper-configuration)
+  - [Download OSS Klipper Configuration](#download-oss-klipper-configuration)
 - [Initial Steps](#initial-steps)
   1. [Adjust Configuration with MCU Path](#adjust-configuration-with-mcu-path)
   2. [Configure Your Printer](#configure-your-printer)
@@ -55,9 +55,7 @@ Watch for releases and updates.
 
 Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
-## Installation Steps
-
-### Before You Begin
+## Before You Begin
 
 - Read this documentation _fully!_
 - Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Consider yourself warned.
@@ -70,6 +68,8 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
+
+## Klipper Installation
 
 ### Flash Firmware
 
@@ -100,7 +100,7 @@ Please note:
 
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
-### Download Klipper Configuration
+### Download OSS Klipper Configuration
 
 You can choose _either_ of the 2 following methods.
 
