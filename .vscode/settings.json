@@ -30,6 +30,6 @@
 		"Sovol"
 	],
 	"[markdown]": {
-		"editor.formatOnSave": true
+		"editor.formatOnSave": false
 	}
 }
