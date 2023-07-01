@@ -1,4 +1,4 @@
-# 🚨 _One-Stop-Shop_ Sovol SV06 Klipper Configuration
+# 🚨 _One-Stop-Shop_ Klipper Configuration
 
 This branch contains the Klipper configuration and firmware for the **Sovol SV06 Plus** 3D printer.
 
@@ -163,10 +163,10 @@ You will be pasting/typing these commands into the Mainsail/Fluidd console.
 2. Do a mechanical gantry calibration; `G34`. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up against the `stoppers` at the top. ~~You will hear a succession of beeps.~~
    1. Figure out your `Z` `position_max` by baby stepping your way up to the beam, and adjust `position_max`, if necessary.
 3. PID tune the bed. Ideally, all PID tuning should occur at the temperatures that you print most at.
-   1. `PID_TEST_BED`
+   1. `PID_TEST_BED TEMP=70`
    2. `SAVE_CONFIG` (once completed)
 4. PID tune the extruder while part cooling fan runs at 25%.
-   1. `PID_TEST_HOTEND`
+   1. `PID_TEST_HOTEND TEMP=245`
    2. `SAVE_CONFIG` (once completed)
 5. Adjust `z_offset`. Make sure your nozzle if very clean. Do the [Paper test](https://www.klipper3d.org/Bed_Level.html?h=probe_calibrate#the-paper-test).
    1. `DO_PROBE_CALIBRATE`
