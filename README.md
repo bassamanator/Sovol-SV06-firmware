@@ -15,9 +15,9 @@ I am creating these files for my personal use and cannot be held responsible for
 
 - [Features](#features)
 - [Stay Up-to-Date](#stay-up-to-date)
+- [Before You Begin](#before-you-begin)
 - [Installation Steps](#installation-steps)
-  - [Before You Begin](#before-you-begin)
-  - [Download the Configuration](#download-the-configuration)
+  - [Download OSS Klipper Configuration](#download-oss-klipper-configuration)
 - [Adjust Your Slicer](#adjust-your-slicer)
 - [Directory Structure](#directory-structure)
 - [Support Me](#support-me)
@@ -45,9 +45,7 @@ Watch for releases and updates.
 
 <img src="./images/githubstar.gif" width="500" alt='Raspberry Pi'/>
 
-## Installation Steps
-
-### Before You Begin
+## Before You Begin
 
 - It is assumed that you already have a working `printer.cfg` and you already have your printer up and running Klipper.
 - Know what you're getting into by reading this documentation _fully!_
@@ -55,7 +53,9 @@ Watch for releases and updates.
 - It is assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
-### Download the Configuration
+## Installation Steps
+
+### Download OSS Klipper Configuration
 
 1. [Download](https://github.com/bassamanator/Sovol-SV06-firmware/archive/refs/heads/any-printer.zip) the `ZIP` file containing the Klipper configuration.
 2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-any-printer`. This is relevant in the next step.
