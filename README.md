@@ -18,10 +18,10 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Features](#features)
 - [Stay Up-to-Date](#stay-up-to-date)
 - [Preface](#preface)
-- [Installation Steps](#installation-steps)
-  - [Before You Begin](#before-you-begin)
+- [Before You Begin](#before-you-begin)
+- [Klipper Installation](#klipper-installation)
   - [Flash Firmware](#flash-firmware)
-  - [Download Klipper Configuration](#download-klipper-configuration)
+  - [Download OSS Klipper Configuration](#download-oss-klipper-configuration)
 - [Initial Steps](#initial-steps)
   1. [Adjust Configuration with MCU Path](#adjust-configuration-with-mcu-path)
   2. [Configure Your Printer](#configure-your-printer)
@@ -57,9 +57,7 @@ Watch for releases and updates.
 
 Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
-## Installation Steps
-
-### Before You Begin
+## Before You Begin
 
 - On the SV06 Plus, your screen will not work if you install Klipper. You can get it working again via the instructions found [here](https://github.com/fryc88/klipper-sv06plus-screen).
 - Read this documentation _fully!_
@@ -73,6 +71,8 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
+
+## Klipper Installation
 
 ### Flash Firmware
 
@@ -103,7 +103,7 @@ Please note:
 
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
-### Download Klipper Configuration
+### Download OSS Klipper Configuration
 
 You can choose _either_ of the 2 following methods.
 
@@ -155,37 +155,26 @@ If you've done everything correctly, you should see no errors or warnings in you
 
 You will be pasting/typing these commands into the Mainsail/Fluidd console.
 
-1. `G28`
-   1. Check to see if `X` and `Y` max positions (`G90`, `G1 X300 F3000`, `G1 Y300 F3000`) can be reached, and adjust `position_max`, if necessary. Note, you might be able to go even further.
-2. Do a `G34`; mechanical gantry calibration. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up against the `stoppers` at the top. ~~You will hear a succession of beeps.~~
-   1. Figure out your `Z` `position_max` by baby stepping your way up to the beam (`G90`, `G1 Z330 F900`, then move up mm by mm). Adjust `position_max`, if necessary.
-3. Pid tune the bed, but first move the printhead to the center. Ideally, all Pid tuning should occur at the temperatures that you print most at.
+1. Check to see if `X` and `Y` max positions can be reached, and adjust `position_max`, if necessary. You might be able to go further, which is great, but I recommend leaving a 2mm gap for safety.
    1. `G28`
    2. `G90`
-   3. `G1 X150 Y150 Z40 F6000`
-   4. `PID_CALIBRATE HEATER=heater_bed TARGET=70`
-   5. `SAVE_CONFIG` (once completed)
+   3. `G1 X300 F3000`
+   4. `G1 Y300 F3000`
+2. Do a mechanical gantry calibration; `G34`. After the controlled collision against the beam at the top, there will be a 10 second pause for you to verify that both sides of the gantry are pressed up against the `stoppers` at the top. ~~You will hear a succession of beeps.~~
+   1. Figure out your `Z` `position_max` by baby stepping your way up to the beam, and adjust `position_max`, if necessary.
+3. PID tune the bed. Ideally, all PID tuning should occur at the temperatures that you print most at.
+   1. `PID_TEST_BED`
+   2. `SAVE_CONFIG` (once completed)
 4. PID tune the extruder while part cooling fan runs at 25%.
-   1. `G28`
-   2. `G90`
-   3. `G1 X150 Y150 Z10 F6000`
-   4. `M106 S64`
-   5. `PID_CALIBRATE HEATER=extruder TARGET=245`
-   6. `SAVE_CONFIG` (once completed)
+   1. `PID_TEST_HOTEND`
+   2. `SAVE_CONFIG` (once completed)
 5. Adjust `z_offset`. Make sure your nozzle if very clean. Do the [Paper test](https://www.klipper3d.org/Bed_Level.html?h=probe_calibrate#the-paper-test).
-   1. `SET_HEATER_TEMPERATURE HEATER=heater_bed TARGET=60`
-   2. `SET_HEATER_TEMPERATURE HEATER=extruder TARGET=180`
-   3. Proceed to next steps after both temperatures have been reached.
-   4. `G28`
-   5. `PROBE_CALIBRATE`
-   6. `SAVE_CONFIG` (once completed)
+   1. `DO_PROBE_CALIBRATE`
+   2. Follow `z_offset` setup in Mainsail/Fluidd.
+   3. `SAVE_CONFIG` (once completed)
 6. Create a bed mesh.
-   1. `SET_HEATER_TEMPERATURE HEATER=heater_bed TARGET=60`
-   2. `SET_HEATER_TEMPERATURE HEATER=extruder TARGET=180`
-   3. Proceed to next steps after both temperatures have been reached.
-   4. `G28`
-   5. `BED_MESH_CALIBRATE`
-   6. `SAVE_CONFIG` (once completed)
+   1. `DO_CREATE_MESH`
+   2. `SAVE_CONFIG` (once completed)
 
 If you've made it here, then your printer has been Klipperized, and is ready to print!
 
