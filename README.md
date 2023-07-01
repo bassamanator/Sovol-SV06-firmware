@@ -18,12 +18,12 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Features](#features)
 - [Stay Up-to-Date](#stay-up-to-date)
 - [Preface](#preface)
-- [Installation Steps](#installation-steps)
-  - [Before You Begin](#before-you-begin)
-  - [Electronic Wiring](#electronic-wiring)
+- [Before You Begin](#before-you-begin)
+- [Electronic Wiring](#electronic-wiring)
   - [⚠️ Important Note About Stepper Motor Current](#important-note-about-stepper-motor-current)
+- [Klipper Installation](#klipper-installation)
   - [Flash Firmware](#flash-firmware)
-  - [Download Klipper Configuration](#download-klipper-configuration)
+  - [Download OSS Klipper Configuration](#download-oss-klipper-configuration)
 - [Initial Steps](#initial-steps)
   1. [Adjust Configuration with MCU Path](#adjust-configuration-with-mcu-path)
   2. [Configure Your Printer](#configure-your-printer)
@@ -59,9 +59,7 @@ Watch for releases and updates.
 
 Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
-## Installation Steps
-
-### Before You Begin
+## Before You Begin
 
 - Read this documentation _fully!_
 - Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Consider yourself warned.
@@ -75,7 +73,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
-### Electronic Wiring
+## Electronic Wiring
 
 Wire cables according to the following diagram:
 <img src="./misc/skr-mini/skr-mini-e3-v3.0-v1678580296384.png" alt='skr-mini-e3-v3.0 installation instructions'/>
@@ -85,6 +83,8 @@ Wire cables according to the following diagram:
 For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been reduced in the `printer.cfg`, because the standard current seems to make the steppers dangerously hot. You may have to increase the current, or if the motors are still too hot, you may have to decrease it.
 
 💡 Although stepper motors can withstand upwards of 125C, they should at the most get hot to the touch (~55C), not _very hot_.
+
+## Klipper Installation
 
 ### Flash Firmware
 
@@ -123,7 +123,7 @@ Find instructions on how to build the firmware yourself [here](https://github.co
 5. Turn on the printer and wait a minute (usually takes 10 seconds).
 6. Turn off the printer and remove the microSD.
 
-### Download Klipper Configuration
+### Download OSS Klipper Configuration
 
 You can choose _either_ of the 2 following methods.
 
