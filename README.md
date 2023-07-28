@@ -34,7 +34,7 @@ I am creating these files for my personal use and cannot be held responsible for
 ## Features
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
-- <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
+- Filament runout sensor usage implemented.
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
@@ -44,12 +44,15 @@ I am creating these files for my personal use and cannot be held responsible for
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
   - Purge line macro.
+- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added! <img src="./images/party_blob.gif" width="20" alt=''/> Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
+**⭐ Star this project** (Highly recommended, starred users may receive priority over regular users)
+
 Watch for releases and updates.
 
-<img src="./images/githubstar.gif" width="500" alt='Raspberry Pi'/>
+<img src="./images/githubstar.gif" width="500" alt='githubstar'/>
 
 ## Preface
 
@@ -235,9 +238,9 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ## Support Me
 
-Please ⭐ star ⭐ this repository!
+Please ⭐ star this repository!
 
-If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
@@ -316,6 +319,21 @@ The printhead is now parked front center waiting for you to insert filament. You
    - OR, you can push some filament by hand _making sure to first disengage the extruder's spring loaded arm_.
 3. Hit resume in your Klipper dashboard.
 
+##### How do I enable KAMP (Klipper Adaptive Meshing & Purging)?
+
+Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been enabled and tested.
+
+If you KAMP is disabled, and you don't have a `default` mesh stored in your `printer.cfg`, `PRINT_START` will crash.
+
+Adjust according to your needs.
+
+| File     | `cfgs/misc-macros.cfg`   |
+| -------- | ------------------------ |
+| Section  | `[gcode_macro _globals]` |
+| Variable | `variable_kamp_enable`   |
+| Disable  | `0`                      |
+| Enable   | `1`                      |
+
 ## Useful Resources
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
@@ -338,5 +356,6 @@ The printhead is now parked front center waiting for you to insert filament. You
 - https://github.com/spinixguy/Sovol-SV06-firmware
 - https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
+- [Klipper Adaptive Meshing & Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)
