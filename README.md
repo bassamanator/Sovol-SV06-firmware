@@ -43,7 +43,8 @@ I am creating these files for my personal use and cannot be held responsible for
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
-  - Purge line macro.
+  - `PURGE_LINE` macro.
+  - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> `TEST_SPEED` macro. <img src="./images/party_blob.gif" width="20" alt=''/> Find instructions [here](#how-do-i-use-the-test_speed-macro).
 - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added! <img src="./images/party_blob.gif" width="20" alt=''/> Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
@@ -333,6 +334,18 @@ Adjust according to your needs.
 | Variable | `variable_kamp_enable`   |
 | Disable  | `0`                      |
 | Enable   | `1`                      |
+
+##### How do I use the `TEST_SPEED` macro?
+
+⚠️ This is for advanced users only, with well oiled machines. You can cause serious damage to your printer if you're not careful. ☠️ **You have been warned** ☠️.
+
+Find full instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/determining_max_speeds_accels.html).
+
+Some tips:
+
+- Before running with `ITERATIONS=40` with an untested speed/accel value, run with `ITERATIONS=1`.
+- Pay close attention throughout the run, so that you can click **`EMERGENCY STOP`** at a moment's notice.
+- This macro will simply help you determine the maximum speed your printhead and bed can reliably move at, not necessarily print at. The bottleneck for my SV06, for example, is the 15mm/s^2 that the hotend maxes out at (well under 200mm/s actual print speed).
 
 ## Useful Resources
 
