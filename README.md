@@ -327,7 +327,11 @@ The printhead is now parked front center waiting for you to insert filament. You
 
 Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been enabled and tested.
 
-If you KAMP is disabled, and you don't have a `default` mesh stored in your `printer.cfg`, `PRINT_START` will crash.
+The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
+
+⚠️ If KAMP is disabled, and you don't have a `default` mesh stored in your `printer.cfg`, `PRINT_START` will crash.
+
+⚠️ KAMP cannot be used with low-powered devices such as the Raspberry Pi Zero.
 
 Adjust according to your needs.
 
