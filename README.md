@@ -102,6 +102,8 @@ Please note:
 5. Turn on the printer and wait a minute (usually takes 10 seconds).
 6. Turn off the printer and remove the microSD.
 
+At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide.
+
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
 ### Download OSS Klipper Configuration
@@ -113,6 +115,7 @@ You can choose _either_ of the 2 following methods.
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder.
    - In linux, you can delete files via `rm fileName` and directories via `rmdir directoryName`.
+   - In linux, you can list files and folders via `ls -lah`.
 3. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` ⚠️ Don't miss the period!
 
 #### Method 2: Download the ZIP
@@ -142,7 +145,7 @@ You can choose _either_ of the 2 following methods.
 
 3. Do a `FIRMWARE_RESTART`.
 
-If you've done everything correctly, you should see no errors or warnings in your Mainsail/Fluidd dashboard.
+If the Klipper flash that you did earlier was successful, and you've done everything else correctly, you should see no errors or warnings in the Mainsail/Fluidd dashboard. **Klipper has successfully been installed on your printer!**
 
 ### Configure Your Printer
 
