@@ -36,7 +36,7 @@ I am creating these files for my personal use and cannot be held responsible for
 ## Features
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
-- <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
+- Filament runout sensor usage implemented.
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
@@ -45,13 +45,17 @@ I am creating these files for my personal use and cannot be held responsible for
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
-  - Purge line macro.
+  - `PURGE_LINE` macro.
+  - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> `TEST_SPEED` macro. <img src="./images/party_blob.gif" width="20" alt=''/> Find instructions [here](#how-do-i-use-the-test_speed-macro).
+- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added! <img src="./images/party_blob.gif" width="20" alt=''/> Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
+**⭐ Star this project** (Highly recommended, starred users may receive priority over regular users)
+
 Watch for releases and updates.
 
-<img src="./images/githubstar.gif" width="500" alt='Raspberry Pi'/>
+<img src="./images/githubstar.gif" width="500" alt='githubstar'/>
 
 ## Preface
 
@@ -101,6 +105,8 @@ Please note:
 5. Turn on the printer and wait a minute (usually takes 10 seconds).
 6. Turn off the printer and remove the microSD.
 
+At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide.
+
 You may find this [video](https://youtu.be/p6l253OJa34) useful.
 
 ### Download OSS Klipper Configuration
@@ -112,6 +118,7 @@ You can choose _either_ of the 2 following methods.
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder.
    - In linux, you can delete files via `rm fileName` and directories via `rmdir directoryName`.
+   - In linux, you can list files and folders via `ls -lah`.
 3. `git clone -b sv06-plus --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` ⚠️ Don't miss the period!
 
 #### Method 2: Download the ZIP
@@ -141,7 +148,7 @@ You can choose _either_ of the 2 following methods.
 
 3. Do a `FIRMWARE_RESTART`.
 
-If you've done everything correctly, you should see no errors or warnings in your Mainsail/Fluidd dashboard.
+If the Klipper flash that you did earlier was successful, and you've done everything else correctly, you should see no errors or warnings in the Mainsail/Fluidd dashboard. **Klipper has successfully been installed on your printer!**
 
 ### Configure Your Printer
 
@@ -239,9 +246,9 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ## Support Me
 
-Please ⭐ star ⭐ this repository!
+Please ⭐ star this repository!
 
-If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
@@ -322,6 +329,33 @@ The printhead is now parked front center waiting for you to insert filament. You
    - OR, you can push some filament by hand _making sure to first disengage the extruder's spring loaded arm_.
 3. Hit resume in your Klipper dashboard.
 
+##### How do I enable KAMP (Klipper Adaptive Meshing & Purging)?
+
+Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been enabled and tested.
+
+If you KAMP is disabled, and you don't have a `default` mesh stored in your `printer.cfg`, `PRINT_START` will crash.
+
+Adjust according to your needs.
+
+| File     | `cfgs/misc-macros.cfg`   |
+| -------- | ------------------------ |
+| Section  | `[gcode_macro _globals]` |
+| Variable | `variable_kamp_enable`   |
+| Disable  | `0`                      |
+| Enable   | `1`                      |
+
+##### How do I use the `TEST_SPEED` macro?
+
+⚠️ This is for advanced users only, with well oiled machines. You can cause serious damage to your printer if you're not careful. ☠️ **You have been warned** ☠️.
+
+Find full instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/determining_max_speeds_accels.html).
+
+Some tips:
+
+- Before running with `ITERATIONS=40` with an untested speed/accel value, run with `ITERATIONS=1`.
+- Pay close attention throughout the run, so that you can click **`EMERGENCY STOP`** at a moment's notice.
+- This macro will simply help you determine the maximum speed your printhead and bed can reliably move at, not necessarily print at. The bottleneck for my SV06, for example, is the 15mm/s^2 that the hotend maxes out at (well under 200mm/s actual print speed).
+
 ## Useful Resources
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
@@ -345,5 +379,6 @@ The printhead is now parked front center waiting for you to insert filament. You
 - https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
 - https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
 - https://www.printables.com/model/447787-sovol-sv06-plus-build-plate
+- [Klipper Adaptive Meshing & Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)
