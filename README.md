@@ -49,7 +49,7 @@ I am creating these files for my personal use and cannot be held responsible for
   - Load/unload filament macros.
   - `PURGE_LINE` macro.
   - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> `TEST_SPEED` macro. <img src="./images/party_blob.gif" width="20" alt=''/> Find instructions [here](#how-do-i-use-the-test_speed-macro).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added! <img src="./images/party_blob.gif" width="20" alt=''/> Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
+- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! <img src="./images/party_blob.gif" width="20" alt=''/> Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
@@ -351,7 +351,7 @@ The printhead is now parked front center waiting for you to insert filament. You
 
 ##### How do I enable KAMP (Klipper Adaptive Meshing & Purging)?
 
-Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been enabled and tested.
+Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been configured and tested.
 
 The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
 

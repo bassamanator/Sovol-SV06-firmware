@@ -1,10 +1,10 @@
 {
 	"editor.tabSize": 4,
+	// "editor.formatOnSave": false,
+	// "editor.defaultFormatter": null,
 	"editor.insertSpaces": true,
 	"editor.detectIndentation": false,
 	"git.mergeEditor": false,
-	"spellright.language": ["en-GB-10-1."],
-	"spellright.documentTypes": ["markdown", "plaintext"],
 	"cSpell.words": [
 		"ADXL",
 		"blanchas",
@@ -34,5 +34,25 @@
 	],
 	"[markdown]": {
 		"editor.formatOnSave": false
-	}
+	},
+	"workbench.colorCustomizations": {
+		"activityBar.activeBackground": "#7e4810",
+		"activityBar.background": "#7e4810",
+		"activityBar.foreground": "#e7e7e7",
+		"activityBar.inactiveForeground": "#e7e7e799",
+		"activityBarBadge.background": "#041c10",
+		"activityBarBadge.foreground": "#e7e7e7",
+		"commandCenter.border": "#e7e7e799",
+		"sash.hoverBorder": "#7e4810",
+		"statusBar.background": "#512e0a",
+		"statusBar.foreground": "#e7e7e7",
+		"statusBarItem.hoverBackground": "#7e4810",
+		"statusBarItem.remoteBackground": "#512e0a",
+		"statusBarItem.remoteForeground": "#e7e7e7",
+		"titleBar.activeBackground": "#512e0a",
+		"titleBar.activeForeground": "#e7e7e7",
+		"titleBar.inactiveBackground": "#512e0a99",
+		"titleBar.inactiveForeground": "#e7e7e799"
+	},
+	"peacock.color": "#512e0a"
 }
