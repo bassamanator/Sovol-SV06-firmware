@@ -1,5 +1,7 @@
 {
 	"editor.tabSize": 4,
+	"editor.formatOnSave": false,
+	"editor.defaultFormatter": null,
 	"editor.insertSpaces": true,
 	"editor.detectIndentation": false,
 	"git.mergeEditor": false,
@@ -14,6 +16,7 @@
 		"gcode",
 		"githubstar",
 		"hotend",
+		"KAMP",
 		"KIAUH",
 		"Klipper",
 		"Klipperized",
