@@ -29,7 +29,8 @@
 		"pico",
 		"Prusa",
 		"runout",
-		"Sovol"
+		"Sovol",
+		"textcolor"
 	],
 	"[markdown]": {
 		"editor.formatOnSave": false
