@@ -5,7 +5,7 @@ This branch contains the Klipper configuration and firmware for the **Sovol SV06
 | Printer                     | Branch                                                                              |
 | --------------------------- | ----------------------------------------------------------------------------------- |
 | Sovol SV06                  | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)           |
-| Sovol SV06 Skr-Mini-E3-V3.0 | ⚡ $\small{\textcolor{aqua}{\text{YOU ARE HERE}}}$ ⚡                               |
+| Sovol SV06 Skr-Mini-E3-V3.0 | ⚡ $\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}$ ⚡                               |
 | Sovol SV06 Plus             | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)     |
 | All other printers          | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) |
 
