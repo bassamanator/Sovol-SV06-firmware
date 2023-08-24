@@ -6,7 +6,7 @@ This branch contains the Klipper configuration and firmware for the **Sovol SV06
 | --------------------------- | ----------------------------------------------------------------------------------------- |
 | Sovol SV06                  | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
 | Sovol SV06 Skr-Mini-E3-V3.0 | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
-| Sovol SV06 Plus             | ⚡ $\small{\textcolor{aqua}{\text{YOU ARE HERE}}}$ ⚡                                     |
+| Sovol SV06 Plus             | ⚡ $\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}$ ⚡                            |
 | All other printers          | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
@@ -375,15 +375,16 @@ Some tips:
 
 ## Sources
 
-- https://www.klipper3d.org
-- https://ellis3dp.com/Print-Tuning-Guide
-- https://github.com/strayr/strayr-k-macros
-- https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
-- https://github.com/spinixguy/Sovol-SV06-firmware
-- https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
-- https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
-- https://www.printables.com/model/447787-sovol-sv06-plus-build-plate
 - [Klipper Adaptive Meshing & Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
 - [PS print settings based on Ellis' SS print settings](https://github.com/mjonuschat/PrusaSlicer-Profiles)
+- [https://www.klipper3d.org](https://www.klipper3d.org)
+- [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- [Mechanical Gantry Calibration Macro](https://github.com/strayr/strayr-k-macros)
+- [SV06 printer.cfg](https://github.com/spinixguy/Sovol-SV06-firmware)
+- [SV06 Buildplate and Texture](https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas)
+- [SV06 Plus Buildplate and Texture](https://www.printables.com/model/447787-sovol-sv06-plus-build-plate)
+- [Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)
+- [Klipper Adaptive Meshing & Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
+- [PrusaSlicer Print Settings](https://github.com/mjonuschat/PrusaSlicer-Profiles)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)
