@@ -37,6 +37,9 @@
 	"[markdown]": {
 		"editor.formatOnSave": false
 	},
+	"[jsonc]": {
+		"editor.insertSpaces": false
+	},
 	"workbench.colorCustomizations": {
 		"activityBar.activeBackground": "#7e4810",
 		"activityBar.background": "#7e4810",
