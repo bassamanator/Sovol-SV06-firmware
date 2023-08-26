@@ -36,7 +36,8 @@ I am creating these files for my personal use and cannot be held responsible for
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - Filament runout sensor usage implemented.
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
-- SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
+- A SuperSlicer config bundle that contains the printer configurations for the SV06/Plus, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)).
+- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> A PrusaSlicer config bundle based on Ellis' SuperSlicer Profiles.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
 - Macros
   - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration.
@@ -44,8 +45,8 @@ I am creating these files for my personal use and cannot be held responsible for
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
   - `PURGE_LINE` macro.
-  - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> `TEST_SPEED` macro. <img src="./images/party_blob.gif" width="20" alt=''/> Find instructions [here](#how-do-i-use-the-test_speed-macro).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! <img src="./images/party_blob.gif" width="20" alt=''/> Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
+  - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
+- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
@@ -57,16 +58,16 @@ Watch for releases and updates.
 
 ## Preface
 
-Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read all documentation found on this page. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
+Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and _fully read all the documentation on this page_. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
 ## Before You Begin
 
 - Read this documentation _fully!_
-- Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Consider yourself warned.
+- Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Beginner's would be wise to go through the steps mentioned [here](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md). Consider yourself warned.
 - Follow the steps in order.
 - If an error was reported at a step, do no proceed to the next step.
 - It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. Note that most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it's not possible to tell just by looking.
-- [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/parts/README.md#put-tape-on-the-5v-pin) the USB cable's 5V pin.
+- [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md#put-tape-on-the-5v-pin) the USB cable's 5V pin.
 - It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
 - Klipper _must_ be installed on the host Raspberry Pi for everything to work. Easiest is to use a [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. Alternatively, you can install `Fluidd` or `Mainsail` via [KIAUH](https://github.com/th33xitus/kiauh).
 - Robert Redford's performance in _Spy Game (2001)_ was superb!
@@ -249,7 +250,7 @@ If you found my work useful, consider buying me a [<img src="./images/logo_white
 
 ## FAQ
 
-##### How do I import a SuperSlicer configuration bundle (`SuperSlicer_config_bundle.ini`) into SuperSlicer?
+##### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
 Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
 
