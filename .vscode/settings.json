@@ -1,15 +1,14 @@
 {
 	"editor.tabSize": 4,
-	"editor.formatOnSave": false,
-	"editor.defaultFormatter": null,
+	// "editor.formatOnSave": false,
+	// "editor.defaultFormatter": null,
 	"editor.insertSpaces": true,
 	"editor.detectIndentation": false,
 	"git.mergeEditor": false,
-	"spellright.language": ["en-GB-10-1."],
-	"spellright.documentTypes": ["markdown", "plaintext"],
 	"cSpell.words": [
 		"ADXL",
 		"blanchas",
+		"Buildplate",
 		"cfgs",
 		"Fluidd",
 		"Fluiddpi",
@@ -31,10 +30,14 @@
 		"pico",
 		"Prusa",
 		"runout",
-		"Sovol"
+		"Sovol",
+		"textcolor"
 	],
 	"[markdown]": {
 		"editor.formatOnSave": false
+	},
+	"[jsonc]": {
+		"editor.insertSpaces": false
 	},
 	"workbench.colorCustomizations": {
 		"activityBar.activeBackground": "#7e4810",
