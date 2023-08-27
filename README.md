@@ -2,12 +2,12 @@
 
 This branch contains the Klipper configuration and firmware for the **Sovol SV06** 3D printer.
 
-| Printer                     | Branch                                                                                    |
-| --------------------------- | ----------------------------------------------------------------------------------------- |
-| Sovol SV06                  | ⚡ $\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}$ ⚡                            |
-| Sovol SV06 Skr-Mini-E3-V3.0 | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
-| Sovol SV06 Plus             | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
-| All other printers          | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
+| Printer                                                         | Branch                                                                                    |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| ${\normalsize{\textcolor{darkturquoise}{\texttt{Sovol SV06}}}}$ | ⚡ ${\small{\textcolor{darkturquoise}{\texttt{YOU ARE HERE}}}}$ ⚡                        |
+| Sovol SV06 Skr-Mini-E3-V3.0                                     | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
+| Sovol SV06 Plus                                                 | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
+| All other printers                                              | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
@@ -50,7 +50,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 ## Stay Up-to-Date
 
-**⭐ Star this project** (Highly recommended, starred users may receive priority over regular users)
+⭐ ${\normalsize{\textcolor{goldenrod}{\texttt{Star this project}}}}$ (Highly recommended, starred users may receive priority over regular users)
 
 Watch for releases and updates.
 
@@ -353,7 +353,7 @@ Find full instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/d
 Some tips:
 
 - Before running with `ITERATIONS=40` with an untested speed/accel value, run with `ITERATIONS=1`.
-- Pay close attention throughout the run, so that you can click **`EMERGENCY STOP`** at a moment's notice.
+- Pay close attention throughout the run, so that you can click ${\small{\textcolor{red}{\texttt{EMERGENCY STOP}}}}$ at a moment's notice.
 - This macro will simply help you determine the maximum speed your printhead and bed can reliably move at, not necessarily print at. The bottleneck for my SV06, for example, is the 15mm/s^2 that the hotend maxes out at (well under 200mm/s actual print speed).
 
 ## Useful Resources
