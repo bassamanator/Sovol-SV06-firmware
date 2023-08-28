@@ -44,9 +44,11 @@ I am creating these files for my personal use and cannot be held responsible for
 
 ## Stay Up-to-Date
 
+⭐ ${\normalsize{\textcolor{goldenrod}{\texttt{Star this project}}}}$ (Highly recommended, starred users may receive priority over regular users)
+
 Watch for releases and updates.
 
-<img src="./images/githubstar.gif" width="500" alt='Raspberry Pi'/>
+<img src="./images/githubstar.gif" width="500" alt='githubstar'/>
 
 ## Before You Begin
 
@@ -128,7 +130,7 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ${\normalsize{\textcolor{goldenrod}{\texttt{Please ⭐ star this repository!}}}}$
 
-If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
