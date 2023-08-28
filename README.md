@@ -2,12 +2,12 @@
 
 This branch contains the OSS Klipper configuration that can be used with **any printer** running Klipper.
 
-| Printer                     | Branch                                                                                    |
-| --------------------------- | ----------------------------------------------------------------------------------------- |
-| Sovol SV06                  | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
-| Sovol SV06 Skr-Mini-E3-V3.0 | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
-| Sovol SV06 Plus             | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
-| All other printers          | ⚡ $\small{\textcolor{aqua}{\text{YOU ARE HERE}}}$ ⚡                                     |
+| Printer                                                                 | Branch                                                                                    |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| Sovol SV06                                                              | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
+| Sovol SV06 Skr-Mini-E3-V3.0                                             | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
+| Sovol SV06 Plus                                                         | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
+| ${\normalsize{\textcolor{darkturquoise}{\texttt{All other printers}}}}$ | ⚡ $\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}$ ⚡                            |
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
@@ -29,15 +29,18 @@ I am creating these files for my personal use and cannot be held responsible for
 ## Features
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 CoreXY users can rightly disagree and say that it lacks the quad gantry levelling macros. Please create a pull request if you can help in this regard!
-- <img src="./images/party_blob.gif" width="20" alt=''/> Filament runout sensor usage implemented. <img src="./images/party_blob.gif" width="20" alt=''/>
+- Filament runout sensor usage implemented.
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
-- SuperSlicer config bundle that contains the printer configuration, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)). Find the differences between the different print setting profiles [here](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles/tree/master/SuperSlicer). But basically, the 45 degree profile places the seam at the back.
+- A SuperSlicer config bundle that contains what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)).
+- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> A PrusaSlicer config bundle based on Ellis' SuperSlicer Profiles.
 - Macros
   - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration. ⚠️ This is for i3 style printers only, see example video [here](https://youtu.be/aVdIeIIpUAk).
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
   - Purge line macro.
+  - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> `TEST_SPEED` macro. Find instructions [here](https://github.com/bassamanator/Sovol-SV06-firmware/blob/master/README.md#how-do-i-use-the-test_speed-macro).
+- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! Read about it [here](https://github.com/bassamanator/Sovol-SV06-firmware/blob/master/README.md#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
@@ -123,7 +126,7 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ## Support Me
 
-Please ⭐ star ⭐ this repository!
+${\normalsize{\textcolor{goldenrod}{\texttt{Please ⭐ star this repository!}}}}$
 
 If you found my work useful, please consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
@@ -138,14 +141,21 @@ Please find answers to common questions [here](https://github.com/bassamanator/S
 - ⭐⭐⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
 - [Simplify3D Print Quality Troubleshooting Guide](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
 
+## Sovol Official Links
+
+- [SV06 Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
+- [SV06 Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
+- [SV06 Plus Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
+
 ## Sources
 
-- https://www.klipper3d.org
-- https://ellis3dp.com/Print-Tuning-Guide
-- https://github.com/strayr/strayr-k-macros
-- https://docs.vorondesign.com/build/software/miniE3_v20_klipper.html
-- https://github.com/spinixguy/Sovol-SV06-firmware
-- https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas
-- https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles
+- [https://www.klipper3d.org](https://www.klipper3d.org)
+- [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
+- [Mechanical Gantry Calibration Macro](https://github.com/strayr/strayr-k-macros)
+- [SV06 printer.cfg](https://github.com/spinixguy/Sovol-SV06-firmware)
+- [SV06 Buildplate and Texture](https://www.printables.com/model/378915-sovol-sv06-buildplate-texture-and-model-for-prusas)
+- [Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)
+- [Klipper Adaptive Meshing & Purging](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging)
+- [PrusaSlicer Print Settings](https://github.com/mjonuschat/PrusaSlicer-Profiles)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)

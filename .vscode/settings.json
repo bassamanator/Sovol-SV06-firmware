@@ -8,17 +8,20 @@
 	"cSpell.words": [
 		"ADXL",
 		"blanchas",
+		"Buildplate",
 		"cfgs",
 		"Fluidd",
 		"Fluiddpi",
 		"gcode",
 		"githubstar",
 		"hotend",
+		"KAMP",
 		"KIAUH",
 		"Klipper",
 		"Klipperized",
 		"lrwxrwxrwx",
 		"moonraker",
+		"normalsize",
 		"octahedroflake",
 		"osskc",
 		"PARKBED",
@@ -30,7 +33,8 @@
 		"Prusa",
 		"runout",
 		"Sovol",
-		"textcolor"
+		"textcolor",
+		"texttt"
 	],
 	"[markdown]": {
 		"editor.formatOnSave": false
