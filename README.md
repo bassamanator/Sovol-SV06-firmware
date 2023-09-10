@@ -50,7 +50,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 ## Stay Up-to-Date
 
-⭐ ${\normalsize{\textcolor{goldenrod}{\texttt{Star this project}}}}$ (Highly recommended, starred users may receive priority over regular users)
+⭐ ${\normalsize{\textcolor{goldenrod}{\texttt{Star this project}}}}$
 
 Watch for releases and updates.
 
