@@ -21,6 +21,7 @@
 		"Klipperized",
 		"lrwxrwxrwx",
 		"moonraker",
+		"normalsize",
 		"octahedroflake",
 		"PARKBED",
 		"PARKCENTER",
@@ -31,7 +32,8 @@
 		"Prusa",
 		"runout",
 		"Sovol",
-		"textcolor"
+		"textcolor",
+		"texttt"
 	],
 	"[markdown]": {
 		"editor.formatOnSave": false
