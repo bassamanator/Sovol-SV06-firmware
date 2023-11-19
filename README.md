@@ -39,7 +39,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - Filament runout sensor usage implemented.
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - A SuperSlicer config bundle that contains the printer configurations for the SV06/Plus, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> A PrusaSlicer config bundle based on Ellis' SuperSlicer Profiles.
+- `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> A PrusaSlicer config bundle based on Ellis' SuperSlicer Profiles.
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
 - Macros
   - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration.
@@ -47,8 +47,8 @@ I am creating these files for my personal use and cannot be held responsible for
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
   - `PURGE_LINE` macro.
-  - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
+  - `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
+- `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
@@ -69,8 +69,8 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Beginner's would be wise to go through the steps mentioned [here](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md). Consider yourself warned.
 - Follow the steps in order.
 - If an error was reported at a step, do no proceed to the next step.
-- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. Note that most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it's not possible to tell just by looking.
-- [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
+- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. 💡 Most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it's not possible to tell just by looking.
+- [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
 - It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
 - Klipper _must_ be installed on the host Raspberry Pi for everything to work. Easiest is to use a [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. Alternatively, you can install `Fluidd` or `Mainsail` via [KIAUH](https://github.com/th33xitus/kiauh).
 - Robert Redford's performance in _Spy Game (2001)_ was superb!
@@ -89,7 +89,8 @@ Please note:
 - For the sake of simplicity, I will refer to the klipper firmware file as `klipper.bin` even though the actual filename is something along the lines of `klipper-v0.11.0-148-g52f4e20c.bin`.
 - The firmware file is located in the `misc` folder.
 - Flashing will only work if current firmware filename is _different from previous flashing procedure_. The `.bin` is also important.
-- Many users have reported having issues flashing Klipper using the Sovol microSD card.
+- You may find this [video](https://youtu.be/p6l253OJa34) useful.
+- ⚠️ Many users have reported having issues flashing Klipper using the Sovol microSD card.
 
 #### 1. Prepare the microSD Card for Flashing with These Parameters
 
@@ -107,9 +108,7 @@ Please note:
 5. Turn on the printer and wait a minute (usually takes 10 seconds).
 6. Turn off the printer and remove the microSD.
 
-At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide.
-
-You may find this [video](https://youtu.be/p6l253OJa34) useful.
+⏲️ At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide.
 
 ### Download OSS Klipper Configuration
 
@@ -139,10 +138,9 @@ You can choose _either_ of the 2 following methods.
       `lrwxrwxrwx 13 root root  22 Apr 11:10  usb-1a86_USB2.0-Serial-if00-port0 -> ../../ttyUSB0`.
    2. `usb-1a86_USB2.0-Serial-if00-port0` is the relevant part.
    3. Therefore, the full path to your `mcu` is either `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0` or `/dev/serial/by-path/usb-1a86_USB2.0-Serial-if00-port0`, depending on the command you used to find the `mcu`.
-2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
-   This is just an _example_ `mcu` section:
+2. Adjust the `[mcu]` section in `printer.cfg` accordingly. 🗒️ This is just an **example**:
 
-   ```
+   ```yaml
    [mcu]
    serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
    restart_method: command
@@ -160,7 +158,7 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
 
 💡 I recommend no filament be loaded for any of these steps.
 
-💡 Find explanations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [https://www.klipper3d.org/](https://www.klipper3d.org/G-Codes.html).
+🗒️ Find explanations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [https://www.klipper3d.org/](https://www.klipper3d.org/G-Codes.html).
 
 You will be pasting/typing these commands into the Mainsail/Fluidd console.
 
@@ -185,15 +183,17 @@ You will be pasting/typing these commands into the Mainsail/Fluidd console.
    1. `DO_CREATE_MESH`
    2. `SAVE_CONFIG` (once completed)
 
-If you've made it here, then your printer has been Klipperized, and is ready to print!
+🏁 If you've made it here, then your printer has been Klipperized, and is ready to print! 🏁
 
 But first, adjust your slicer.
 
 ## Adjust Your Slicer
 
+💡 If you are using the config bundles found on this repo, you can skip this step.
+
 You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
 
-If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`. ⚠️ This is just an **example**:
+If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`. 🗒️ This is just an **example**:
 
 ```
 PRINT_START ...
