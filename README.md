@@ -26,8 +26,8 @@ I am creating these files for my personal use and cannot be held responsible for
   1. [Adjust Configuration with MCU Path](#adjust-configuration-with-mcu-path)
   2. [Configure Your Printer](#configure-your-printer)
 - [Adjust Your Slicer](#adjust-your-slicer)
-- [Directory Structure](#directory-structure)
 - [Support Me](#support-me)
+- [Directory Structure](#directory-structure)
 - [FAQ](#faq)
 - [Useful Resources](#useful-resources)
 - [Sovol Official Links](#sovol-official-links)
@@ -64,7 +64,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 ## Before You Begin
 
-- This entire page is a **13 minute read**. Save yourself _hours of troubleshooting_ and read this documentation **fully!**
+- This entire page is a **13 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
 - On the SV06 Plus, your screen will not work if you install Klipper. You can get it _mostly_ working again via the instructions found [here](https://github.com/fryc88/klipper-sv06plus-screen).
 - Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Beginner's would be wise to go through the steps mentioned [here](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md). Consider yourself warned.
 - Follow the steps in order.
@@ -82,7 +82,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 ### Flash Firmware
 
-💡 _If you have already flashed klipper onto your motherboard in the past, you can skip this step._
+💡 If you have already flashed klipper onto your motherboard in the past, you can skip this step.
 
 Please note:
 
@@ -209,6 +209,12 @@ PRINT_START ...
 PURGE_LINE
 ```
 
+## Support Me
+
+Please ⭐ star this repository!
+
+If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+
 ## Directory Structure
 
 This repository contains many files and folders. Some are _necessary_ for this Klipper configuration to work, others are not.
@@ -254,12 +260,6 @@ This repository contains many files and folders. Some are _necessary_ for this K
 └── .vscode ❌
     └── settings.json
 ```
-
-## Support Me
-
-${\normalsize{\textcolor{goldenrod}{\texttt{Please ⭐ star this repository!}}}}$
-
-If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
