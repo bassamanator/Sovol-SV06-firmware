@@ -21,8 +21,8 @@ I am creating these files for my personal use and cannot be held responsible for
   - [Download OSS Klipper Configuration](#download-oss-klipper-configuration)
   - [Setup Instructions](#setup-instructions)
 - [Adjust Your Slicer](#adjust-your-slicer)
-- [Directory Structure](#directory-structure)
 - [Support Me](#support-me)
+- [Directory Structure](#directory-structure)
 - [FAQ](#faq)
 - [Useful Resources](#useful-resources)
 - [Sovol Official Links](#sovol-official-links)
@@ -50,7 +50,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 Watch for releases and updates.
 
-<img src="./images/githubstar.gif" width="500" alt='githubstar'/>
+<img src="./images/githubstar.gif" width="500" alt='github star'/>
 
 ## Preface
 
@@ -58,7 +58,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 ## Before You Begin
 
-- This entire page is a **6 minute read**. Save yourself _hours of troubleshooting_ and read this documentation **fully!**
+- This entire page is a **6 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
 - It is assumed that you already have a working `printer.cfg` and you already have your printer up and running Klipper.
 - The [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master) branch of this repo contains step by step instructions on how to get Klipper going. If you are a beginner, you might find those instructions useful.
 - Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Beginner's would be wise to go through the steps mentioned [here](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md). Consider yourself warned.
@@ -89,6 +89,8 @@ Simply add `[include ./osskc.cfg]` somewhere at the top of your `printer.cfg`.
 
 ## Adjust Your Slicer
 
+💡 If you are using the config bundles found on this repo, you can skip this step.
+
 You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
 
 If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`.
@@ -98,6 +100,12 @@ If you would like to print a purge line before your print starts, at the end of 
 PRINT_START ...
 PURGE_LINE
 ```
+
+## Support Me
+
+Please ⭐ star this repository!
+
+If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## Directory Structure
 
@@ -136,12 +144,6 @@ This repository contains many files and folders. Some are _necessary_ for this K
 └── .vscode ❌
     └── settings.json
 ```
-
-## Support Me
-
-Please ⭐ star this repository!
-
-If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 ## FAQ
 
