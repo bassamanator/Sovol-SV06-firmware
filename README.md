@@ -35,9 +35,11 @@ I am creating these files for my personal use and cannot be held responsible for
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - Filament runout sensor usage implemented.
-- Minimum configuration settings for Mainsail/Fluiddpi to work.
-- A SuperSlicer config bundle that contains the printer configurations for the SV06/Plus, as well as what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> A PrusaSlicer config bundle based on Ellis' SuperSlicer Profiles.
+- Minimum configuration settings for Mainsail/Fluidd.
+- Pre-configured configuration bundles based on the [Ellis SuperSlicer Print Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)
+  - SuperSlicer
+  - PrusaSlicer
+  - Printer profiles: SV06; SV06 Plus
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
 - Macros
   - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration.
@@ -45,8 +47,8 @@ I am creating these files for my personal use and cannot be held responsible for
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
   - `PURGE_LINE` macro.
-  - `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
+  - `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
+- Klipper Adaptive Meshing & Purging (KAMP) integrated. Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
@@ -260,12 +262,12 @@ The printer will beep upon:
 
 Make the following changes according to your needs. All beeping will be disabled _except_ during gantry calibration.
 
-| File            | `cfgs/misc-macros.cfg`     |
-| --------------- | -------------------------- |
-| Section         | `[gcode_macro _globals]`   |
-| Variable        | `variable_beeping_enabled` |
-| Disable beeping | `0`                        |
-| Enable beeping  | `1`                        |
+| File     | `cfgs/misc-macros.cfg`     |
+| -------- | -------------------------- |
+| Section  | `[gcode_macro _globals]`   |
+| Variable | `variable_beeping_enabled` |
+| Disable  | `0`                        |
+| Enable   | `1` (default)              |
 
 ##### I want to use a filament sensor. How do I set it up?
 
@@ -275,12 +277,12 @@ You can find information about the physical setup [here](https://github.com/bass
 
 Make the following changes according to your needs.
 
-| File           | `cfgs/misc-macros.cfg`             |
-| -------------- | ---------------------------------- |
-| Section        | `[gcode_macro _globals]`           |
-| Variable       | `variable_filament_sensor_enabled` |
-| Disable sensor | `0`                                |
-| Enable sensor  | `1`                                |
+| File     | `cfgs/misc-macros.cfg`             |
+| -------- | ---------------------------------- |
+| Section  | `[gcode_macro _globals]`           |
+| Variable | `variable_filament_sensor_enabled` |
+| Disable  | `0` (default)                      |
+| Enable   | `1`                                |
 
 ##### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
 
@@ -316,7 +318,7 @@ The printhead is now parked front center waiting for you to insert filament. You
 
 ##### How do I enable KAMP (Klipper Adaptive Meshing & Purging)?
 
-Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been configured and tested.
+Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been configured and tested. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
 
 The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
 
@@ -330,7 +332,7 @@ Adjust according to your needs.
 | -------- | ------------------------ |
 | Section  | `[gcode_macro _globals]` |
 | Variable | `variable_kamp_enable`   |
-| Disable  | `0`                      |
+| Disable  | `0` (default)            |
 | Enable   | `1`                      |
 
 ##### How do I use the `TEST_SPEED` macro?
