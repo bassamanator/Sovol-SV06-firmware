@@ -157,7 +157,7 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
 
 ❗☠️ **Power off if there is a collision/problem** ☠️❗
 
-💡 The `emergency stop` button in your dashboard works faster than hitting the power switch.
+💡 The ${\small{\textcolor{red}{\texttt{EMERGENCY STOP}}}}$ button in your dashboard works faster than hitting the power switch.
 
 💡 Do a practice emergency stop.
 
