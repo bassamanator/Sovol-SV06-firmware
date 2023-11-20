@@ -241,26 +241,24 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ## FAQ
 
-##### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
+### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
 Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
 
-##### How do I print using SuperSlicer?
+### How do I print using SuperSlicer?
 
 Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
 
-##### When does beeping occur?
+### When does beeping occur?
 
 The printer will beep upon:
 
 - Filament runout.
 - Filament change/`M600`.
 - Upon `PRINT_END`.
-- `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
+- `MECHANICAL_GANTRY_CALIBRATION`/`G34` (beeping will occur even if beeping is disabled, as long as you have a speaker on your board).
 
-##### How do I disable beeping?
-
-Make the following changes according to your needs. All beeping will be disabled _except_ during gantry calibration.
+Adjust behaviour according to your needs.
 
 | File     | `cfgs/misc-macros.cfg`     |
 | -------- | -------------------------- |
@@ -269,13 +267,11 @@ Make the following changes according to your needs. All beeping will be disabled
 | Disable  | `0`                        |
 | Enable   | `1` (default)              |
 
-##### I want to use a filament sensor. How do I set it up?
+### I want to use a filament sensor. How do I set it up?
 
 You can find information about the physical setup [here](https://github.com/bassamanator/everything-sovol-sv06#filament-sensor).
 
-##### I have a simple filament sensor connected. How do I enable/disable it?
-
-Make the following changes according to your needs.
+Adjust behaviour according to your needs.
 
 | File     | `cfgs/misc-macros.cfg`             |
 | -------- | ---------------------------------- |
@@ -284,28 +280,28 @@ Make the following changes according to your needs.
 | Disable  | `0` (default)                      |
 | Enable   | `1`                                |
 
-##### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
+### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
 
 A simple runout sensor can only detect a change in state. So, if you start a print without filament loaded, the printer will not know that there is no filament loaded. You should test your sensor by having filament loaded, starting a print, then cutting the filament. The expected behaviour is that the print will pause, and as long as you have beeping enabled, you will hear 3 annoying beeps.
 
-##### What happens when I put in `M600`/colour change at a certain layer?
+### What happens when I put in `M600`/colour change at a certain layer?
 
 1. The printer will beep 3 times (not annoyingly).
 2. Printing will stop.
 3. The printhead will park itself front center.
 4. The hotend will turn off, but the bed will remain hot.
 
-##### What happens when I pause a print?
+### What happens when I pause a print?
 
 Same behaviour as `M600`/colour change _except_ there won't be any beeping.
 
-##### What happens when filament runs out?
+### What happens when filament runs out?
 
 _If_ you have a working filament sensor, the same behaviour as `M600`/colour change will occur _except_ the beeps will be fairly annoying.
 
-##### How do I resume a print after a colour change or filament runout?
+### How do I resume a print after a colour change or filament runout?
 
-⚠️ _Do not disable the stepper motors during this process!_
+⚠️ Do not disable the stepper motors during this process!
 
 The printhead is now parked front center waiting for you to insert filament. You will:
 
@@ -316,7 +312,7 @@ The printhead is now parked front center waiting for you to insert filament. You
    - OR, you can push some filament by hand _making sure to first disengage the extruder's spring loaded arm_.
 3. Hit resume in your Klipper dashboard.
 
-##### How do I enable KAMP (Klipper Adaptive Meshing & Purging)?
+### How do I enable KAMP (Klipper Adaptive Meshing & Purging)?
 
 Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been configured and tested. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
 
@@ -326,7 +322,7 @@ The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-
 
 ⚠️ KAMP cannot be used with low-powered devices such as the Raspberry Pi Zero.
 
-Adjust according to your needs.
+Adjust behaviour according to your needs.
 
 | File     | `cfgs/misc-macros.cfg`   |
 | -------- | ------------------------ |
@@ -335,7 +331,7 @@ Adjust according to your needs.
 | Disable  | `0` (default)            |
 | Enable   | `1`                      |
 
-##### How do I use the `TEST_SPEED` macro?
+### How do I use the `TEST_SPEED` macro?
 
 ⚠️ This is for advanced users only, with well oiled machines. You can cause serious damage to your printer if you're not careful. ☠️ **You have been warned** ☠️.
 
