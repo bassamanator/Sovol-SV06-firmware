@@ -198,9 +198,10 @@ But first, adjust your slicer.
 
 You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
 
-If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`. 🗒️ This is just an **example**:
+If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`.
 
-```
+```yaml
+#🗒️ This is just an example
 PRINT_START ...
 PURGE_LINE
 ```
