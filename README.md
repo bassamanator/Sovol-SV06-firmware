@@ -56,7 +56,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 Watch for releases and updates.
 
-<img src="./images/githubstar.gif" width="500" alt='githubstar'/>
+<img src="./images/githubstar.gif" width="500" alt='github star'/>
 
 ## Preface
 
@@ -64,8 +64,8 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 
 ## Before You Begin
 
-- On the SV06 Plus, your screen will not work if you install Klipper. You can get it working again via the instructions found [here](https://github.com/fryc88/klipper-sv06plus-screen).
-- Read this documentation _fully!_
+- This entire page is a **13 minute read**. Save yourself _hours of troubleshooting_ and read this documentation **fully!**
+- On the SV06 Plus, your screen will not work if you install Klipper. You can get it _mostly_ working again via the instructions found [here](https://github.com/fryc88/klipper-sv06plus-screen).
 - Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Beginner's would be wise to go through the steps mentioned [here](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md). Consider yourself warned.
 - Follow the steps in order.
 - If an error was reported at a step, do no proceed to the next step.
@@ -133,14 +133,18 @@ You can choose _either_ of the 2 following methods.
 
 ### Adjust Configuration with MCU Path
 
-1. Find what port the `mcu` (printer motherboard) is connected to via `ls -l /dev/serial/by-id/` or `ls -l /dev/serial/by-path/`.
+1. Find what port the `mcu` (printer motherboard) is connected to via **one** of the following commands:
+
+   - `ls /dev/serial/by-id/*`
+   - `ls /dev/serial/by-path/*`
+
    1. The output will be something along the lines of
-      `lrwxrwxrwx 13 root root  22 Apr 11:10  usb-1a86_USB2.0-Serial-if00-port0 -> ../../ttyUSB0`.
-   2. `usb-1a86_USB2.0-Serial-if00-port0` is the relevant part.
-   3. Therefore, the full path to your `mcu` is either `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0` or `/dev/serial/by-path/usb-1a86_USB2.0-Serial-if00-port0`, depending on the command you used to find the `mcu`.
-2. Adjust the `[mcu]` section in `printer.cfg` accordingly. 🗒️ This is just an **example**:
+      - `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0`
+
+2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
 
    ```yaml
+   # 🗒️ This is just an example
    [mcu]
    serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
    restart_method: command
@@ -156,9 +160,13 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
 
 ❗☠️ **Power off if there is a collision/problem** ☠️❗
 
+💡 The ${\small{\textcolor{red}{\texttt{EMERGENCY STOP}}}}$ button in your dashboard works faster than hitting the power switch.
+
+💡 Do a practice emergency stop.
+
 💡 I recommend no filament be loaded for any of these steps.
 
-🗒️ Find explanations for gcode commands at [https://marlinfw.org/](https://marlinfw.org/) and [https://www.klipper3d.org/](https://www.klipper3d.org/G-Codes.html).
+🗒️ Find explanations for gcode commands: [https://marlinfw.org/](https://marlinfw.org/), [https://www.klipper3d.org/](https://www.klipper3d.org/G-Codes.html).
 
 You will be pasting/typing these commands into the Mainsail/Fluidd console.
 
@@ -193,9 +201,10 @@ But first, adjust your slicer.
 
 You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
 
-If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`. 🗒️ This is just an **example**:
+If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`.
 
-```
+```yaml
+# 🗒️ This is just an example
 PRINT_START ...
 PURGE_LINE
 ```
