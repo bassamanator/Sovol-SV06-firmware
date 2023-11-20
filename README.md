@@ -19,6 +19,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Before You Begin](#before-you-begin)
 - [Installation Steps](#installation-steps)
   - [Download OSS Klipper Configuration](#download-oss-klipper-configuration)
+  - [Setup Instructions](#setup-instructions)
 - [Adjust Your Slicer](#adjust-your-slicer)
 - [Directory Structure](#directory-structure)
 - [Support Me](#support-me)
