@@ -15,6 +15,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 - [Features](#features)
 - [Stay Up-to-Date](#stay-up-to-date)
+- [Preface](#preface)
 - [Before You Begin](#before-you-begin)
 - [Installation Steps](#installation-steps)
   - [Download OSS Klipper Configuration](#download-oss-klipper-configuration)
@@ -32,15 +33,15 @@ I am creating these files for my personal use and cannot be held responsible for
 - Filament runout sensor usage implemented.
 - Minimum configuration settings for Mainsail/Fluiddpi to work.
 - A SuperSlicer config bundle that contains what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> A PrusaSlicer config bundle based on Ellis' SuperSlicer Profiles.
+- `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> A PrusaSlicer config bundle based on Ellis' SuperSlicer Profiles.
 - Macros
-  - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration. ⚠️ This is for i3 style printers only, see example video [here](https://youtu.be/aVdIeIIpUAk).
+  - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration.
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
-  - Purge line macro.
-  - `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> `TEST_SPEED` macro. Find instructions [here](https://github.com/bassamanator/Sovol-SV06-firmware/blob/master/README.md#how-do-i-use-the-test_speed-macro).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt=''/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! Read about it [here](https://github.com/bassamanator/Sovol-SV06-firmware/blob/master/README.md#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
+  - `PURGE_LINE` macro.
+  - `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
+- `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
@@ -50,12 +51,20 @@ Watch for releases and updates.
 
 <img src="./images/githubstar.gif" width="500" alt='githubstar'/>
 
+## Preface
+
+Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and _fully read all the documentation on this page_. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
+
 ## Before You Begin
 
+- This entire page is a **6 minute read**. Save yourself _hours of troubleshooting_ and read this documentation **fully!**
 - It is assumed that you already have a working `printer.cfg` and you already have your printer up and running Klipper.
-- Know what you're getting into by reading this documentation _fully!_
-- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable.
-- It is assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
+- The [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master) branch of this repo contains step by step instructions on how to get Klipper going. If you are a beginner, you might find those instructions useful.
+- Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Beginner's would be wise to go through the steps mentioned [here](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md). Consider yourself warned.
+- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. 💡 Most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it's not possible to tell just by looking.
+- [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
+- It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
+- Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
 
 ## Installation Steps
@@ -66,9 +75,9 @@ Watch for releases and updates.
 2. The parent folder in the `ZIP` is `Sovol-SV06-firmware-any-printer`. This is relevant in the next step.
 3. Extract **only** the _contents_ of the parent folder into `~/printer_data/config`.
 
-💡 **If** you get a warning that you already have a `moonraker.conf` (which you probably do since you're already up and running Klipper), **and** you're not using a low powered device such as a Raspberry Pi Zero, you need to simply paste the following into your <u>_existing_</u> `moonraker.conf`:
+💡 **If** you get a warning that you already have a `moonraker.conf` (which you probably do since you're already up and running Klipper), **and** you're not using a low powered device such as a Raspberry Pi Zero, you need to simply paste the following into your **existing** `moonraker.conf`:
 
-```
+```yaml
 [file_manager]
 enable_object_processing: True
 ```
@@ -81,9 +90,10 @@ Simply add `[include ./osskc.cfg]` somewhere at the top of your `printer.cfg`.
 
 You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
 
-If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`. ⚠️ This is just an **example**:
+If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`.
 
-```
+```yaml
+# 🗒️ This is just an example
 PRINT_START ...
 PURGE_LINE
 ```
@@ -128,7 +138,7 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ## Support Me
 
-${\normalsize{\textcolor{goldenrod}{\texttt{Please ⭐ star this repository!}}}}$
+Please ⭐ star this repository!
 
 If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
