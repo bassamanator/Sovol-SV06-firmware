@@ -141,7 +141,7 @@ You can choose _either_ of the 2 following methods.
 2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
 
    ```yaml
-   🗒️ This is just an example
+   #🗒️ This is just an example
    [mcu]
    serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
    restart_method: command
