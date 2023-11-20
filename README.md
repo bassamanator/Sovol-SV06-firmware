@@ -218,43 +218,23 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 - **Necessary** items are marked with a ✅.
 - Items that can _optionally_ be deleted are marked with a ❌.
+<!-- tree -a -C -I '.git|.directory' -L 1 -F -->
 
-```
-├── cfgs ✅
-│   ├── adxl-direct.cfg
-│   ├── adxl-rp2040.cfg
-│   ├── adxl-rpi-pico-2x.cfg
-│   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
-│   ├── misc-macros.cfg
-│   ├── PARKING.cfg
-│   └── TEST_SPEED.cfg
+```sh
+├── cfgs/ ✅
 ├── CODE_OF_CONDUCT.md ❌
 ├── CONTRIBUTING.md ❌
-├── .github ❌
-│   ├── FUNDING.yml
-│   └── ISSUE_TEMPLATE
-│       ├── bug_report.md
-│       └── feature_request.md
+├── .github/ ❌
 ├── .gitignore ❌
-├── images ❌
-│   ├── cup-border.png
-│   ├── githubstar.gif
-│   ├── heart.gif
-│   ├── logo_white_stroke.png
-│   └── party_blob.gif
-├── misc ❌
-│   ├── klipper-v0.11.0-148-g52f4e20c.bin
-│   ├── M503-output.yml
-│   ├── marlin-SV06V2.0.0A_2.24.bin
-│   ├── SuperSlicer_config_bundle.ini
-│   ├── sv06-buildPlate.png
-│   ├── SV06-buildPlate.stl
-│   └── SV06-texture.svg
+├── images/ ❌
+├── LICENSE ❌
+├── misc/ ❌
 ├── moonraker.conf ✅
+├── osskc.cfg ✅
 ├── printer.cfg ✅
 ├── README.md ❌
-└── .vscode ❌
-    └── settings.json
+├── SECURITY.md ❌
+└── .vscode/ ❌
 ```
 
 ## FAQ
