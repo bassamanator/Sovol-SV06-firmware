@@ -32,17 +32,18 @@ I am creating these files for my personal use and cannot be held responsible for
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥 CoreXY users can rightly disagree and say that it lacks the quad gantry levelling macros. Please create a pull request if you can help in this regard!
 - Filament runout sensor usage implemented.
-- Minimum configuration settings for Mainsail/Fluiddpi to work.
-- A SuperSlicer config bundle that contains what are considered by many to be the best print settings available for any FDM printer ([Ellis' SuperSlicer Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> A PrusaSlicer config bundle based on Ellis' SuperSlicer Profiles.
+- Minimum configuration settings for Mainsail/Fluidd.
+- Pre-configured configuration bundles based on the [Ellis SuperSlicer Print Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)
+  - SuperSlicer
+  - PrusaSlicer
 - Macros
   - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration.
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
   - Load/unload filament macros.
   - `PURGE_LINE` macro.
-  - `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
-- `NEW` <img src="./images/party_blob.gif" width="20" alt='dancing blob'/> Klipper Adaptive Meshing & Purging (KAMP) added (disabled by default)! Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
+  - `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
+- Klipper Adaptive Meshing & Purging (KAMP) integrated. Read about it [here](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ## Stay Up-to-Date
 
@@ -113,36 +114,22 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 - **Necessary** items are marked with a ✅.
 - Items that can _optionally_ be deleted are marked with a ❌.
+<!-- tree -a -C -I '.git|.directory' -L 1 -F -->
 
-```
-├── cfgs ✅
-│   ├── adxl-direct.cfg
-│   ├── adxl-rp2040.cfg
-│   ├── adxl-rpi-pico-2x.cfg
-│   ├── MECHANICAL_GANTRY_CALIBRATION.cfg
-│   ├── misc-macros.cfg
-│   ├── PARKING.cfg
-│   └── TEST_SPEED.cfg
+```sh
+├── cfgs/ ✅
 ├── CODE_OF_CONDUCT.md ❌
 ├── CONTRIBUTING.md ❌
-├── .github ❌
-│   └── ISSUE_TEMPLATE
-│       ├── bug_report.md
-│       └── feature_request.md
+├── .github/ ❌
 ├── .gitignore ❌
-├── images ❌
-│   ├── cup-border.png
-│   ├── githubstar.gif
-│   ├── heart.gif
-│   ├── logo_white_stroke.png
-│   └── party_blob.gif
-├── misc ❌
-│   └── SuperSlicer_config_bundle.ini
-├── moonraker.conf ✅ ❌ ¿? (depends if you already have this file or not)
+├── images/ ❌
+├── LICENSE ❌
+├── misc/ ❌
+├── moonraker.conf ✅
 ├── osskc.cfg ✅
 ├── README.md ❌
-└── .vscode ❌
-    └── settings.json
+├── SECURITY.md ❌
+└── .vscode/ ❌
 ```
 
 ## FAQ
