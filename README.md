@@ -107,7 +107,7 @@ Please note:
 5. Turn on the printer and wait a minute (usually takes 10 seconds).
 6. Turn off the printer and remove the microSD.
 
-⏲️ At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide.
+⏲️ At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide. A good sign that it worked is the touchscreen not progressing past the Sovol logo on power-on.
 
 ### Download OSS Klipper Configuration
 
@@ -132,6 +132,8 @@ You can choose _either_ of the 2 following methods.
 
 ### Adjust Configuration with MCU Path
 
+*NB* If you are using KIAUH, in the menu under [4] Advanced, you will find an option to identify the `mcu` port. 
+
 1. Find what port the `mcu` (printer motherboard) is connected to via **one** of the following commands:
 
    - `ls /dev/serial/by-id/*`
@@ -139,6 +141,8 @@ You can choose _either_ of the 2 following methods.
 
    1. The output will be something along the lines of
       - `/dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0`
+
+The following steps are completed in the Mainsail web interface. You can locate this at the same ip address as your pi. The KIAUH automatically sets up the services required to run Mainsail when the pi is turned on.
 
 2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
 
