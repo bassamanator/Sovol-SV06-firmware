@@ -36,5 +36,14 @@ If applicable, add screenshots to help explain your problem.
 **Is your local copy of this configuration up to date?**
 - This configuration changes all the time, when did you install it? Are you sure you're running the latest version?
 
+**What slicer are you using?**
+- PrusaSlicer, SuperSlicer, etc.
+
+**Are you using the config bundles from this repo?**
+- Yes/No.
+
+**Did you [Adjust your slicer](https://github.com/bassamanator/Sovol-SV06-firmware#adjust-your-slicer)?
+- Yes/No
+
 **Additional context**
 Add any other context about the problem here.
