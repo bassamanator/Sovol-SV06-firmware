@@ -200,10 +200,15 @@ But first, adjust your slicer.
 
 You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
 
-If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line add `PURGE_LINE`.
+### Line Purge
+
+If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line, add one of the following:
+
+- `PURGE_LINE`; prints a standard purge line.
+- `LINE_PURGE`; prints KAMP's purge line. ⚠️ Do not attempt to use without reading [this section](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ```yaml
-# 🗒️ This is just an example
+# 🗒️ This is just an example Start G-Code
 PRINT_START ...
 PURGE_LINE
 ```
@@ -314,13 +319,15 @@ The printhead is now parked front center waiting for you to insert filament. You
 
 ### How do I enable KAMP (Klipper Adaptive Meshing & Purging)?
 
-Although this repo contains all the code from the KAMP repository, only the `mesh` functionality of KAMP has been configured and tested. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
+⚠️ No KAMP functionality can be used on low-powered devices such as the Raspberry Pi Zero.
 
-The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
+⚠️ If KAMP is disabled, and there is no `default` mesh, `PRINT_START` will crash.
 
-⚠️ If KAMP is disabled, and you don't have a `default` mesh stored in your `printer.cfg`, `PRINT_START` will crash.
+🗒️ The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
 
-⚠️ KAMP cannot be used with low-powered devices such as the Raspberry Pi Zero.
+🗒️ `LINE_PURGE` is useable (on appropriate devices) even if KAMP is disabled.
+
+This repo contains all the code from the KAMP repository, however, only the `adaptive meshing` and `LINE_PURGE` functionality of KAMP has been configured and tested for use. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
 
 Adjust behaviour according to your needs.
 
