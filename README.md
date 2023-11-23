@@ -256,7 +256,7 @@ The printer will beep upon:
 - Filament runout.
 - Filament change/`M600`.
 - Upon `PRINT_END`.
-- `MECHANICAL_GANTRY_CALIBRATION`/`G34` (beeping will occur even if beeping is disabled, as long as you have a speaker on your board).
+- `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
 
 Adjust behaviour according to your needs.
 
