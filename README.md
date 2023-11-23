@@ -343,6 +343,10 @@ Some tips:
 - Pay close attention throughout the run, so that you can click ${\small{\textcolor{red}{\texttt{EMERGENCY STOP}}}}$ at a moment's notice.
 - This macro will simply help you determine the maximum speed your printhead and bed can reliably move at, not necessarily print at. The bottleneck for my SV06, for example, is the 15mm/s^2 that the hotend maxes out at (well under 200mm/s actual print speed).
 
+### How do I compile my own firmware?
+
+Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/111).
+
 ## Useful Resources
 
 - [Everything Sovol SV06](https://github.com/bassamanator/everything-sovol-sv06)
