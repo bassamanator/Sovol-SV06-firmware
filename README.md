@@ -195,9 +195,7 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
 
 💡 I recommend no filament be loaded for any of these steps.
 
-🗒️ Find explanations for gcode commands: [https://marlinfw.org/](https://marlinfw.org/), [https://www.klipper3d.org/](https://www.klipper3d.org/G-Codes.html).
-
-You will be pasting/typing these commands into the Mainsail/Fluidd console.
+🗒️ You will be pasting/typing these commands into the Mainsail/Fluidd console.
 
 1. Check to see if `X` and `Y` max positions can be reached, and adjust `position_max`, if necessary. You might be able to go further, which is great, but I recommend leaving a 2mm gap for safety.
    1. `G28`
@@ -251,7 +249,7 @@ PURGE_LINE
 
 Please ⭐ star this repository!
 
-If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+If you found my work useful, buy me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 [🔼 Back to top](#outline)
 
