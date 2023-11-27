@@ -110,15 +110,10 @@ For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been 
 
 Please note:
 
+- For the sake of simplicity, I will refer to the klipper firmware file as `firmware.bin` even though the actual filename is something along the lines of `firmware-v0.12.0-10-gea2f6bc0-UNTESTED.bin`.
 - The firmware file **must** be named `firmware.bin`.
-- The firmware files are located in `misc/skr-mini`.
+- The firmware file is located in `misc/skr-mini`.
 - ⚠️ Many users have reported having issues flashing Klipper using the Sovol microSD card.
-
-#### Select Your Firmware
-
-- `klipper-USB.bin` compiled by BTT.
-- `klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin` that I compiled, however, it is **untested**.
-- [Build](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/117) your own.
 
 #### 1. Prepare the microSD Card for Flashing with These Parameters
 
