@@ -118,12 +118,7 @@ Please note:
 
 - `klipper-USB.bin` compiled by BTT.
 - `klipper-v0.11.0-198-g33b18fd6-latest-UNTESTED.bin` that I compiled, however, it is **untested**.
-
-##### Build Your Own
-
-Find instructions on how to build the firmware yourself [here](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper#build-firmware-image).
-
-<img src="./misc/skr-mini/menuconfig.png" width="500" alt='ls output'/>
+- [Build](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/117) your own.
 
 #### 1. Prepare the microSD Card for Flashing with These Parameters
 
@@ -397,6 +392,10 @@ Some tips:
 - Before running with `ITERATIONS=40` with an untested speed/accel value, run with `ITERATIONS=1`.
 - Pay close attention throughout the run, so that you can click ${\small{\textcolor{red}{\texttt{EMERGENCY STOP}}}}$ at a moment's notice.
 - This macro will simply help you determine the maximum speed your printhead and bed can reliably move at, not necessarily print at. The bottleneck for my SV06, for example, is the 15mm/s^2 that the hotend maxes out at (well under 200mm/s actual print speed).
+
+### How do I compile my own firmware?
+
+Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/117).
 
 [🔼 Back to top](#outline)
 
