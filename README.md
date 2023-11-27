@@ -54,9 +54,9 @@ I am creating these files for my personal use and cannot be held responsible for
 
 ## Stay Up-to-Date
 
-⭐ ${\normalsize{\textcolor{goldenrod}{\texttt{Star this project}}}}$
+${\normalsize{\textcolor{goldenrod}{\texttt{Star ⭐ this project}}}}$
 
-Watch for releases and updates.
+Watch for releases and updates. Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/37).
 
 <img src="./images/githubstar.gif" width="500" alt='github star'/>
 
@@ -270,11 +270,11 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
-Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
+Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
 
 ### How do I print using SuperSlicer?
 
-Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
+Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
 
 ### When does beeping occur?
 
@@ -374,7 +374,7 @@ Some tips:
 
 ### How do I compile my own firmware?
 
-Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/111).
+Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/111).
 
 [🔼 Back to top](#outline)
 
