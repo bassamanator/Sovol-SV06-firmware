@@ -52,17 +52,23 @@ I am creating these files for my personal use and cannot be held responsible for
   - `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
 - Klipper Adaptive Meshing & Purging (KAMP) integrated. Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
+[🔼 Back to top](#outline)
+
 ## Stay Up-to-Date
 
-⭐ ${\normalsize{\textcolor{goldenrod}{\texttt{Star this project}}}}$
+${\normalsize{\textcolor{goldenrod}{\texttt{Star ⭐ this project}}}}$
 
-Watch for releases and updates.
+Watch for releases and updates. Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/37).
 
 <img src="./images/githubstar.gif" width="500" alt='github star'/>
+
+[🔼 Back to top](#outline)
 
 ## Preface
 
 Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and _fully read all the documentation on this page_. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
+
+[🔼 Back to top](#outline)
 
 ## Before You Begin
 
@@ -79,6 +85,8 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
+
+[🔼 Back to top](#outline)
 
 ## Klipper Installation
 
@@ -112,6 +120,8 @@ Please note:
 
 ⏲️ At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide.
 
+[🔼 Back to top](#outline)
+
 ### Download OSS Klipper Configuration
 
 You can choose _either_ of the 2 following methods.
@@ -130,6 +140,8 @@ You can choose _either_ of the 2 following methods.
 2. See `Step 2` in `Method 1`.
 3. The parent folder in the `ZIP` is `Sovol-SV06-firmware-sv06-plus`. This is relevant in the next step.
 4. Extract **only** the _contents_ of the parent folder into `~/printer_data/config`.
+
+[🔼 Back to top](#outline)
 
 ## Initial Steps
 
@@ -155,6 +167,8 @@ You can choose _either_ of the 2 following methods.
 3. Do a `FIRMWARE_RESTART`.
 
 If the Klipper flash that you did earlier was successful, and you've done everything else correctly, you should see no errors or warnings in the Mainsail/Fluidd dashboard. **Klipper has successfully been installed on your printer!**
+
+[🔼 Back to top](#outline)
 
 ### Configure Your Printer
 
@@ -197,6 +211,8 @@ You will be pasting/typing these commands into the Mainsail/Fluidd console.
 
 But first, adjust your slicer.
 
+[🔼 Back to top](#outline)
+
 ## Adjust Your Slicer
 
 💡 If you are using the config bundles found on this repo, you can skip this step.
@@ -216,11 +232,15 @@ PRINT_START ...
 PURGE_LINE
 ```
 
+[🔼 Back to top](#outline)
+
 ## Support Me
 
 Please ⭐ star this repository!
 
 If you found my work useful, consider buying me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+
+[🔼 Back to top](#outline)
 
 ## Directory Structure
 
@@ -247,15 +267,17 @@ This repository contains many files and folders. Some are _necessary_ for this K
 └── .vscode/ ❌
 ```
 
+[🔼 Back to top](#outline)
+
 ## FAQ
 
 ### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
-Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
+Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
 
 ### How do I print using SuperSlicer?
 
-Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
+Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
 
 ### When does beeping occur?
 
@@ -357,7 +379,9 @@ Some tips:
 
 ### How do I compile my own firmware?
 
-Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/111).
+Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/111).
+
+[🔼 Back to top](#outline)
 
 ## Useful Resources
 
@@ -366,11 +390,15 @@ Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware
 - ⭐⭐⭐⭐⭐ [Ellis' Print Tuning Guide](https://ellis3dp.com/Print-Tuning-Guide)
 - [Simplify3D Print Quality Troubleshooting Guide](https://www.simplify3d.com/resources/print-quality-troubleshooting/)
 
+[🔼 Back to top](#outline)
+
 ## Sovol Official Links
 
 - [SV06 Marlin Source Code](https://github.com/Sovol3d/Sv06-Source-Code)
 - [SV06 Models](https://github.com/Sovol3d/SV06-Fully-Open-Source)
 - [SV06 Plus Marlin Source Code and Models](https://github.com/Sovol3d/SV06-PLUS)
+
+[🔼 Back to top](#outline)
 
 ## Sources
 
@@ -387,3 +415,5 @@ Please see [this discussion](https://github.com/bassamanator/Sovol-SV06-firmware
 - [PrusaSlicer Print Settings](https://github.com/mjonuschat/PrusaSlicer-Profiles)
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H0HIHTH)
+
+[🔼 Back to top](#outline)
