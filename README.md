@@ -35,7 +35,7 @@ I am creating these files for my personal use and cannot be held responsible for
 
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - Filament runout sensor usage implemented.
-- Minimum configuration settings for Mainsail/Fluidd.
+- Minimum configuration settings for `Mainsail` and `Fluidd`.
 - Pre-configured configuration bundles based on the [Ellis SuperSlicer Print Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)
   - SuperSlicer
   - PrusaSlicer
@@ -78,7 +78,9 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
 - It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
 - Klipper _must_ be installed on the host Raspberry Pi for everything to work. Easiest is to use a [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. Alternatively, you can install `Fluidd` or `Mainsail` via [KIAUH](https://github.com/th33xitus/kiauh).
-- Klipper _must_ be up to date. Find updating instructions [here](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/111).
+- Klipper _must_ be up to date.
+  - In `Fluidd`, you can do this from `Settings` > `Software Updates`.
+  - In `Mainsail`, you can do this from `Machine` > `Update Manager`.
 - Robert Redford's performance in _Spy Game (2001)_ was superb!
 - It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
@@ -164,7 +166,7 @@ You can choose _either_ of the 2 following methods.
 
 3. Do a `FIRMWARE_RESTART`.
 
-If the Klipper flash that you did earlier was successful, and you've done everything else correctly, you should see no errors or warnings in the Mainsail/Fluidd dashboard. **Klipper has successfully been installed on your printer!**
+If the Klipper flash that you did earlier was successful, and you've done everything else correctly, you should see no errors or warnings in the `Mainsail`/`Fluidd` dashboard. **Klipper has successfully been installed on your printer!**
 
 [🔼 Back to top](#outline)
 
@@ -180,7 +182,7 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
 
 💡 I recommend no filament be loaded for any of these steps.
 
-🗒️ You will be pasting/typing these commands into the Mainsail/Fluidd console.
+🗒️ You will be pasting/typing these commands into the `Mainsail`/`Fluidd` console.
 
 1. Check to see if `X` and `Y` max positions can be reached, and adjust `position_max`, if necessary. You might be able to go further, which is great, but I recommend leaving a 2mm gap for safety.
    1. `G28`
@@ -197,7 +199,7 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
    2. `SAVE_CONFIG` (once completed)
 5. Adjust `z_offset`. Make sure your nozzle if very clean. Do the [Paper test](https://www.klipper3d.org/Bed_Level.html?h=probe_calibrate#the-paper-test).
    1. `DO_PROBE_CALIBRATE`
-   2. Follow `z_offset` setup in Mainsail/Fluidd.
+   2. Follow `z_offset` setup in `Mainsail`/`Fluidd`.
    3. `SAVE_CONFIG` (once completed)
 6. Create a bed mesh.
    1. `DO_CREATE_MESH`

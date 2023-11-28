@@ -23,7 +23,7 @@ You have to decide what camp you want to be apart off.
 
 ##### Update Klipper repo first
 
-\*\* _Relevant for those coming from the_ **Before You Begin** _section (installing Klipper for the first time)_.
+\*\* _For those coming from the_ ${\small{\textcolor{WildStrawberry}{\texttt{Before You B.egin}}}}$ _section (installing Klipper for the first time), complete_ **only** _this section_. No need to compile the firmware, etc.
 
 It's always best to update the Klipper repository that lives on the host before compiling. This ensures that your `klipper.bin` will be as 'fresh' as possible.
 
