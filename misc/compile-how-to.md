@@ -23,6 +23,8 @@ You have to decide what camp you want to be apart off.
 
 ##### Update Klipper repo first
 
+\*\* _Relevant for those coming from the_ **Before You Begin** _section (installing Klipper for the first time)_.
+
 It's always best to update the Klipper repository that lives on the host before compiling. This ensures that your `klipper.bin` will be as 'fresh' as possible.
 
 - In `Fluidd`, you can do this from `Settings` > `Software Updates`.
