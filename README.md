@@ -66,7 +66,9 @@ Watch for releases and updates. Please see this [discussion](https://github.com/
 
 ## Preface
 
-Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and _fully read all the documentation on this page_. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
+Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read this documentation. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
+
+In many ways, this entire repository can be considered _my opinion_ on the `3D printing experience` and this has been _my attempt_ to share that experience. Some factors, such as accuracy and user experience, have been at the forefront of my thoughts during this work. I hope you find this repository suitable. Cheers.
 
 [🔼 Back to top](#outline)
 
@@ -87,7 +89,7 @@ Although I've made switching over to Klipper as easy as is possible, it can stil
 - Robert Redford's performance in _Spy Game (2001)_ was superb!
 - It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
-- I would recommend searching for the word `NOTE` in this repository. There are roughly half a dozen short points amongst the various files that you should be aware of if you're using this configuration.
+- I would recommend searching for the word `NOTE` in this configuration. There are roughly half a dozen short points amongst the various files that you should be aware of.
 
 [🔼 Back to top](#outline)
 
