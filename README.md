@@ -66,7 +66,7 @@ Watch for releases and updates. Please see this [discussion](https://github.com/
 
 Although I've made switching over to Klipper as easy as is possible, it can still be a challenge for some, especially considering that most of you have likely never used GNU+Linux. Save yourself the frustration, and fully read this documentation. Also note that Klipper is not a _must_, and is not for everyone. You can stick with Marlin, and have a fine 3D printing experience.
 
-In many ways, this entire repository can be considered _my opinion_ on the `3D printing experience` and this has been _my attempt_ to share that experience. Some factors, such as accuracy and user experience, have been at the forefront of my thoughts during this work. I hope you find this repository suitable. Cheers.
+In many ways, this entire repository can be considered _my opinion_ on the `3D printing experience` and this has been _my attempt_ to share that experience. Some factors, such as accuracy, testing, and user experience, have been at the forefront of my thoughts during this work. I hope you find this repository suitable. Cheers.
 
 [🔼 Back to top](#outline)
 
