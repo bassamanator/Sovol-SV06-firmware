@@ -40,12 +40,12 @@ I am creating these files for my personal use and cannot be held responsible for
 - 💥 This Klipper configuration is an _endpoint_, meaning that it contains **everything** that you could possibly need in order to have an excellent Klipper experience! 💥
 - Filament runout sensor usage implemented.
 - Minimum configuration settings for `Mainsail` and `Fluidd`.
-- Pre-configured configuration bundles based on the [Ellis SuperSlicer Print Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles)
+- Pre-configured configuration bundles based on the [Ellis SuperSlicer Print Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles):
   - SuperSlicer
   - PrusaSlicer
-  - Printer profiles: SV06; SV06 Plus
+  - Printer profiles: SV06/Plus; SV07/Plus
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
-- Macros
+- Macros:
   - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration.
   - Misc macros: `PRINT_START`, `CANCEL_PRINT`, `PRINT_END`, `PAUSE`, `RESUME`.
   - Parking macros (parks the printhead at various locations): `PARKFRONT`, `PARKFRONTLOW`, `PARKREAR`, `PARKCENTER`, `PARKBED`.
@@ -231,9 +231,17 @@ But first, adjust your slicer.
 
 ## Adjust Your Slicer
 
-💡 If you are using the config bundles found on this repo, you can skip this step.
+🗒️ If you are using the config bundles found on this repo, you can skip this section.
 
-You need to adjust the start and end gcode in your slicer. The relevant macros are `PRINT_START` and `PRINT_END`. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
+### Start G-Code
+
+It varies depending on your slicer. Find instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/passing_slicer_variables.html#slicer-start-g-code).
+
+### End G-Code
+
+```
+PRINT_END
+```
 
 ### Line Purge
 
