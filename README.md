@@ -14,7 +14,7 @@
 # Speedrun
 
 <a href="https://youtu.be/jGplZnNoT4I?si=1e3BTfP3vhhEvGNs" target="_blank">
- <img src="https://img.youtube.com/vi/jGplZnNoT4I/0.jpg" alt="Watch the video" width="100%"/>
+ <img src="https://img.youtube.com/vi/jGplZnNoT4I/maxresdefault.jpg" alt="Watch the video" width="100%"/>
 </a>
 
 <img src="./images/octahedroflake.jpg" />
