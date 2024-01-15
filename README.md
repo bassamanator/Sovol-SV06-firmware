@@ -54,9 +54,9 @@ I am creating these files for my personal use and cannot be held responsible for
 
 ## Stay Up-to-Date
 
-${\normalsize{\textcolor{goldenrod}{\texttt{Star ⭐ this project}}}}$
+${\normalsize{\textcolor{goldenrod}{\texttt{Star ⭐ this project.}}}}$
 
-Watch for releases and updates. Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/37).
+Watch for [updates](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/37).
 
 <img src="./images/githubstar.gif" width="500" alt='github star'/>
 
@@ -73,18 +73,17 @@ In many ways, this entire repository can be considered _my opinion_ on the `3D p
 ## Before You Begin
 
 - This entire page is a **13 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
-- Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_ than they were before. Beginner's would be wise to go through the steps mentioned [here](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md). Consider yourself warned.
-- Follow the steps in order.
-- If an error was reported at a step, do no proceed to the next step.
-- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. 💡 Most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it's not possible to tell just by looking.
+- ⚠️ Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_. Beginners would be wise to run through [these steps](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md).
 - [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
-- It is also assumed that the username on the host device is `pi`. If that is not the case, you will have to manually edit `moonraker.conf` and `cfgs/misc-macros.cfg` and change any mentions of `/home/pi` to `/home/yourUserName`.
-- Klipper _must_ be installed on the host Raspberry Pi for everything to work. Easiest is to use a [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest) image. Alternatively, you can install `Fluidd` or `Mainsail` via [KIAUH](https://github.com/th33xitus/kiauh).
+- Follow the steps in order. If an error was reported at a step, do no proceed to the next step.
+- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. 💡 Most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it is not possible to tell just by looking.
+- It is also assumed that the username on the host device is `pi`. If that is not the case, edit `moonraker.conf` and `cfgs/misc-macros.cfg` to change any mentions of `/home/pi` to `/home/yourUserName`.
+- Klipper _must_ be installed on the host beforehand. Easiest is to use [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest). [KIAUH](https://github.com/th33xitus/kiauh) is another option.
 - Klipper _must_ be up to date.
   - In `Fluidd`, you can do this from `Settings` > `Software Updates`.
   - In `Mainsail`, you can do this from `Machine` > `Update Manager`.
 - Robert Redford's performance in _Spy Game (2001)_ was superb!
-- It is assumed that there is one instance of Klipper installed. If you have multiple instances of Klipper installed, via `KIAUH` for example, then this guide is not for you. You can still use all the configs of course, but the steps in this guide will likely not work for you.
+- It is assumed that there is one instance of Klipper installed. If that is not the case, then the steps in this guide will not work _perfectly_ for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this configuration. There are roughly half a dozen short points amongst the various files that you should be aware of.
 
