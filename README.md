@@ -72,7 +72,7 @@ In many ways, this entire repository can be considered _my opinion_ on the `3D p
 
 ## Before You Begin
 
-- This entire page is a **13 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
+- This entire page is a **12 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
 - ⚠️ Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_. Beginners would be wise to run through [these steps](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md).
 - [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
 - Follow the steps in order. If an error was reported at a step, do no proceed to the next step.
@@ -298,8 +298,6 @@ The printer will beep upon:
 - Upon `PRINT_END`.
 - `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
 
-Adjust behaviour according to your needs.
-
 | File     | `cfgs/misc-macros.cfg`     |
 | -------- | -------------------------- |
 | Section  | `[gcode_macro _globals]`   |
@@ -310,8 +308,6 @@ Adjust behaviour according to your needs.
 ### I want to use a filament sensor. How do I set it up?
 
 You can find information about the physical setup [here](https://github.com/bassamanator/everything-sovol-sv06#filament-sensor).
-
-Adjust behaviour according to your needs.
 
 | File     | `cfgs/misc-macros.cfg`             |
 | -------- | ---------------------------------- |
@@ -363,8 +359,6 @@ The printhead is now parked front center waiting for you to insert filament. You
 📝 `LINE_PURGE` is useable (on appropriate devices) even if KAMP is disabled.
 
 This repo contains all the code from the KAMP repository, however, only the `adaptive meshing` and `LINE_PURGE` functionality of KAMP has been configured and tested for use. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
-
-Adjust behaviour according to your needs.
 
 | File     | `cfgs/misc-macros.cfg`   |
 | -------- | ------------------------ |
