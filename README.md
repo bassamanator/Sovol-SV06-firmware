@@ -125,9 +125,9 @@ Please note:
 
 ### Download OSS Klipper Configuration
 
-You can choose _either_ of the 2 following methods.
-
 #### Method 1: Clone the Repository
+
+💡 Make sure `git` is installed (`sudo apt update && sudo apt install git`).
 
 1. `cd ~/printer_data/config`
 2. Empty entire `~/printer_data/config` folder.
@@ -148,6 +148,8 @@ You can choose _either_ of the 2 following methods.
 
 ### Adjust Configuration with MCU Path
 
+💡 Make sure the host and printer are connected via USB.
+
 1. Find what port the `mcu` (printer motherboard) is connected to via **one** of the following commands:
 
    - `ls /dev/serial/by-id/*`
@@ -159,7 +161,7 @@ You can choose _either_ of the 2 following methods.
 2. Adjust the `[mcu]` section in `printer.cfg` accordingly.
 
    ```yaml
-   # 🗒️ This is just an example
+   # 📝 This is just an example
    [mcu]
    serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
    restart_method: command
@@ -183,7 +185,7 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
 
 💡 I recommend no filament be loaded for any of these steps.
 
-🗒️ You will be pasting/typing these commands into the `Mainsail`/`Fluidd` console.
+📝 You will be pasting/typing these commands into the `Mainsail`/`Fluidd` console.
 
 1. Check to see if `X` and `Y` max positions can be reached, and adjust `position_max`, if necessary. You might be able to go further, which is great, but I recommend leaving a 2mm gap for safety.
    1. `G28`
@@ -214,7 +216,7 @@ But first, adjust your slicer.
 
 ## Adjust Your Slicer
 
-🗒️ If you are using the config bundles found on this repo, you can skip this section.
+📝 If you are using the config bundles found on this repo, you can skip this section.
 
 ### Start G-Code
 
@@ -234,7 +236,7 @@ If you would like to print a purge line before your print starts, at the end of 
 - `LINE_PURGE`; prints KAMP's purge line. ⚠️ Do not attempt to use without reading [this section](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
 
 ```yaml
-# 🗒️ This is just an example Start G-Code
+# 📝 This is just an example Start G-Code
 PRINT_START ...
 PURGE_LINE
 ```
@@ -355,9 +357,9 @@ The printhead is now parked front center waiting for you to insert filament. You
 
 ⚠️ If KAMP is disabled, and there is no `default` mesh, `PRINT_START` will crash.
 
-🗒️ The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
+📝 The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
 
-🗒️ `LINE_PURGE` is useable (on appropriate devices) even if KAMP is disabled.
+📝 `LINE_PURGE` is useable (on appropriate devices) even if KAMP is disabled.
 
 This repo contains all the code from the KAMP repository, however, only the `adaptive meshing` and `LINE_PURGE` functionality of KAMP has been configured and tested for use. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
 
