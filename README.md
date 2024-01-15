@@ -247,7 +247,7 @@ PURGE_LINE
 
 Please ⭐ star this repository!
 
-If you found my work useful, buy me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+Support [open source](https://en.wikipedia.org/wiki/Open_source), and buy me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 [🔼 Back to top](#outline)
 
@@ -256,24 +256,25 @@ If you found my work useful, buy me a [<img src="./images/logo_white_stroke.png"
 This repository contains many files and folders. Some are _necessary_ for this Klipper configuration to work, others are not.
 
 - **Necessary** items are marked with a ✅.
-- Items that can _optionally_ be deleted are marked with a ❌.
-<!-- tree -a -C -I '.git|.directory' -L 1 -F -->
+- Items that can _optionally_ be deleted are marked with a 💠.
+<!-- tree -a -C -I '.directory' -L 1 -F -->
 
 ```sh
 ├── cfgs/ ✅
-├── CODE_OF_CONDUCT.md ❌
-├── CONTRIBUTING.md ❌
-├── .github/ ❌
-├── .gitignore ❌
-├── images/ ❌
-├── LICENSE ❌
-├── misc/ ❌
+├── CODE_OF_CONDUCT.md 💠
+├── CONTRIBUTING.md 💠
+├── .git/ ✅❔
+├── .github/ 💠
+├── .gitignore ✅❔
+├── images/ 💠
+├── LICENSE 💠
+├── misc/ 💠
 ├── moonraker.conf ✅
 ├── osskc.cfg ✅
 ├── printer.cfg ✅
-├── README.md ❌
-├── SECURITY.md ❌
-└── .vscode/ ❌
+├── README.md 💠
+├── SECURITY.md 💠
+└── .vscode/ 💠
 ```
 
 [🔼 Back to top](#outline)
