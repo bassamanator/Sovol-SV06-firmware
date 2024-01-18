@@ -72,7 +72,7 @@ In many ways, this entire repository can be considered _my opinion_ on the `3D p
 
 ## Before You Begin
 
-- This entire page is a **11 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
+- This entire page is a **9 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
 - ⚠️ Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_. Beginners would be wise to run through [these steps](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md).
 - ⚠️ [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
 - Follow the steps in order. If an error was reported at a step, do no proceed to the next step.
