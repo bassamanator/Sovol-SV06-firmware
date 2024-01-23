@@ -76,9 +76,9 @@ In many ways, this entire repository can be considered _my opinion_ on the `3D p
 
 ## Before You Begin
 
-- This entire page is a **12 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
+- This entire page is a **9 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
 - ⚠️ Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_. Beginners would be wise to run through [these steps](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md).
-- [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
+- ⚠️ [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
 - Follow the steps in order. If an error was reported at a step, do no proceed to the next step.
 - It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. 💡 Most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it is not possible to tell just by looking.
 - It is also assumed that the username on the host device is `pi`. If that is not the case, edit `moonraker.conf` and `cfgs/misc-macros.cfg` to change any mentions of `/home/pi` to `/home/yourUserName`.
@@ -87,9 +87,10 @@ In many ways, this entire repository can be considered _my opinion_ on the `3D p
   - In `Fluidd`, you can do this from `Settings` > `Software Updates`.
   - In `Mainsail`, you can do this from `Machine` > `Update Manager`.
 - Robert Redford's performance in _Spy Game (2001)_ was superb!
-- It is assumed that there is one instance of Klipper installed. If that is not the case, then the steps in this guide will not work _perfectly_ for you.
+- It is assumed that there is one instance of Klipper installed. If that is not the case, the steps in this guide will not work _perfectly_ for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this configuration. There are roughly half a dozen short points amongst the various files that you should be aware of.
+<!-- - Link to recommended parts. -->
 
 [🔼 Back to top](#outline)
 
@@ -110,7 +111,7 @@ For the SKR-Mini-E3-V3.0, the `run_current` for x, y, z stepper motors has been 
 
 ### Flash Firmware
 
-💡 If you have already flashed klipper onto your motherboard in the past, you can skip this step.
+💡 If you flashed Klipper onto your motherboard in the past, you can skip this step.
 
 Please note:
 
@@ -166,7 +167,7 @@ Please note:
 
 💡 Make sure the host and printer are connected via USB.
 
-1. Find what port the `mcu` (printer motherboard) is connected to via **one** of the following commands:
+1. Find what port the `mcu` (printer motherboard) is connected to via _one_ of the following commands:
 
    - `ls /dev/serial/by-id/*`
    - `ls /dev/serial/by-path/*`
@@ -185,7 +186,7 @@ Please note:
 
 3. Do a `FIRMWARE_RESTART`.
 
-If the Klipper flash that you did earlier was successful, and you've done everything else correctly, you should see no errors or warnings in the `Mainsail`/`Fluidd` dashboard. **Klipper has successfully been installed on your printer!**
+If the Klipper flash that you did earlier was successful, and you've done everything else correctly, you should see no errors or warnings in the `Mainsail`/`Fluidd` dashboard. 🎉 **Your printer has been Klipperized!** 🎉
 
 [🔼 Back to top](#outline)
 
@@ -224,15 +225,15 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
    1. `DO_CREATE_MESH`
    2. `SAVE_CONFIG` (once completed)
 
-🏁 If you've made it here, then your printer has been Klipperized, and is ready to print! 🏁
+🏁 If you've made it here, then your Klipperized printer is ready to print! 🏁
 
-But first, adjust your slicer.
+_But first_, adjust your slicer.
 
 [🔼 Back to top](#outline)
 
 ## Adjust Your Slicer
 
-📝 If you are using the config bundles found on this repo, you can skip this section.
+📝 If you are using the slicer bundles found on this repo, you can skip this section.
 
 ### Start G-Code
 
@@ -297,11 +298,23 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ## FAQ
 
+### What are some settings that I can change?
+
+| File                   | Section                  |
+| ---------------------- | ------------------------ |
+| `cfgs/misc-macros.cfg` | `[gcode_macro _globals]` |
+
+| Variable                           | Disable       | Enable        | Notes                                                               |
+| ---------------------------------- | ------------- | ------------- | ------------------------------------------------------------------- |
+| `variable_beeping_enabled`         | `0`           | `1` (default) |
+| `variable_filament_sensor_enabled` | `0` (default) | `1`           |
+| `variable_kamp_enable`             | `0` (default) | `1`           | See [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging) |
+
 ### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
 Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
 
-### How do I print using SuperSlicer?
+### How do I print using SuperSlicer/PrusaSlicer?
 
 Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/14).
 
@@ -314,23 +327,9 @@ The printer will beep upon:
 - Upon `PRINT_END`.
 - `MECHANICAL_GANTRY_CALIBRATION`/`G34`.
 
-| File     | `cfgs/misc-macros.cfg`     |
-| -------- | -------------------------- |
-| Section  | `[gcode_macro _globals]`   |
-| Variable | `variable_beeping_enabled` |
-| Disable  | `0`                        |
-| Enable   | `1` (default)              |
-
 ### I want to use a filament sensor. How do I set it up?
 
 You can find information about the physical setup [here](https://github.com/bassamanator/everything-sovol-sv06#filament-sensor).
-
-| File     | `cfgs/misc-macros.cfg`             |
-| -------- | ---------------------------------- |
-| Section  | `[gcode_macro _globals]`           |
-| Variable | `variable_filament_sensor_enabled` |
-| Disable  | `0` (default)                      |
-| Enable   | `1`                                |
 
 ### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
 
@@ -375,13 +374,6 @@ The printhead is now parked front center waiting for you to insert filament. You
 📝 `LINE_PURGE` is useable (on appropriate devices) even if KAMP is disabled.
 
 This repo contains all the code from the KAMP repository, however, only the `adaptive meshing` and `LINE_PURGE` functionality of KAMP has been configured and tested for use. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
-
-| File     | `cfgs/misc-macros.cfg`   |
-| -------- | ------------------------ |
-| Section  | `[gcode_macro _globals]` |
-| Variable | `variable_kamp_enable`   |
-| Disable  | `0` (default)            |
-| Enable   | `1`                      |
 
 ### How do I use the `TEST_SPEED` macro?
 
