@@ -284,6 +284,8 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 ### What are some settings that I can change?
 
+Edit the relevant file according to your needs.
+
 | File                   | Section                  |
 | ---------------------- | ------------------------ |
 | `cfgs/misc-macros.cfg` | `[gcode_macro _globals]` |
