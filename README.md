@@ -277,6 +277,7 @@ This repository contains many files and folders. Some are _necessary_ for this K
 <!-- tree -a -C -I '.directory' -L 1 -F -->
 
 ```sh
+/home/pi/printer_data/config
 ├── cfgs/ ✅
 ├── CODE_OF_CONDUCT.md 💠
 ├── CONTRIBUTING.md 💠
