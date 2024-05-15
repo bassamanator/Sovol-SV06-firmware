@@ -97,7 +97,7 @@ In many ways, this entire repository can be considered _my opinion_ on the `3D p
 ## Electronic Wiring
 
 Wire cables according to the following diagram:
-<img src="./misc/skr-mini/skr-mini-e3-v3.0-v1678580296384.png" alt='skr-mini-e3-v3.0 installation instructions'/>
+<img src="./misc/skr-mini/skr-mini-e3-v3.0-v1715751911501.png" alt='skr-mini-e3-v3.0 installation instructions'/>
 
 ### Important Note About Stepper Motor Current
 
