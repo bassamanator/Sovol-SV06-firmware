@@ -52,7 +52,7 @@ I am creating these files for my personal use and cannot be held responsible for
   - Load/unload filament macros.
   - `PURGE_LINE` macro.
   - `TEST_SPEED` macro. Find instructions [here](#how-do-i-use-the-test_speed-macro).
-- Klipper Adaptive Meshing & Purging (KAMP) integrated. Read about it [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
+- Klipper Adaptive Meshing & Purging (KAMP) integrated. Read about it [here](#what-do-i-need-to-know-about-kamp).
 
 [🔼 Back to top](#outline)
 
@@ -62,7 +62,7 @@ ${\normalsize{\textcolor{goldenrod}{\texttt{Star ⭐ this project.}}}}$
 
 Watch for [updates](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/37).
 
-<img src="./images/githubstar.gif" width="500" alt='github star'/>
+<img src="./misc/images/githubstar.gif" width="500" alt='github star'/>
 
 [🔼 Back to top](#outline)
 
@@ -264,7 +264,7 @@ PURGE_LINE
 
 Please ⭐ star this repository!
 
-Support [open source](https://en.wikipedia.org/wiki/Open_source), and buy me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+Support [open source](https://en.wikipedia.org/wiki/Open_source), and buy me a [<img src="./misc/images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 [🔼 Back to top](#outline)
 
@@ -284,7 +284,6 @@ This repository contains many files and folders. Some are _necessary_ for this K
 ├── .git/ ✅❔
 ├── .github/ 💠
 ├── .gitignore ✅❔
-├── images/ 💠
 ├── LICENSE 💠
 ├── misc/ 💠
 ├── moonraker.conf ✅
@@ -334,6 +333,8 @@ The printer will beep upon:
 
 You can find information about the physical setup [here](https://github.com/bassamanator/everything-sovol-sv06#filament-sensor).
 
+You can test the sensor via `QUERY_FILAMENT_SENSOR SENSOR=filament_sensor`.
+
 ### My filament runout sensor works, but I just started a print without any filament loaded. What gives?
 
 A simple runout sensor can only detect a change in state. So, if you start a print without filament loaded, the printer will not know that there is no filament loaded. You should test your sensor by having filament loaded, starting a print, then cutting the filament. The expected behaviour is that the print will pause, and as long as you have beeping enabled, you will hear 3 annoying beeps.
@@ -366,7 +367,7 @@ The printhead is now parked front center waiting for you to insert filament. You
    - OR, you can push some filament by hand _making sure to first disengage the extruder's spring loaded arm_.
 3. Hit resume in your Klipper dashboard.
 
-### How do I enable KAMP (Klipper Adaptive Meshing & Purging)?
+### What do I need to know about KAMP?
 
 ⚠️ No KAMP functionality can be used on low-powered devices such as the Raspberry Pi Zero.
 
@@ -377,6 +378,8 @@ The printhead is now parked front center waiting for you to insert filament. You
 📝 `LINE_PURGE` is useable (on appropriate devices) even if KAMP is disabled.
 
 This repo contains all the code from the KAMP repository, however, only the `adaptive meshing` and `LINE_PURGE` functionality of KAMP has been configured and tested for use. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
+
+Read [KAMP official docs](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) to learn more.
 
 ### How do I use the `TEST_SPEED` macro?
 
