@@ -30,6 +30,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Adjust Your Slicer](#adjust-your-slicer)
 - [Support Me](#support-me)
 - [Directory Structure](#directory-structure)
+- [Known Issues](#known-issues)
 - [FAQ](#faq)
 - [Useful Resources](#useful-resources)
 - [Sovol Official Links](#sovol-official-links)
@@ -293,6 +294,16 @@ This repository contains many files and folders. Some are _necessary_ for this K
 ├── SECURITY.md 💠
 └── .vscode/ 💠
 ```
+
+[🔼 Back to top](#outline)
+
+## Known Issues
+
+### Sequential printing
+
+Cancelling a print with sequential printing will possibly lead to collisions with previously printed objects.
+
+In PrusaSlicer, please see Printer Settings > Notes, for extruder clearances.
 
 [🔼 Back to top](#outline)
 
