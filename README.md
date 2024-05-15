@@ -58,7 +58,7 @@ ${\normalsize{\textcolor{goldenrod}{\texttt{Star ⭐ this project.}}}}$
 
 Watch for [updates](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/37).
 
-<img src="./images/githubstar.gif" width="500" alt='github star'/>
+<img src="./misc/images/githubstar.gif" width="500" alt='github star'/>
 
 [🔼 Back to top](#outline)
 
@@ -248,7 +248,7 @@ PURGE_LINE
 
 Please ⭐ star this repository!
 
-Support [open source](https://en.wikipedia.org/wiki/Open_source), and buy me a [<img src="./images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
+Support [open source](https://en.wikipedia.org/wiki/Open_source), and buy me a [<img src="./misc/images/logo_white_stroke.png" height="20" alt='Ko-fi'/>](https://ko-fi.com/bassamanator).
 
 [🔼 Back to top](#outline)
 
@@ -268,7 +268,6 @@ This repository contains many files and folders. Some are _necessary_ for this K
 ├── .git/ ✅❔
 ├── .github/ 💠
 ├── .gitignore ✅❔
-├── images/ 💠
 ├── LICENSE 💠
 ├── misc/ 💠
 ├── moonraker.conf ✅
