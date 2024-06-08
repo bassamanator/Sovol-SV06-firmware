@@ -26,7 +26,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Adjust Your Slicer](#adjust-your-slicer)
 - [Support Me](#support-me)
 - [Directory Structure](#directory-structure)
-- [Known Issues](#known-issues)
+- [Special Considerations](#special-considerations)
 - [FAQ](#faq)
 - [Useful Resources](#useful-resources)
 - [Sovol Official Links](#sovol-official-links)
@@ -281,11 +281,11 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 [🔼 Back to top](#outline)
 
-## Known Issues
+## Special Considerations
 
 ### Sequential printing
 
-Cancelling a print with sequential printing will possibly lead to collisions with previously printed objects.
+If enabled, cancelling, or resuming a print from pause, could lead to collisions with previously printed objects. In order to prevent collisions, in your slicer, ensure that objects are printed from the back of the build plate to the front.
 
 In PrusaSlicer, please see Printer Settings > Notes, for extruder clearances.
 
