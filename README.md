@@ -6,8 +6,11 @@ This branch contains the Klipper configuration and firmware for the **Sovol SV06
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Sovol SV06                                                           | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
 | Sovol SV06 Skr-Mini-E3-V3.0                                          | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
+| Sovol SV06 Fly-E3-Pro-V3                                             | [fly-e3-pro-v3](https://github.com/ElPainis/Fly-E3-Pro-v3) \*\*                           |
 | ${\normalsize{\textcolor{darkturquoise}{\texttt{Sovol SV06 Plus}}}}$ | ⚡ $\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}$ ⚡                            |
 | All other printers                                                   | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
+
+\*\* _Maintained by [ElPainis](https://github.com/ElPainis)_
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
@@ -28,7 +31,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - [Adjust Your Slicer](#adjust-your-slicer)
 - [Support Me](#support-me)
 - [Directory Structure](#directory-structure)
-- [Known Issues](#known-issues)
+- [Special Considerations](#special-considerations)
 - [FAQ](#faq)
 - [Useful Resources](#useful-resources)
 - [Sovol Official Links](#sovol-official-links)
@@ -284,11 +287,11 @@ This repository contains many files and folders. Some are _necessary_ for this K
 
 [🔼 Back to top](#outline)
 
-## Known Issues
+## Special Considerations
 
 ### Sequential printing
 
-Cancelling a print with sequential printing will possibly lead to collisions with previously printed objects.
+If enabled, cancelling, or resuming a print from pause, could lead to collisions with previously printed objects. In order to prevent collisions, in your slicer, ensure that objects are printed from the back of the build plate to the front.
 
 In PrusaSlicer, please see Printer Settings > Notes, for extruder clearances.
 
