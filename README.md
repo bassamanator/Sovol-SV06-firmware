@@ -6,8 +6,11 @@ This branch contains the OSS Klipper configuration that can be used with **any s
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | Sovol SV06                                                              | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
 | Sovol SV06 Skr-Mini-E3-V3.0                                             | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
+| Sovol SV06 Fly-E3-Pro-V3                                                | [fly-e3-pro-v3](https://github.com/ElPainis/Fly-E3-Pro-v3) \*\*                           |
 | Sovol SV06 Plus                                                         | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
 | ${\normalsize{\textcolor{darkturquoise}{\texttt{All other printers}}}}$ | ⚡ $\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}$ ⚡                            |
+
+\*\* _Maintained by [ElPainis](https://github.com/ElPainis)_
 
 I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
