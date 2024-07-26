@@ -292,6 +292,12 @@ If enabled, cancelling, or resuming a print from pause, could lead to collisions
 
 In PrusaSlicer, please see Printer Settings > Notes, for extruder clearances.
 
+## Renamed GCODE Commands
+
+### BED_MESH_CALIBRATE
+
+Renamed to `_BED_MESH_CALIBRATE`.
+
 [🔼 Back to top](#outline)
 
 ## FAQ
