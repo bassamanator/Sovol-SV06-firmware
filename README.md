@@ -310,11 +310,11 @@ Edit the relevant file according to your needs.
 | ---------------------- | ------------------------ |
 | `cfgs/misc-macros.cfg` | `[gcode_macro _globals]` |
 
-| Variable                           | Disable       | Enable        | Notes                                                               |
-| ---------------------------------- | ------------- | ------------- | ------------------------------------------------------------------- |
+| Variable                           | Disable       | Enable        | Notes                                          |
+| ---------------------------------- | ------------- | ------------- | ---------------------------------------------- |
 | `variable_beeping_enabled`         | `0`           | `1` (default) |
 | `variable_filament_sensor_enabled` | `0` (default) | `1`           |
-| `variable_kamp_enable`             | `0` (default) | `1`           | See [here](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging) |
+| `variable_kamp_enable`             | `0` (default) | `1`           | See [here](#what-do-i-need-to-know-about-kamp) |
 
 ### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
