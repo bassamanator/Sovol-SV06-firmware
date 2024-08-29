@@ -77,10 +77,8 @@ In many ways, this entire repository can be considered _my opinion_ on the `3D p
 ## Before You Begin
 
 - This entire page is a **9 minute read**. Save yourself _hours of troubleshooting_ and read this documentation fully.
-- ⚠️ Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_. Beginners would be wise to run through [these steps](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md).
-- ⚠️ [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
 - Follow the steps in order. If an error was reported at a step, do no proceed to the next step.
-- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a data USB cable. 💡 Most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it is not possible to tell just by looking.
+- It is assumed that you are connected to your host Raspberry Pi (or other host device) via SSH, and that your printer motherboard is connected to the host via a _data_ USB cable.
 - It is also assumed that the username on the host device is `pi`. If that is not the case, edit `moonraker.conf` and `cfgs/misc-macros.cfg` to change any mentions of `/home/pi` to `/home/yourUserName`.
 - Klipper _must_ be installed on the host beforehand. Easiest is to use [MainsailOS](https://github.com/mainsail-crew/mainsail/releases/latest). [KIAUH](https://github.com/th33xitus/kiauh) is another option.
 - Klipper _must_ be up to date.
@@ -90,7 +88,16 @@ In many ways, this entire repository can be considered _my opinion_ on the `3D p
 - It is assumed that there is one instance of Klipper installed. If that is not the case, the steps in this guide will not work _perfectly_ for you.
 - Your question has probably been answered already, but if it hasn't, please post in the [Discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions) section.
 - I would recommend searching for the word `NOTE` in this configuration. There are roughly half a dozen short points amongst the various files that you should be aware of.
-<!-- - Link to recommended parts. -->
+- Consider [these](https://github.com/bassamanator/everything-sovol-sv06/blob/main/parts/README.md#printed-upgrades) printable parts, and also see my [Printables](https://www.printables.com/@bassamanator) page.
+
+> [!TIP]
+> Most of the micro USB cables that you find at home are _unlikely_ to be data cables, and it is not possible to tell just by looking.
+
+> [!CAUTION]
+> Make sure your printer is in good physical condition, because print and travel speeds will be _a lot faster_. Beginners would be wise to run through [these steps](https://github.com/bassamanator/everything-sovol-sv06/blob/main/initialsteps.md).
+
+> [!CAUTION]
+> [Disable](https://github.com/bassamanator/everything-sovol-sv06/blob/main/howto.md#disable-usb-cable-5v-pin) the USB cable's 5V pin.
 
 [🔼 Back to top](#outline)
 
