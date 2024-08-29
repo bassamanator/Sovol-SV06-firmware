@@ -106,7 +106,9 @@ Please note:
 - The firmware file is located in the `misc` folder.
 - Flashing will only work if current firmware filename is _different from previous flashing procedure_. The `.bin` is also important.
 - You may find this [video](https://youtu.be/p6l253OJa34) useful.
-- ⚠️ Many users have reported having issues flashing Klipper using the Sovol microSD card.
+
+> [!WARNING]
+> Many users have reported having issues flashing Klipper using the Sovol microSD card.
 
 #### 1. Prepare the microSD Card for Flashing with These Parameters
 
@@ -124,7 +126,8 @@ Please note:
 5. Turn on the printer and wait a minute (usually takes 10 seconds).
 6. Turn off the printer and remove the microSD.
 
-⏲️ At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide.
+> [!IMPORTANT]
+> ⏲️ At this point, it's not possible to tell with certainty whether your flash was successful, continue on with the guide.
 
 [🔼 Back to top](#outline)
 
@@ -190,7 +193,8 @@ If the Klipper flash that you did earlier was successful, and you've done everyt
 
 💡 I recommend no filament be loaded for any of these steps.
 
-📝 You will be pasting/typing these commands into the `Mainsail`/`Fluidd` console.
+> [!NOTE]
+> You will be pasting/typing these commands into the `Mainsail`/`Fluidd` console.
 
 1. Check to see if `X` and `Y` max positions can be reached, and adjust `position_max`, if necessary. You might be able to go further, which is great, but I recommend leaving a 2mm gap for safety.
    1. `G28`
@@ -221,7 +225,8 @@ _But first_, adjust your slicer.
 
 ## Adjust Your Slicer
 
-📝 If you are using the slicer bundles found on this repo, you can skip this section.
+> [!NOTE]
+> If you are using the slicer bundles found on this repo, you can skip this section.
 
 ### Start G-Code
 
@@ -238,7 +243,10 @@ PRINT_END
 If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line, add one of the following:
 
 - `PURGE_LINE`; prints a standard purge line.
-- `LINE_PURGE`; prints KAMP's purge line. ⚠️ Do not attempt to use without reading [this section](#how-do-i-enable-kamp-klipper-adaptive-meshing--purging).
+- `LINE_PURGE`; prints KAMP's purge line.
+
+> [!WARNING]
+> Do not attempt to use `LINE_PURGE` without reading [this section](#what-do-i-need-to-know-about-kamp).
 
 ```yaml
 # 📝 This is just an example Start G-Code
@@ -360,7 +368,8 @@ _If_ you have a working filament sensor, the same behaviour as `M600`/colour cha
 
 ### How do I resume a print after a colour change or filament runout?
 
-⚠️ Do not disable the stepper motors during this process!
+> [!WARNING]
+> Do not disable the stepper motors during this process!
 
 The printhead is now parked front center waiting for you to insert filament. You will:
 
@@ -373,13 +382,17 @@ The printhead is now parked front center waiting for you to insert filament. You
 
 ### What do I need to know about KAMP?
 
-⚠️ No KAMP functionality can be used on low-powered devices such as the Raspberry Pi Zero.
+> [!WARNING]
+> No KAMP functionality can be used on low-powered devices such as the Raspberry Pi Zero.
 
-⚠️ If KAMP is disabled, and there is no `default` mesh, `PRINT_START` will crash.
+> [!WARNING]
+> If KAMP is disabled, and there is no `default` mesh, `PRINT_START` will crash.
 
-📝 The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
+> [!IMPORTANT]
+> The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
 
-📝 `LINE_PURGE` is useable (on appropriate devices) even if KAMP is disabled.
+> [!NOTE]
+> `LINE_PURGE` is useable _on appropriate devices_ even if KAMP is disabled.
 
 This repo contains all the code from the KAMP repository, however, only the `adaptive meshing` and `LINE_PURGE` functionality of KAMP has been configured and tested for use. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
 
@@ -387,7 +400,8 @@ Read [KAMP official docs](https://github.com/kyleisah/Klipper-Adaptive-Meshing-P
 
 ### How do I use the `TEST_SPEED` macro?
 
-⚠️ This is for advanced users only, with well oiled machines. You can cause serious damage to your printer if you're not careful. ☠️ **You have been warned** ☠️.
+> [!WARNING]
+> This is for advanced users only, with well oiled machines. You can cause serious damage to your printer if you're not careful.
 
 Find full instructions [here](https://ellis3dp.com/Print-Tuning-Guide/articles/determining_max_speeds_accels.html).
 
