@@ -2,3 +2,5 @@ printer-*_*.cfg
 .moonraker.conf.bkp
 .directory
 moonraker.conf.backup
+.venv
+__pycache__
