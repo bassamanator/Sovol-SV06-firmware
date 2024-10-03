@@ -4,3 +4,4 @@ printer-*_*.cfg
 moonraker.conf.backup
 .venv
 __pycache__
+crowsnest.conf.*
