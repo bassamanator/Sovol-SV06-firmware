@@ -14,7 +14,7 @@ support my open source work ❤️
 | Sovol SV06 Fly-E3-Pro-V3                                      | [fly-e3-pro-v3](https://github.com/ElPainis/Fly-E3-Pro-v3) \*\*                           |
 | All other printers                                            | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
 
-${\scriptsize{** Maintained by ElPainis}}$
+${\small{\textit{** Maintained by ElPainis}}}$
 
 > [!WARNING]
 > I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
