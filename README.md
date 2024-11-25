@@ -1,18 +1,23 @@
-# 🚨 _One-Stop-Shop_ Klipper Configuration
+<p align="center">
+Please consider
+<a href="https://ko-fi.com/bassamanator" target="_blank">donating</a> to
+support my open source work ❤️
+</p>
 
-This branch contains the Klipper configuration and firmware for the **Sovol SV06 Plus** 3D printer.
+# One-Stop-Shop Klipper Configuration
 
-| Printer                                                              | Branch                                                                                    |
-| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Sovol SV06                                                           | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
-| Sovol SV06 Skr-Mini-E3-V3.0                                          | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
-| Sovol SV06 Fly-E3-Pro-V3                                             | [fly-e3-pro-v3](https://github.com/ElPainis/Fly-E3-Pro-v3) \*\*                           |
-| ${\normalsize{\textcolor{darkturquoise}{\texttt{Sovol SV06 Plus}}}}$ | ⚡ $\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}$ ⚡                            |
-| All other printers                                                   | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
+| Printer                                                            | Branch                                                                                    |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+| Sovol SV06                                                         | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)                 |
+| Sovol SV06 SKR-Mini-E3-V3.0                                        | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
+| Sovol SV06 Fly-E3-Pro-V3                                           | [fly-e3-pro-v3](https://github.com/ElPainis/Fly-E3-Pro-v3) \*\*                           |
+| ${\normalsize{\textcolor{darkturquoise}{\text{Sovol SV06 Plus}}}}$ | ⚡ ${\scriptsize{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}}$ ⚡                     |
+| All other printers                                                 | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
 
-\*\* _Maintained by [ElPainis](https://github.com/ElPainis)_
+${\small{\textit{** Maintained by ElPainis}}}$
 
-I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
+> [!WARNING]
+> I am creating these files for my personal use and cannot be held responsible for what it might do to your printer. Use at your own risk.
 
 🙏🏻 🙌🏻 Big thanks to [blanchas3d](https://github.com/blanchas3d) in testing out this branch and reporting issues.
 
@@ -45,7 +50,7 @@ I am creating these files for my personal use and cannot be held responsible for
 - Pre-configured configuration bundles based on the [Ellis SuperSlicer Print Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles):
   - SuperSlicer
   - PrusaSlicer
-  - Printer profiles: SV06/Plus; SV07/Plus
+  - Printer profiles: `SV06/Plus`; `SV07/Plus`
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
 - Macros:
   - **Improved** mechanical gantry calibration/`G34` macro that provides the user audio feedback, and time to check the calibration.
