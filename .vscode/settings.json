@@ -34,8 +34,10 @@
 		"Printables",
 		"Prusa",
 		"runout",
+		"scriptsize",
 		"Sovol",
 		"textcolor",
+		"textit",
 		"texttt"
 	],
 	"[markdown]": {
