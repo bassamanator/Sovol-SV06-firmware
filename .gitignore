@@ -1,3 +1,6 @@
 printer-*_*.cfg
 .moonraker.conf.bkp
 .directory
+.venv
+__pycache__
+crowsnest.conf.*

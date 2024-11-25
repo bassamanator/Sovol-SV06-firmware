@@ -1,7 +1,7 @@
 {
 	"editor.tabSize": 4,
 	// "editor.formatOnSave": false,
-	// "editor.defaultFormatter": null,
+	// "editor.defaultFormatter": "mervin.markdown-formatter",
 	"editor.insertSpaces": true,
 	"editor.detectIndentation": false,
 	"git.mergeEditor": false,
@@ -35,8 +35,10 @@
 		"Printables",
 		"Prusa",
 		"runout",
+		"scriptsize",
 		"Sovol",
 		"textcolor",
+		"textit",
 		"texttt"
 	],
 	"[markdown]": {
