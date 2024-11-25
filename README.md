@@ -9,9 +9,9 @@ support my open source work ❤️
 | Printer                                                       | Branch                                                                                    |
 | ------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
 | ${\normalsize{\textcolor{darkturquoise}{\text{Sovol SV06}}}}$ | ⚡ ${\scriptsize{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}}$ ⚡                     |
-| Sovol SV06 Skr-Mini-E3-V3.0                                   | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
-| Sovol SV06 Plus                                               | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
+| Sovol SV06 SKR-Mini-E3-V3.0                                   | [skr-mini-e3-v3](https://github.com/bassamanator/Sovol-SV06-firmware/tree/skr-mini-e3-v3) |
 | Sovol SV06 Fly-E3-Pro-V3                                      | [fly-e3-pro-v3](https://github.com/ElPainis/Fly-E3-Pro-v3) \*\*                           |
+| Sovol SV06 Plus                                               | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)           |
 | All other printers                                            | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer)       |
 
 ${\small{\textit{** Maintained by ElPainis}}}$
