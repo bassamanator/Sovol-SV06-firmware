@@ -318,6 +318,12 @@ In PrusaSlicer, please see Printer Settings > Notes, for extruder clearances.
 
 Renamed to `_BED_MESH_CALIBRATE`.
 
+### Errors
+
+#### MCU 'mcu' shutdown: Timer too close
+
+This error often occurs when the `mcu` is unable to generate the required `microsteps`. Lower power Klipper hosts might be especially susceptible. Reducing `microsteps` to `64`, or even `32` can resolve the issue.
+
 [🔼 Back to top](#outline)
 
 ## FAQ
