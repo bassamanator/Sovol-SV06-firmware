@@ -1,4 +1,4 @@
-# Converting Prusa Slicer config bundle to Orca Slicer
+## Converting Prusa Slicer config bundle to Orca Slicer
 
 Orca Slicer configs can be converted from Prusa Slicer using https://github.com/apparle/SuperSlicer_to_Orca_scripts . It is a fork of theophile's script with some enhancements ([theophile/SuperSlicer_to_Orca_scripts#43](https://github.com/theophile/SuperSlicer_to_Orca_scripts/pull/43) ) which haven't been merged yet. It does require a few perl modules which can be installed using cpanminus (or your favorite perl module manager).
 
@@ -11,4 +11,5 @@ perl SuperSlicer_to_Orca_scripts/superslicer_to_orca.pl --input PrusaSlicer_conf
 ## How to use OrcaSlicer bundle:
 This config bundle can be imported into OrcaSlicer : `File > Import > Import configs...`
 
-Note, after importing OrcaSlicer does reformat the json files and add some more default attributes, so the contents of this file cannot directly be compared with the contents of the zipped bundle.
+Note, OrcaSlicer reformats the json files and adds some default attributes, so the imported files cannot be directly compared with the contents of the zipped bundle. But you can use json comparison tools like [https://www.jsondiff.com/](https://www.jsondiff.com/) to analyze the differences if needed.
+
