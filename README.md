@@ -48,6 +48,7 @@ ${\small{\textit{** Maintained by ElPainis}}}$
 - Pre-configured configuration bundles based on the [Ellis SuperSlicer Print Profiles](https://github.com/AndrewEllis93/Ellis-SuperSlicer-Profiles):
   - SuperSlicer
   - PrusaSlicer
+  - 🚀 OrcaSlicer (*experimental*) 🚀
   - Printer profiles: `SV06/Plus`; `SV07/Plus`
 - Bed model and texture to use in SuperSlicer/PrusaSlicer.
 - Macros:
