@@ -150,11 +150,12 @@ Please note:
 
 💡 Make sure `git` is installed (`sudo apt update && sudo apt install git`).
 
-1. `cd ~/printer_data/config`
-2. Empty entire `~/printer_data/config` folder.
+1. `ssh` into the Klipper host.
+2. `cd ~/printer_data/config`
+3. Empty entire `~/printer_data/config` folder.
    - In linux, you can delete files via `rm fileName` and directories via `rmdir directoryName`.
    - In linux, you can list files and folders via `ls -lah`.
-3. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` ⚠️ Don't miss the period!
+4. `git clone -b master --single-branch https://github.com/bassamanator/Sovol-SV06-firmware.git .` ⚠️ Don't miss the period!
 
 #### Method 2: Download the ZIP
 
@@ -188,7 +189,7 @@ Please note:
    restart_method: command
    ```
 
-3. Do a `FIRMWARE_RESTART`.
+3. Do a `FIRMWARE_RESTART` in the Klipper console.
 
 If the Klipper flash that you did earlier was successful, and you've done everything else correctly, you should see no errors or warnings in the `Mainsail`/`Fluidd` dashboard. 🎉 **Your printer has been Klipperized!** 🎉
 
