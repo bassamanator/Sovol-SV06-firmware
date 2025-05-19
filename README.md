@@ -338,11 +338,13 @@ Edit the relevant file according to your needs.
 | ---------------------- | ------------------------ |
 | `cfgs/misc-macros.cfg` | `[gcode_macro _globals]` |
 
-| Variable                           | Disable       | Enable        | Notes                                          |
-| ---------------------------------- | ------------- | ------------- | ---------------------------------------------- |
-| `variable_beeping_enabled`         | `0`           | `1` (default) |
-| `variable_filament_sensor_enabled` | `0` (default) | `1`           |
-| `variable_kamp_enable`             | `0` (default) | `1`           | See [here](#what-do-i-need-to-know-about-kamp) |
+| Variable                           | Disable       | Enable         | Notes                                          |
+| ---------------------------------- | ------------- | -------------- | ---------------------------------------------- |
+| `variable_beeping_enabled`         | `0`           | `1` (default)  |
+| `variable_filament_sensor_enabled` | `0` (default) | `1`            |
+| `variable_kamp_enable`             | `0` (default) | `1`            | See [here](#what-do-i-need-to-know-about-kamp) |
+| `variable_bed_temp_over`           | `0`           | `10` (default) | Speeds up print start                          |
+| `variable_bed_temp_not_exact`      | `0`           | `1` (default)  | Speeds up print start                          |
 
 ### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
