@@ -70,4 +70,18 @@
 		"titleBar.inactiveForeground": "#e7e7e799"
 	},
 	"peacock.color": "#512e0a"
+	// "[html][jinja][jinja-html]": {
+	// 	"editor.formatOnSave": false,
+	// 	"editor.defaultFormatter": "monosans.djlint",
+	// 	"editor.detectIndentation": true,
+	// 	"editor.linkedEditing": true,
+	// 	"editor.tabSize": 4,
+
+	// 	"djlint.enableLinting": true,
+	// 	"djlint.profile": "jinja"
+	// },
+	// "djlint.showInstallError": true,
+	// "djlint.useVenv": false,
+	// "djlint.pythonPath": "/home/bassam/.local/share/uv/tools",
+	// "djlint.formatLanguages": ["django-html", "jinja", "jinja-html"]
 }
