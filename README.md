@@ -346,6 +346,13 @@ Edit the relevant file according to your needs.
 | `variable_bed_temp_over`           | `0`           | `10` (default) | Speeds up print start                          |
 | `variable_bed_temp_not_exact`      | `0`           | `1` (default)  | Speeds up print start                          |
 
+### Any differences between this configuration and Sovol's Marlin firmware?
+
+| Property                  | Marlin | OSS Klipper Config |
+| ------------------------- | ------ | ------------------ |
+| `stepper_z` `run_current` | 0.800  | 0.900              |
+| `microsteps`              | 16     | 128                |
+
 ### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
 Please see this [discussion](https://github.com/bassamanator/Sovol-SV06-firmware/discussions/13).
