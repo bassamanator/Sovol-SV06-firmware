@@ -9,7 +9,7 @@ support my open source work ❤️
 | Printer                                                                        | Branch                                                                              |
 | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
 | Sovol SV06                                                                     | [master](https://github.com/bassamanator/Sovol-SV06-firmware/tree/master)           |
-| ${\normalsize{\textcolor{darkturquoise}{\text{Sovol SV06 SKR-Mini-E3-V3.0}}}}$ | ⚡ ${\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}}$ ⚡                      |
+| ${\normalsize{\textcolor{darkturquoise}{\text{Sovol SV06 SKR-Mini-E3-V3.0}}}}$ | ⚡ ${\small{\textcolor{darkturquoise}{\text{YOU ARE HERE}}}}$ ⚡                    |
 | Sovol SV06 Fly-E3-Pro-V3                                                       | [fly-e3-pro-v3](https://github.com/ElPainis/Fly-E3-Pro-v3) \*\*                     |
 | Sovol SV06 Plus                                                                | [sv06-plus](https://github.com/bassamanator/Sovol-SV06-firmware/tree/sv06-plus)     |
 | All other printers                                                             | [any-printer](https://github.com/bassamanator/Sovol-SV06-firmware/tree/any-printer) |
@@ -361,6 +361,15 @@ Edit the relevant file according to your needs.
 | `variable_kamp_enable`             | `0` (default) | `1`            | See [here](#what-do-i-need-to-know-about-kamp) |
 | `variable_bed_temp_over`           | `0`           | `10` (default) | Speeds up print start                          |
 | `variable_bed_temp_not_exact`      | `0`           | `1` (default)  | Speeds up print start                          |
+
+### Any differences between this configuration and Sovol's Marlin firmware?
+
+| Property                  | Marlin | OSS Klipper Config |
+| ------------------------- | ------ | ------------------ |
+| `stepper_x` `run_current` | 0.860  | 0.600              |
+| `stepper_y` `run_current` | 0.900  | 0.600              |
+| `stepper_z` `run_current` | 0.800  | 0.600              |
+| `microsteps`              | 16     | 64                 |
 
 ### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
 
