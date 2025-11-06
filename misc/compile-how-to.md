@@ -23,8 +23,6 @@ You have to decide what camp you want to be apart off.
 
 ##### Update Klipper repo first
 
-\*\* _For those coming from the_ ${\small{\textcolor{WildStrawberry}{\texttt{Before You B.egin}}}}$ _section (installing Klipper for the first time), complete_ **only** _this section_. No need to compile the firmware, etc.
-
 It's always best to update the Klipper repository that lives on the host before compiling. This ensures that your `klipper.bin` will be as 'fresh' as possible.
 
 - In `Fluidd`, you can do this from `Settings` > `Software Updates`.
@@ -37,9 +35,13 @@ It's always best to update the Klipper repository that lives on the host before 
 1. `ssh` into the Klipper host (i.e., RPi, OrangePi, etc.).
 2. `cd ~/klipper`
 3. `make menuconfig`
-4. Set things up to look as follows:
-   ![make-menuconfig](https://github.com/bassamanator/Sovol-SV06-firmware/assets/61985779/22298d47-2604-4231-ad10-7d6793be7904)
-5. `make clean`
+   - Adjusts compilation settings via terminal GUI.
+5. Set things up to look as follows:
+<div align='center'>
+<img width="561" height="323" alt="image" src="https://github.com/user-attachments/assets/868f89f7-29a2-42b6-bf08-e7a59e8c8510" />
+</div>
+
+6. `make clean`
    - Clears `~/klipper/out/`
-6. `make`
+7. `make`
    - Compiles `klipper.bin` and puts it in `~/klipper/out/`
