@@ -1,14 +1,3 @@
-<!-- markdownlint-configure-file
-{
-    "no-inline-html":false,
-    "first-line-h1":false,
-    "descriptive-link-text":false,
-    "no-blanks-blockquote":false,
-    "fenced-code-language":false,
-    "table-column-count":false
-}
--->
-
 <p align="center">
 Please consider
 <a href="https://ko-fi.com/bassamanator" target="_blank">donating</a> to
