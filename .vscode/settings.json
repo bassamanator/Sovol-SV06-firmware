@@ -18,6 +18,7 @@
 		"Klipper",
 		"Klipperized",
 		"lrwxrwxrwx",
+		"menuconfig",
 		"microsteps",
 		"moonraker",
 		"normalsize",
@@ -59,12 +60,21 @@
 		"statusBar.background": "#512e0a",
 		"statusBar.foreground": "#e7e7e7",
 		"statusBarItem.hoverBackground": "#7e4810",
-		"statusBarItem.remoteBackground": "#512e0a",
+		"statusBarItem.remoteBackground": "#128e51",
 		"statusBarItem.remoteForeground": "#e7e7e7",
 		"titleBar.activeBackground": "#512e0a",
 		"titleBar.activeForeground": "#e7e7e7",
 		"titleBar.inactiveBackground": "#512e0a99",
-		"titleBar.inactiveForeground": "#e7e7e799"
+		"titleBar.inactiveForeground": "#e7e7e799",
+		"activityBar.activeBorder": "#e7e7e7",
+		"activityBarTop.activeBackground": "#7e4810",
+		"activityBarTop.activeBorder": "#e7e7e7",
+		"activityBarTop.background": "#7e4810",
+		"activityBarTop.foreground": "#e7e7e7",
+		"activityBarTop.inactiveForeground": "#e7e7e799",
+		"commandCenter.foreground": "#e7e7e7",
+		"statusBar.debuggingBackground": "#512e0a",
+		"statusBar.debuggingForeground": "#e7e7e7"
 	},
 	"peacock.color": "#512e0a"
 	// "[html][jinja][jinja-html]": {
@@ -73,7 +83,6 @@
 	// 	"editor.detectIndentation": true,
 	// 	"editor.linkedEditing": true,
 	// 	"editor.tabSize": 4,
-
 	// 	"djlint.enableLinting": true,
 	// 	"djlint.profile": "jinja"
 	// },
