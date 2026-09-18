@@ -35,13 +35,10 @@ It's always best to update the Klipper repository that lives on the host before 
 1. `ssh` into the Klipper host (i.e., RPi, OrangePi, etc.).
 2. `cd ~/klipper`
 3. `make menuconfig`
-   - Adjusts compilation settings via terminal GUI.
-5. Set things up to look as follows:
-<div align='center'>
-<img width="561" height="323" alt="image" src="https://github.com/user-attachments/assets/868f89f7-29a2-42b6-bf08-e7a59e8c8510" />
-</div>
+4. Set things up to look as follows:
 
-6. `make clean`
+   ![make-menuconfig](https://github.com/bassamanator/Sovol-SV06-firmware/blob/51058eacde444c16d6a8a87db06d91568f040ec0/misc/images/make-menuconfig-latest.png)
+5. `make clean`
    - Clears `~/klipper/out/`
 7. `make`
    - Compiles `klipper.bin` and puts it in `~/klipper/out/`

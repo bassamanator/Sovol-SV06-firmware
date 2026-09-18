@@ -262,10 +262,10 @@ PRINT_END
 If you would like to print a purge line before your print starts, at the end of your start gcode, on a new line, add one of the following:
 
 - `PURGE_LINE`; prints a standard purge line.
-- `LINE_PURGE`; prints KAMP's purge line.
+- `KAMP_LINE_PURGE`; prints KAMP's purge line.
 
 > [!WARNING]
-> Do not attempt to use `LINE_PURGE` without reading [this section](#what-do-i-need-to-know-about-kamp).
+> Do not attempt to use `KAMP_LINE_PURGE` without reading [this section](#what-do-i-need-to-know-about-kamp).
 
 ```yaml
 # 📝 This is just an example Start G-Code
@@ -319,12 +319,6 @@ If enabled, cancelling, or resuming a print from pause, could lead to collisions
 
 In PrusaSlicer, please see Printer Settings > Notes, for extruder clearances.
 
-### Renamed GCODE Commands
-
-#### BED_MESH_CALIBRATE
-
-Renamed to `_BED_MESH_CALIBRATE`.
-
 ### Errors
 
 #### MCU 'mcu' shutdown: Timer too close
@@ -355,6 +349,7 @@ Edit the relevant file according to your needs.
 
 | Property                  | Marlin | OSS Klipper Config |
 | ------------------------- | ------ | ------------------ |
+| `stepper_z` `run_current` | 0.800  | 0.900              |
 | `microsteps`              | 16     | 128                |
 
 ### How do I import a configuration bundle into SuperSlicer/PrusaSlicer?
@@ -427,9 +422,9 @@ The printhead is now parked front center waiting for you to insert filament. You
 > The [Label objects setting](https://docs.mainsail.xyz/overview/features/exclude-objects#enable-the-label-objects-setting-in-your-slicer) in your slicer must be enabled for KAMP to work.
 
 > [!NOTE]
-> `LINE_PURGE` is useable _on appropriate devices_ even if KAMP is disabled.
+> `KAMP_LINE_PURGE` is useable _on appropriate devices_ even if KAMP is disabled.
 
-This repo contains all the code from the KAMP repository, however, only the `adaptive meshing` and `LINE_PURGE` functionality of KAMP has been configured and tested for use. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
+This repo contains all the code from the KAMP repository, however, only the `adaptive meshing` and `KAMP_LINE_PURGE` functionality of KAMP has been configured and tested for use. To enable other functionality, adjust `/cfgs/kamp/KAMP_Settings.cfg`.
 
 Read [KAMP official docs](https://github.com/kyleisah/Klipper-Adaptive-Meshing-Purging) to learn more.
 
