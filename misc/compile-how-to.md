@@ -36,11 +36,8 @@ It's always best to update the Klipper repository that lives on the host before 
 2. `cd ~/klipper`
 3. `make menuconfig`
 4. Set things up to look as follows:
-   ![make-menuconfig](https://github.com/bassamanator/Sovol-SV06-firmware/assets/61985779/22298d47-2604-4231-ad10-7d6793be7904)
 
-> [!NOTE]
-> New option added: `Optimize stepper code for 'step on both edges'`, enable it.
-
+   ![make-menuconfig](https://github.com/bassamanator/Sovol-SV06-firmware/blob/51058eacde444c16d6a8a87db06d91568f040ec0/misc/images/make-menuconfig-latest.png)
 5. `make clean`
    - Clears `~/klipper/out/`
 6. `make`
