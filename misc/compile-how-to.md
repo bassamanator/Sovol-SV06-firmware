@@ -30,8 +30,7 @@ You have to decide what camp you want to be apart off.
 
 ## Compilation Steps
 
-> [!NOTE]
-> The compilation *settings* you see in the image below apply only to the `SV06/Plus`, but the *steps themselves* apply to any board.
+### SV06/Plus
 
 1. `ssh` into the Klipper host (i.e., RPi, OrangePi, etc.).
 2. `cd ~/klipper`
@@ -45,3 +44,9 @@ You have to decide what camp you want to be apart off.
     - Clears `~/klipper/out/`
 7. `make`
     - Compiles `klipper.bin` and puts it in `~/klipper/out/`
+
+### SKR-MINI-E3-V3
+
+Follow the same steps as above except set things up to look as follows:
+
+![make-menuconfig](https://github.com/bassamanator/Sovol-SV06-firmware/blob/ce233d2f6e615b690942cff995187a3c5923945b/misc/skr-mini/menuconfig.png)
