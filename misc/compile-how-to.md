@@ -1,47 +1,47 @@
 ${\small{\textcolor{green}{\texttt{2 minute read}}}}$
 
-#### Do I need to re-flash the motherboard?
+# Everything about `klipper.Bin` for the SV06/Plus
 
-You will _almost never_ need to re-flash `klipper.bin`. When this is needed, your dashboard will explicitly tell you that you need to re-flash.
+## FAQs
 
-#### Where does Klipper live?
+### Do I need to re-flash the motherboard?
+
+You will _almost never_ need to re-flash your motherboard. When this is needed, your dashboard will explicitly tell you that you need to re-flash.
+
+### Where does Klipper live?
 
 1. On the motherboard.
 2. On the host device (Raspberry Pi, etc.).
 
 🗒️ These 2 versions of klipper can rightly differ.
 
-#### Should I update Klipper, moonraker, etc.?
+### Should I update Klipper, moonraker, etc.?
 
-I always update everything on the host device via the dashboard. I don't want to miss out on improvements, especially those that improve safety. What this means is that on some occasions, there will be breaking changes: you will need to change a few things in your config **before you can print**. I would suggest that if you absolutely have to get something printed immediately and there's an update, perhaps wait till after the print completes to do the update.
+I always update everything on the host device via the dashboard. I don't want to miss out on improvements, especially those that improve safety. What this means is that on some occasions, there will be breaking changes: you will need to change a few things in your config **before you can print**. I would suggest that if you absolutely have to get something printed immediately, and there's an update, perhaps wait till after the print completes to do the update.
 
-Others will argue that 'if it ain't broke, don't fix it'.
+Others will argue that "if it ain't broke, don't fix it".
 
 You have to decide what camp you want to be apart off.
 
 #### How-To
 
-##### Update Klipper repo first
-
-It's always best to update the Klipper repository that lives on the host before compiling. This ensures that your `klipper.bin` will be as 'fresh' as possible.
-
 - In `Fluidd`, you can do this from `Settings` > `Software Updates`.
 - In `Mainsail`, you can do this from `Machine` > `Update Manager`.
 
-##### Compile `klipper.bin`
+## Compilation Steps
 
-🗒️ The `compilation settings` you see in the image below apply only the the `SV06/Plus` boards, but the steps for compilation apply to any board.
+> [!NOTE]
+> The compilation *settings* you see in the image below apply only to the `SV06/Plus`, but the *steps themselves* apply to any board.
 
 1. `ssh` into the Klipper host (i.e., RPi, OrangePi, etc.).
 2. `cd ~/klipper`
-3. `make menuconfig`
-   - Adjusts compilation settings via terminal GUI.
+3. `git pull`
+    - Pulls the latest changes from the klipper repo, ensuring that your `klipper.bin` will be as fresh as possible.
+4. `make menuconfig`
 5. Set things up to look as follows:
-<div align='center'>
-<img width="561" height="323" alt="image" src="https://github.com/user-attachments/assets/868f89f7-29a2-42b6-bf08-e7a59e8c8510" />
-</div>
 
+    ![make-menuconfig](https://github.com/bassamanator/Sovol-SV06-firmware/blob/51058eacde444c16d6a8a87db06d91568f040ec0/misc/images/make-menuconfig-latest.png)
 6. `make clean`
-   - Clears `~/klipper/out/`
+    - Clears `~/klipper/out/`
 7. `make`
-   - Compiles `klipper.bin` and puts it in `~/klipper/out/`
+    - Compiles `klipper.bin` and puts it in `~/klipper/out/`
