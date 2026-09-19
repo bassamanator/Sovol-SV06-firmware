@@ -50,3 +50,5 @@ You have to decide what camp you want to be apart off.
 Follow the same steps as above except set things up to look as follows:
 
 ![make-menuconfig](https://github.com/bassamanator/Sovol-SV06-firmware/blob/ce233d2f6e615b690942cff995187a3c5923945b/misc/skr-mini/menuconfig.png)
+[Source](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V3.0/Klipper)
+
