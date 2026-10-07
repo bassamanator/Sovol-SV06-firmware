@@ -12,4 +12,7 @@ perl SuperSlicer_to_Orca_scripts/superslicer_to_orca.pl --input PrusaSlicer_conf
 
 This config bundle can be imported into OrcaSlicer : `File > Import > Import configs...`
 
-Note, OrcaSlicer reformats the `json` and adds some default attributes, so the imported files cannot be directly compared with the contents of the zipped bundle. But you can use json comparison tools like [https://www.jsondiff.com/](https://www.jsondiff.com/) to analyze the differences if needed.
+OrcaSlicer reformats the JSON and adds some default attributes, so the imported files cannot be directly
+compared with the contents of the zipped bundle. Use a structured JSON comparison tool such as
+[JSON Diff](https://jsondiff.com/) or
+[JSONViewerTool JSON Compare](https://jsonviewertool.com/json-compare) to analyze the differences if needed.
